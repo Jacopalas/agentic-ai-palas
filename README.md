@@ -1,10 +1,10 @@
 # Agentic AI Palas
 
-A portable toolkit of skills and scripts for Claude Code. Install once, use in any project.
+A portable toolkit of skills for Claude Code. Install once, use in any project.
 
 ## Purpose
 
-This repository contains generic, reusable components for Claude Code that work across any project—regardless of language, framework, or domain. Skills, scripts, and configurations that we want available everywhere.
+This repository contains generic, reusable components for Claude Code that work across any project—regardless of language, framework, or domain. Skills and configurations that we want available everywhere.
 
 **Focus**: Claude Code exclusively. We work within `.claude/` directory.
 
@@ -33,7 +33,6 @@ See [Installation Guide](docs/installation.md) for manual installation and optio
 agentic-ai-palas/
 ├── .claude/                    # ← Gets installed to your projects
 │   ├── skills/                 # Skill definitions
-│   ├── scripts/                # Utility scripts
 │   └── _tooling/               # Shared tools and configs
 ├── docs/                       # Documentation (not installed)
 │   ├── installation.md
@@ -51,7 +50,6 @@ When you run the installer on your project:
 | Component           | Installed          | Notes                               |
 | ------------------- | ------------------ | ----------------------------------- |
 | `.claude/skills/`   | ✅ Yes             | All skills                          |
-| `.claude/scripts/`  | ✅ Yes             | Utility scripts                     |
 | `.claude/_tooling/` | ✅ Yes             | Shared tooling                      |
 | `.claude/CLAUDE.md` | ✅ Only if missing | Won't overwrite your customizations |
 

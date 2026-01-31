@@ -14,4 +14,3 @@ This directory contains detailed documentation for Agentic AI Palas.
 
 - [Main README](../README.md) — Project overview
 - [Skills Directory](../.claude/skills/) — Available skills
-- [Scripts Directory](../.claude/scripts/) — Utility scripts

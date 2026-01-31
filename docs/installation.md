@@ -1,6 +1,6 @@
 # Installation
 
-Install Agentic AI Palas skills and scripts into any project.
+Install Agentic AI Palas skills into any project.
 
 ## Requirements
 
@@ -31,7 +31,6 @@ your-project/
     │   ├── initializing-environment/
     │   ├── removing-notebooklm/
     │   └── security-scan/
-    ├── scripts/           # Utility scripts
     └── _tooling/          # Shared tooling (Node.js packages, configs)
 ```
 
@@ -60,7 +59,7 @@ curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/ins
 Remove the installed directories:
 
 ```bash
-rm -rf .claude/skills .claude/scripts .claude/_tooling
+rm -rf .claude/skills .claude/_tooling
 ```
 
 Keep `.claude/CLAUDE.md` if you've customized it.

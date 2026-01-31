@@ -1,10 +1,10 @@
 # Agentic AI Palas
 
-Portable toolkit of skills and scripts for Claude Code.
+Portable toolkit of skills for Claude Code.
 
 ## Purpose
 
-This repository provides generic, reusable components for Claude Code that work in any project. We focus exclusively on `.claude/` directory—skills, scripts, and configurations.
+This repository provides generic, reusable components for Claude Code that work in any project. We focus exclusively on `.claude/` directory—skills and configurations.
 
 ## Operating Principles
 
@@ -34,7 +34,6 @@ Be pragmatic. Be reliable. Self-anneal.
 │   ├── initializing-environment/
 │   ├── removing-notebooklm/
 │   └── security-scan/
-├── scripts/                # Utility scripts
 └── _tooling/               # Shared tools and configs
 ```
 

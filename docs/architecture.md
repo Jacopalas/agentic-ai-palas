@@ -4,7 +4,7 @@ Project structure and design decisions for Agentic AI Palas.
 
 ## Overview
 
-Agentic AI Palas is a portable toolkit of skills and scripts for Claude Code. The design prioritizes:
+Agentic AI Palas is a portable toolkit of skills for Claude Code. The design prioritizes:
 
 - **Portability**: Install into any project with a single command
 - **Non-invasive**: Never overwrites existing configuration
@@ -23,7 +23,6 @@ agentic-ai-palas/
 │   │   ├── initializing-environment/
 │   │   ├── removing-notebooklm/
 │   │   └── security-scan/
-│   ├── scripts/               # Utility scripts
 │   └── _tooling/              # Shared tools and configs
 ├── docs/                       # Documentation (not installed)
 ├── install/                    # Installation scripts (not installed)
@@ -38,7 +37,6 @@ When you run the installer on a target project:
 | Source              | Destination         | Notes                 |
 | ------------------- | ------------------- | --------------------- |
 | `.claude/skills/`   | `.claude/skills/`   | All skills copied     |
-| `.claude/scripts/`  | `.claude/scripts/`  | All scripts copied    |
 | `.claude/_tooling/` | `.claude/_tooling/` | Shared tooling copied |
 | `.claude/CLAUDE.md` | `.claude/CLAUDE.md` | **Only if missing**   |
 
@@ -130,5 +128,4 @@ The toolkit doesn't use semantic versioning. Updates are incremental improvement
 To update an installed toolkit, re-run the installer. It will:
 
 - Overwrite skills with latest versions
-- Overwrite scripts with latest versions
 - Preserve your custom `CLAUDE.md`

@@ -50,18 +50,6 @@ fi
 cp -r "${SOURCE_DIR}/.claude/skills" "${TARGET_DIR}/.claude/skills"
 echo -e "${GREEN}  ✓ Skills installed${NC}"
 
-# Copy scripts
-echo -e "${BLUE}Installing scripts...${NC}"
-if [ -d "${TARGET_DIR}/.claude/scripts" ]; then
-    rm -rf "${TARGET_DIR}/.claude/scripts"
-fi
-if [ -d "${SOURCE_DIR}/.claude/scripts" ]; then
-    cp -r "${SOURCE_DIR}/.claude/scripts" "${TARGET_DIR}/.claude/scripts"
-    echo -e "${GREEN}  ✓ Scripts installed${NC}"
-else
-    echo -e "${YELLOW}  ⚠ No scripts directory found${NC}"
-fi
-
 # Copy _tooling
 echo -e "${BLUE}Installing tooling...${NC}"
 if [ -d "${TARGET_DIR}/.claude/_tooling" ]; then
