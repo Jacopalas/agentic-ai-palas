@@ -78,6 +78,20 @@ When you run the installer on your project:
 4. Run `/fixing-markdown` on new files
 5. Submit pull request
 
-## Internal Note
+## About Antigravity IDE
 
-This repository uses [Antigravity Kit](https://github.com/vudovn/antigravity-kit) (`.agent/` directory) for its own development. The `.agent/` directory is **not** installed to target projects—it's for internal use only.
+If you use [Antigravity IDE](https://github.com/vudovn/antigravity-kit), you can install [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/) to get additional agents and skills:
+
+```bash
+# Requires Node.js
+npx @vudovn/ag-kit init
+```
+
+This creates a `.agent/` directory with 20+ specialist agents and 36+ skills. See the [official repository](https://github.com/vudovn/antigravity-kit) for documentation.
+
+**Important notes:**
+
+- `.agent/` is **git-ignored** — it won't pollute your commits
+- `.agent/` does **not conflict** with `.claude/` — they are independent systems
+- **Not required** — you don't need Antigravity IDE to use this project
+- `/fixing-markdown` is configured to ignore `.agent/` entirely

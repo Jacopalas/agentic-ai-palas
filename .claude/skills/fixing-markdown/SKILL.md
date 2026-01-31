@@ -25,6 +25,23 @@ Run `markdownlint-cli2` + `prettier` to auto-fix markdown formatting issues.
 
 **No argument = show this usage.**
 
+## Exclusions
+
+**NEVER modify files under `.agent/` directory.**
+
+The `.agent/` directory (git-ignored) contains Antigravity Kit 2.0—optional tooling for Antigravity IDE users. These files are managed externally and have their own formatting conventions. This skill must:
+
+1. **Reject** any target that is `.agent/` or starts with `.agent/`
+2. **Exclude** `.agent/` when target is `.` or root directory
+3. **Skip** any file path containing `/.agent/` or `\.agent\`
+
+If user requests `.agent/` formatting, respond:
+
+```text
+⚠️ Skipping .agent/ — this directory is managed externally (Antigravity Kit).
+Use Antigravity's own formatting tools if needed.
+```
+
 ## Prerequisites
 
 **Run initializing-environment first** to ensure Node.js environment is ready.
@@ -49,11 +66,23 @@ node .claude/_tooling/node_modules/prettier/bin/prettier.cjs --config .claude/_t
 ### Folder (recursive)
 
 ```bash
+# Step 1: Fix structural issues (exclude .agent/)
+node .claude/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config .claude/_tooling/.markdownlint-cli2.jsonc "path/to/folder/**/*.md" "#.agent"
+
+# Step 2: Format (exclude .agent/)
+node .claude/_tooling/node_modules/prettier/bin/prettier.cjs --config .claude/_tooling/.prettierrc --write "path/to/folder/**/*.md" --ignore-pattern ".agent/**"
+```
+
+### Root Directory (`.`)
+
+When target is `.` or root, always exclude `.agent/`:
+
+```bash
 # Step 1: Fix structural issues
-node .claude/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config .claude/_tooling/.markdownlint-cli2.jsonc "path/to/folder/**/*.md"
+node .claude/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config .claude/_tooling/.markdownlint-cli2.jsonc "**/*.md" "#.agent"
 
 # Step 2: Format
-node .claude/_tooling/node_modules/prettier/bin/prettier.cjs --config .claude/_tooling/.prettierrc --write "path/to/folder/**/*.md"
+node .claude/_tooling/node_modules/prettier/bin/prettier.cjs --config .claude/_tooling/.prettierrc --write "**/*.md" --ignore-pattern ".agent/**"
 ```
 
 ## Examples
@@ -126,11 +155,12 @@ prettier: formatted
 ## Behavior
 
 1. **Check argument**: If no target provided, show usage and exit
-2. **Run initializing-environment**: Ensure Node.js environment is ready
-3. **Detect target type**: file or folder
-4. **Run markdownlint-cli2**: Fix structural issues
-5. **Run prettier**: Format visual appearance
-6. **Report**: Show results from both tools
+2. **Check exclusions**: If target is `.agent/` or inside it, show warning and exit
+3. **Run initializing-environment**: Ensure Node.js environment is ready
+4. **Detect target type**: file or folder
+5. **Run markdownlint-cli2**: Fix structural issues (always exclude `.agent/`)
+6. **Run prettier**: Format visual appearance (always exclude `.agent/`)
+7. **Report**: Show results from both tools
 
 ## Notes
 

@@ -79,6 +79,9 @@ __pycache__/
 dist/
 build/
 
+# Antigravity Kit (optional, installed separately)
+.agent/
+
 # Local configuration
 .local
 local.config.js

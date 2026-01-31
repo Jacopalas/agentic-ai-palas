@@ -46,10 +46,29 @@ When you run the installer on a target project:
 
 | Directory | Reason |
 |-----------|--------|
-| `.agent/` | Antigravity Kit — for internal development only |
+| `.agent/` | Antigravity Kit — optional tooling for Antigravity IDE users |
 | `docs/` | Documentation — reference from GitHub |
 | `install/` | Installation scripts — one-time use |
 | `.git/` | Git history — not needed |
+
+## About `.agent/` Directory
+
+If you use [Antigravity IDE](https://github.com/vudovn/antigravity-kit), you can install Antigravity Kit 2.0:
+
+```bash
+# Requires Node.js
+npx @vudovn/ag-kit init
+```
+
+This creates `.agent/` with 20+ specialist agents and 36+ skills.
+
+**Key points:**
+
+- `.agent/` is **git-ignored** — won't pollute commits
+- `.agent/` does **not conflict** with `.claude/` — independent systems
+- Not required to use or contribute to this project
+- `/fixing-markdown` ignores `.agent/` entirely
+- Target projects receive only `.claude/` contents
 
 ## Design Decisions
 

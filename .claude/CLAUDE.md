@@ -6,6 +6,15 @@ Portable toolkit of skills and scripts for Claude Code.
 
 This repository provides generic, reusable components for Claude Code that work in any project. We focus exclusively on `.claude/` directory—skills, scripts, and configurations.
 
+## Operating Principles
+
+Be pragmatic. Be reliable. Self-anneal.
+
+- **Check skills first**: Before doing manual work, verify if an existing skill can handle the task
+- **Self-improvement**: When a skill fails or produces unexpected results, update the SKILL.md with the edge case or fix
+- **Zero entropy**: Never create folders or files outside the defined structure
+- **Living documentation**: Skills are living documents—update them as better approaches or constraints are discovered
+
 ## Available Skills
 
 | Skill | Purpose |
@@ -29,14 +38,6 @@ This repository provides generic, reusable components for Claude Code that work 
 └── _tooling/               # Shared tools and configs
 ```
 
-## Creating New Skills
-
-1. Create directory: `.claude/skills/my-skill/`
-2. Add `SKILL.md` with frontmatter and instructions
-3. Follow format in [docs/creating-skills.md](../docs/creating-skills.md)
-4. Update [README.md](../README.md) skills table
-5. Run `/fixing-markdown .claude/skills/my-skill/SKILL.md`
-
 ## Documentation Quality
 
 After creating or updating markdown files, validate formatting:
@@ -45,15 +46,6 @@ After creating or updating markdown files, validate formatting:
 /fixing-markdown <file-or-folder>
 ```
 
-## Internal Development
+## Exclusions
 
-This repo uses [Antigravity Kit](https://github.com/vudovn/antigravity-kit) (`.agent/` directory) for development. The `.agent/` directory is **not distributed** to target projects.
-
-## Installation Scripts
-
-The `install/` directory contains installation scripts:
-
-- `install.sh` — Linux/macOS
-- `install.ps1` — Windows PowerShell
-
-These scripts copy `.claude/skills/`, `.claude/scripts/`, and `.claude/_tooling/` to target projects. They create a minimal `CLAUDE.md` only if one doesn't exist.
+The `.agent/` directory (if present) is git-ignored and must be excluded from all operations including `/fixing-markdown`.
