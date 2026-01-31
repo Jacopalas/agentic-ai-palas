@@ -85,6 +85,7 @@ build/
 # Local configuration
 .local
 local.config.js
+.claude/settings.local.json
 
 # API keys and secrets (local testing)
 secrets/
