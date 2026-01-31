@@ -80,7 +80,7 @@ dist/
 build/
 
 # Antigravity Kit (optional, installed separately)
-.agent/
+#.agent/
 
 # Local configuration
 .local
