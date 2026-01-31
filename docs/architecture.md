@@ -4,7 +4,7 @@ Project structure and design decisions for Agentic AI Palas.
 
 ## Overview
 
-Agentic AI Palas is a portable toolkit of skills and scripts for Claude Code. The design prioritizes:
+Agentic AI Palas is a portable toolkit of skills for Claude Code. The design prioritizes:
 
 - **Portability**: Install into any project with a single command
 - **Non-invasive**: Never overwrites existing configuration
@@ -23,7 +23,6 @@ agentic-ai-palas/
 │   │   ├── initializing-environment/
 │   │   ├── removing-notebooklm/
 │   │   └── security-scan/
-│   ├── scripts/               # Utility scripts
 │   └── _tooling/              # Shared tools and configs
 ├── docs/                       # Documentation (not installed)
 ├── install/                    # Installation scripts (not installed)
@@ -35,21 +34,20 @@ agentic-ai-palas/
 
 When you run the installer on a target project:
 
-| Source | Destination | Notes |
-|--------|-------------|-------|
-| `.claude/skills/` | `.claude/skills/` | All skills copied |
-| `.claude/scripts/` | `.claude/scripts/` | All scripts copied |
+| Source              | Destination         | Notes                 |
+| ------------------- | ------------------- | --------------------- |
+| `.claude/skills/`   | `.claude/skills/`   | All skills copied     |
 | `.claude/_tooling/` | `.claude/_tooling/` | Shared tooling copied |
-| `.claude/CLAUDE.md` | `.claude/CLAUDE.md` | **Only if missing** |
+| `.claude/CLAUDE.md` | `.claude/CLAUDE.md` | **Only if missing**   |
 
 ## What Does NOT Get Installed
 
-| Directory | Reason |
-|-----------|--------|
-| `.agent/` | Antigravity Kit — optional tooling for Antigravity IDE users |
-| `docs/` | Documentation — reference from GitHub |
-| `install/` | Installation scripts — one-time use |
-| `.git/` | Git history — not needed |
+| Directory  | Reason                                                       |
+| ---------- | ------------------------------------------------------------ |
+| `.agent/`  | Antigravity Kit — optional tooling for Antigravity IDE users |
+| `docs/`    | Documentation — reference from GitHub                        |
+| `install/` | Installation scripts — one-time use                          |
+| `.git/`    | Git history — not needed                                     |
 
 ## About `.agent/` Directory
 
@@ -86,7 +84,7 @@ The installer creates a minimal `CLAUDE.md` only if one doesn't exist.
 
 ### 3. No External Dependencies for Installation
 
-Installation uses only bash (Linux/Mac) or PowerShell (Windows).
+Installation uses only bash (works on Linux, macOS, and Windows via Git Bash).
 
 **Why?** Projects shouldn't need Node.js/Python just to install the toolkit.
 
@@ -130,5 +128,4 @@ The toolkit doesn't use semantic versioning. Updates are incremental improvement
 To update an installed toolkit, re-run the installer. It will:
 
 - Overwrite skills with latest versions
-- Overwrite scripts with latest versions
 - Preserve your custom `CLAUDE.md`

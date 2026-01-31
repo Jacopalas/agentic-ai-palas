@@ -84,12 +84,12 @@ Additional information, caveats, or tips.
 
 ## Frontmatter Fields
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `name` | Yes | Skill identifier (kebab-case, matches folder name) |
-| `description` | Yes | What the skill does + trigger keywords |
-| `metadata.skillport.category` | No | Category for organization |
-| `metadata.skillport.tags` | No | Tags for discoverability |
+| Field                         | Required | Description                                        |
+| ----------------------------- | -------- | -------------------------------------------------- |
+| `name`                        | Yes      | Skill identifier (kebab-case, matches folder name) |
+| `description`                 | Yes      | What the skill does + trigger keywords             |
+| `metadata.skillport.category` | No       | Category for organization                          |
+| `metadata.skillport.tags`     | No       | Tags for discoverability                           |
 
 ## Naming Conventions
 
@@ -156,8 +156,8 @@ command --flag argument
 ## Usage
 
 \`\`\`text
-/my-skill check <target>    # Validate without changes
-/my-skill fix <target>      # Fix issues automatically
+/my-skill check <target> # Validate without changes
+/my-skill fix <target> # Fix issues automatically
 \`\`\`
 ```
 
