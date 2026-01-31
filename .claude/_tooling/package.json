@@ -1,0 +1,10 @@
+{
+  "name": "sumwall-browser-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dev tools for sumwall.browser",
+  "devDependencies": {
+    "markdownlint-cli2": "^0.17.2",
+    "prettier": "^3.4.2"
+  }
+}

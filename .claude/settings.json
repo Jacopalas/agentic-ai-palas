@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "includeCoAuthoredBy": false,
+    "permissions": {
+        "allow": [
+            "Bash(git status:*)",
+            "Bash(git diff:*)",
+            "Bash(git log:*)",
+            "Bash(git show:*)",
+            "Bash(git fetch:*)",
+            "Bash(git branch:*)",
+            "Bash(git hash-object:*)",
+            "Bash(ls:*)",
+            "Bash(tree:*)",
+            "Bash(rg:*)",
+            "Bash(node:*)",
+            "Bash(markdownlint-cli2:*)",
+            "Bash(prettier:*)",
+            "Bash(.claude/_tooling/.venv/Scripts/python.exe:*)",
+            "Bash(.claude/_tooling/.venv/bin/python:*)",
+            "Skill(fixing-markdown)",
+            "Read(/tmp/**)",
+            "Read(//c/tmp/**)"
+        ]
+    }
+}
