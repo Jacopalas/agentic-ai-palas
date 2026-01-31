@@ -29,6 +29,32 @@ See [skills directory](./skills/) for full documentation.
 - Write in English
 - Keep components modular and reusable
 
+## Documentation Quality
+
+**After creating or updating ANY markdown file**, validate and fix formatting:
+
+```bash
+/fixing-markdown <file-or-folder>
+```
+
+**Examples:**
+```bash
+/fixing-markdown README.md
+/fixing-markdown .claude/CLAUDE.md
+/fixing-markdown .
+```
+
+Use `/fixing-markdown` on:
+- ✅ README.md (after any update)
+- ✅ CLAUDE.md (after any update)
+- ✅ Component README files
+- ✅ SKILL.md files
+- ✅ Any other markdown documentation
+
+This ensures consistent formatting, proper spacing, and adherence to markdown standards.
+
+---
+
 ## Contributing
 
 ### Before Adding a New Skill or Agent
@@ -41,4 +67,9 @@ See [skills directory](./skills/) for full documentation.
    - Add entry to "Skills" or "Agents" table in the "What's Available" section
    - Include name, purpose, and location link
 
-**This keeps the project overview accurate for all collaborators.**
+3. **Run markdown validation** (see "Documentation Quality" section above)
+   ```bash
+   /fixing-markdown README.md
+   ```
+
+**This keeps the project overview accurate and formatting consistent for all collaborators.**
