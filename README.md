@@ -1,88 +1,83 @@
 # Agentic AI Palas
 
-A portable toolkit of skills for Claude Code. Install once, use in any project.
+**Stop configuring Claude Code from scratch on every project.**
 
-## Purpose
-
-This repository contains generic, reusable components for Claude Code that work across any project—regardless of language, framework, or domain. Skills and configurations that we want available everywhere.
-
-**Focus**: Claude Code exclusively. We work within `.claude/` directory.
-
-## Quick Install
+One command. Instant skills. Works everywhere.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
 ```
 
-Works on Linux, macOS, and Windows (Git Bash).
+- Windows Users: Install [Git for Windows](https://git-scm.com/download/win) which includes **Git Bash**. Run the install command from *Git Bash*, not PowerShell or CMD.
+- **Updating?** Run the same command. Your custom `CLAUDE.md` stays untouched.
 
-See [Installation Guide](docs/installation.md) for manual installation and options.
+## The Problem
 
-## Available Skills
+Every time you start a new project with Claude Code, you're back to zero. No commit conventions. No markdown validation. No security checks. You either spend time setting things up again, or you just don't bother.
 
-| Skill                  | Purpose                                                         |
-| ---------------------- | --------------------------------------------------------------- |
-| `/commit`              | Create well-structured git commits with conventional format     |
-| `/fixing-markdown`     | Validate and fix markdown formatting                            |
-| `/security-scan`       | Basic security scanning for exposed secrets and vulnerabilities |
-| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images                |
+If you work on multiple projects—or juggle client work across different repos—this friction adds up fast.
 
-## Project Structure
+## The Solution
+
+Agentic AI Palas gives you a portable set of skills that install in seconds and work in any project. Python, JavaScript, Rust, Go—doesn't matter. These are generic tools that help you work faster with Claude Code.
+
+**Perfect for:**
+
+- Developers starting with Claude Code who want useful defaults
+- Freelancers and consultants managing multiple client projects
+- Teams who want consistent Claude behavior across repositories
+
+## What You Get
+
+| Skill | What it does |
+|-------|--------------|
+| `/commit` | Consistent, well-formatted git commits every time |
+| `/fixing-markdown` | Catches and fixes markdown formatting issues |
+| `/security-scan` | Finds exposed secrets before they hit your repo |
+| `/removing-notebooklm` | Strips NotebookLM watermarks from PDFs and images |
+
+Just type the skill name in Claude Code:
 
 ```text
-agentic-ai-palas/
-├── .claude/                    # ← Gets installed to your projects
-│   ├── skills/                 # Skill definitions
-│   └── _tooling/               # Shared tools and configs
-├── docs/                       # Documentation (not installed)
-│   ├── installation.md
-│   ├── creating-skills.md
-│   └── architecture.md
-├── install/
-│   └── install.sh              # All platforms (bash)
-└── README.md
+/commit
+/fixing-markdown docs/
+/security-scan
 ```
 
 ## What Gets Installed
 
-When you run the installer on your project:
+```text
+your-project/
+└── .claude/
+    ├── skills/      # All the skills above
+    ├── _tooling/    # Shared configs and tools
+    └── CLAUDE.md    # Project instructions (only if missing)
+```
 
-| Component           | Installed          | Notes                               |
-| ------------------- | ------------------ | ----------------------------------- |
-| `.claude/skills/`   | ✅ Yes             | All skills                          |
-| `.claude/_tooling/` | ✅ Yes             | Shared tooling                      |
-| `.claude/CLAUDE.md` | ✅ Only if missing | Won't overwrite your customizations |
+Nothing outside `.claude/`. Your project structure stays clean.
 
 ## Documentation
 
-| Document                                   | Description                    |
-| ------------------------------------------ | ------------------------------ |
-| [Installation](docs/installation.md)       | Install, update, and uninstall |
-| [Creating Skills](docs/creating-skills.md) | How to create new skills       |
-| [Architecture](docs/architecture.md)       | Project structure and design   |
+| Guide | Description |
+|-------|-------------|
+| [Creating Skills](docs/creating-skills.md) | Build your own skills |
+| [Architecture](docs/architecture.md) | How it all fits together |
 
 ## Contributing
 
-1. Create skill in `.claude/skills/my-skill/SKILL.md`
+Have a skill that could help everyone?
+
+1. Create `.claude/skills/your-skill/SKILL.md`
 2. Follow the [skill format](docs/creating-skills.md)
-3. Update this README's skills table
-4. Run `/fixing-markdown` on new files
-5. Submit pull request
+3. Update the skills table above
+4. Submit a pull request
 
-## About Antigravity IDE
+## Extras: Antigravity Kit
 
-If you use [Antigravity IDE](https://github.com/vudovn/antigravity-kit), you can install [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/) to get additional agents and skills:
+If you use [Antigravity IDE](https://antigravity.google/) with both Claude and Gemini accounts, you can extend your setup with [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/):
 
 ```bash
-# Requires Node.js
 npx @vudovn/ag-kit init
 ```
 
-This creates a `.agent/` directory with 20+ specialist agents and 36+ skills. See the [official repository](https://github.com/vudovn/antigravity-kit) for documentation.
-
-**Important notes:**
-
-- `.agent/` is **git-ignored** — it won't pollute your commits
-- `.agent/` does **not conflict** with `.claude/` — they are independent systems
-- **Not required** — you don't need Antigravity IDE to use this project
-- `/fixing-markdown` is configured to ignore `.agent/` entirely
+This adds 20+ agents and 36+ skills in a separate `.agent/` directory. Completely optional and doesn't conflict with this toolkit.
