@@ -4,38 +4,18 @@ Install Agentic AI Palas skills and scripts into any project.
 
 ## Requirements
 
-- Git (to clone or download)
-- Bash (Linux/Mac) or PowerShell (Windows)
+- Git
+- Bash (Linux, macOS, or Git Bash on Windows)
+
+> Windows Users: Install [Git for Windows](https://git-scm.com/download/win) which includes **Git Bash**. Run the install command from *Git Bash*, not PowerShell or CMD.
 
 ## Quick Install
-
-### Linux / macOS
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
 ```
 
-Or download and run manually:
-
-```bash
-git clone https://github.com/Jacopalas/agentic-ai-palas.git /tmp/agentic-ai-palas
-bash /tmp/agentic-ai-palas/install/install.sh
-rm -rf /tmp/agentic-ai-palas
-```
-
-### Windows (PowerShell)
-
-```powershell
-irm https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.ps1 | iex
-```
-
-Or download and run manually:
-
-```powershell
-git clone https://github.com/Jacopalas/agentic-ai-palas.git $env:TEMP\agentic-ai-palas
-& $env:TEMP\agentic-ai-palas\install\install.ps1
-Remove-Item -Recurse -Force $env:TEMP\agentic-ai-palas
-```
+Works on Linux, macOS, and Windows (via Git Bash).
 
 ## What Gets Installed
 
@@ -72,11 +52,7 @@ your-project/
 Re-run the installer to update skills. Your custom `CLAUDE.md` will NOT be overwritten.
 
 ```bash
-# Linux/Mac
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
-
-# Windows
-irm https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.ps1 | iex
 ```
 
 ## Uninstalling

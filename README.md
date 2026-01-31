@@ -10,28 +10,22 @@ This repository contains generic, reusable components for Claude Code that work 
 
 ## Quick Install
 
-### Linux / macOS
-
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
 ```
 
-### Windows (PowerShell)
-
-```powershell
-irm https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.ps1 | iex
-```
+Works on Linux, macOS, and Windows (Git Bash).
 
 See [Installation Guide](docs/installation.md) for manual installation and options.
 
 ## Available Skills
 
-| Skill | Purpose |
-|-------|---------|
-| `/commit` | Create well-structured git commits with conventional format |
-| `/fixing-markdown` | Validate and fix markdown formatting |
-| `/security-scan` | Basic security scanning for exposed secrets and vulnerabilities |
-| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images |
+| Skill                  | Purpose                                                         |
+| ---------------------- | --------------------------------------------------------------- |
+| `/commit`              | Create well-structured git commits with conventional format     |
+| `/fixing-markdown`     | Validate and fix markdown formatting                            |
+| `/security-scan`       | Basic security scanning for exposed secrets and vulnerabilities |
+| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images                |
 
 ## Project Structure
 
@@ -45,9 +39,8 @@ agentic-ai-palas/
 │   ├── installation.md
 │   ├── creating-skills.md
 │   └── architecture.md
-├── install/                    # Installation scripts
-│   ├── install.sh              # Linux/macOS
-│   └── install.ps1             # Windows
+├── install/
+│   └── install.sh              # All platforms (bash)
 └── README.md
 ```
 
@@ -55,20 +48,20 @@ agentic-ai-palas/
 
 When you run the installer on your project:
 
-| Component | Installed | Notes |
-|-----------|-----------|-------|
-| `.claude/skills/` | ✅ Yes | All skills |
-| `.claude/scripts/` | ✅ Yes | Utility scripts |
-| `.claude/_tooling/` | ✅ Yes | Shared tooling |
+| Component           | Installed          | Notes                               |
+| ------------------- | ------------------ | ----------------------------------- |
+| `.claude/skills/`   | ✅ Yes             | All skills                          |
+| `.claude/scripts/`  | ✅ Yes             | Utility scripts                     |
+| `.claude/_tooling/` | ✅ Yes             | Shared tooling                      |
 | `.claude/CLAUDE.md` | ✅ Only if missing | Won't overwrite your customizations |
 
 ## Documentation
 
-| Document | Description |
-|----------|-------------|
-| [Installation](docs/installation.md) | Install, update, and uninstall |
-| [Creating Skills](docs/creating-skills.md) | How to create new skills |
-| [Architecture](docs/architecture.md) | Project structure and design |
+| Document                                   | Description                    |
+| ------------------------------------------ | ------------------------------ |
+| [Installation](docs/installation.md)       | Install, update, and uninstall |
+| [Creating Skills](docs/creating-skills.md) | How to create new skills       |
+| [Architecture](docs/architecture.md)       | Project structure and design   |
 
 ## Contributing
 

@@ -35,21 +35,21 @@ agentic-ai-palas/
 
 When you run the installer on a target project:
 
-| Source | Destination | Notes |
-|--------|-------------|-------|
-| `.claude/skills/` | `.claude/skills/` | All skills copied |
-| `.claude/scripts/` | `.claude/scripts/` | All scripts copied |
+| Source              | Destination         | Notes                 |
+| ------------------- | ------------------- | --------------------- |
+| `.claude/skills/`   | `.claude/skills/`   | All skills copied     |
+| `.claude/scripts/`  | `.claude/scripts/`  | All scripts copied    |
 | `.claude/_tooling/` | `.claude/_tooling/` | Shared tooling copied |
-| `.claude/CLAUDE.md` | `.claude/CLAUDE.md` | **Only if missing** |
+| `.claude/CLAUDE.md` | `.claude/CLAUDE.md` | **Only if missing**   |
 
 ## What Does NOT Get Installed
 
-| Directory | Reason |
-|-----------|--------|
-| `.agent/` | Antigravity Kit — optional tooling for Antigravity IDE users |
-| `docs/` | Documentation — reference from GitHub |
-| `install/` | Installation scripts — one-time use |
-| `.git/` | Git history — not needed |
+| Directory  | Reason                                                       |
+| ---------- | ------------------------------------------------------------ |
+| `.agent/`  | Antigravity Kit — optional tooling for Antigravity IDE users |
+| `docs/`    | Documentation — reference from GitHub                        |
+| `install/` | Installation scripts — one-time use                          |
+| `.git/`    | Git history — not needed                                     |
 
 ## About `.agent/` Directory
 
@@ -86,7 +86,7 @@ The installer creates a minimal `CLAUDE.md` only if one doesn't exist.
 
 ### 3. No External Dependencies for Installation
 
-Installation uses only bash (Linux/Mac) or PowerShell (Windows).
+Installation uses only bash (works on Linux, macOS, and Windows via Git Bash).
 
 **Why?** Projects shouldn't need Node.js/Python just to install the toolkit.
 
