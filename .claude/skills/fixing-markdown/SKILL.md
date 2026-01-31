@@ -27,7 +27,7 @@ Run `markdownlint-cli2` + `prettier` to auto-fix markdown formatting issues.
 
 ## Prerequisites
 
-**Run _initializing-environment first** to ensure Node.js environment is ready.
+**Run initializing-environment first** to ensure Node.js environment is ready.
 
 Tools required in `.claude/_tooling/node_modules/`:
 
@@ -126,7 +126,7 @@ prettier: formatted
 ## Behavior
 
 1. **Check argument**: If no target provided, show usage and exit
-2. **Run _initializing-environment**: Ensure Node.js environment is ready
+2. **Run initializing-environment**: Ensure Node.js environment is ready
 3. **Detect target type**: file or folder
 4. **Run markdownlint-cli2**: Fix structural issues
 5. **Run prettier**: Format visual appearance
@@ -135,4 +135,4 @@ prettier: formatted
 ## Notes
 
 - Config files: `.claude/_tooling/.markdownlint-cli2.jsonc`, `.claude/_tooling/.prettierrc`
-- Requires: Node.js environment (handled by _initializing-environment)
+- Requires: Node.js environment (handled by initializing-environment)

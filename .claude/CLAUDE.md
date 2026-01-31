@@ -14,6 +14,7 @@ Reusable components for AI-powered projects.
 | Skill | Purpose |
 |-------|---------|
 | `/fixing-markdown` | Validate and fix markdown formatting using markdownlint-cli2 and prettier |
+| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images |
 
 See [skills directory](./skills/) for full documentation.
 

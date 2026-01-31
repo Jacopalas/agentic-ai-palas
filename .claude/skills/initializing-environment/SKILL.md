@@ -1,5 +1,5 @@
 ---
-name: _initializing-environment
+name: initializing-environment
 description: Internal skill to initialize Python and Node.js environments. Called by other skills before execution. Not user-invokable.
 metadata:
   skillport:
@@ -15,10 +15,10 @@ Ensures Python and Node.js virtual environments are ready before running depende
 
 This skill is called internally by other skills. It is NOT user-invokable.
 
-When another skill needs dependencies, call `_initializing-environment` first:
+When another skill needs dependencies, call `initializing-environment` first:
 
 ```text
-1. Run _initializing-environment checks
+1. Run initializing-environment checks
 2. If checks pass, proceed with the skill
 3. If checks fail, show error and exit
 ```
@@ -69,17 +69,17 @@ fi
 python -m venv .claude/_tooling/.venv
 
 # Install requirements
-.claude/_tooling/.venv\Scripts\pip.exe install -r .claude/_tooling/requirements.txt
+.claude/_tooling/.venv/Scripts/pip.exe install -r .claude/_tooling/requirements.txt
 
 # Verify installation
-.claude/_tooling/.venv\Scripts\pip.exe show Pillow pymupdf opencv-python
+.claude/_tooling/.venv/Scripts/pip.exe show Pillow pymupdf opencv-python
 ```
 
 ### Node.js Setup
 
 ```bash
 # Install dependencies
-"C:\Program Files\nodejs\npm.cmd" install --prefix .claude/_tooling
+npm install --prefix .claude/_tooling
 
 # Verify installation
 node .claude/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --help

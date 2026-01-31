@@ -15,6 +15,7 @@ Custom Claude Code commands and extensions:
 | Skill | Purpose | Location |
 |-------|---------|----------|
 | `/fixing-markdown` | Validate and fix markdown formatting | [`.claude/skills/fixing-markdown`](./.claude/skills/fixing-markdown) |
+| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images | [`.claude/skills/removing-notebooklm`](./.claude/skills/removing-notebooklm) |
 
 ### Agents
 
@@ -46,6 +47,7 @@ Available in [`/contents`](./contents)
 ├── .claude/                 # Claude Code skills and tools
 │   ├── skills/              # Available skills (SKILL.md format)
 │   │   ├── fixing-markdown/
+│   │   ├── removing-notebooklm/
 │   │   └── [new-skills]/
 │   └── scripts/             # Utility scripts
 ├── agents/                  # Autonomous agents
