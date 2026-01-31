@@ -80,4 +80,4 @@ If you use [Antigravity IDE](https://antigravity.google/) with both Claude and G
 npx @vudovn/ag-kit init
 ```
 
-This adds 20+ agents and 36+ skills in a separate `.agent/` directory. Completely optional, valid only for Antigravity and doesn't conflict with this toolkit.
+This adds 20+ agents and 36+ skills in a separate `.agent/` directory. Completely optional and doesn't conflict with this toolkit.
