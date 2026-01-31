@@ -1,81 +1,83 @@
 # Agentic AI Palas
 
-A collaborative collection of reusable skills, agents, scripts, and templates for AI-powered projects using Claude Code, Antigravity, and other AI platforms.
+A portable toolkit of skills and scripts for Claude Code. Install once, use in any project.
 
 ## Purpose
 
-We're building a shared toolkit that extends the capabilities of Claude Code and other AI tools. This project contains production-ready components—skills, agents, automation scripts, and templates—that we develop, test, and refine for use across different projects.
+This repository contains generic, reusable components for Claude Code that work across any project—regardless of language, framework, or domain. Skills, scripts, and configurations that we want available everywhere.
 
-## What's Available
+**Focus**: Claude Code exclusively. We work within `.claude/` directory.
 
-### Skills
+## Quick Install
 
-Custom Claude Code commands and extensions:
+### Linux / macOS
 
-| Skill | Purpose | Location |
-|-------|---------|----------|
-| `/fixing-markdown` | Validate and fix markdown formatting | [`.claude/skills/fixing-markdown`](./.claude/skills/fixing-markdown) |
-| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images | [`.claude/skills/removing-notebooklm`](./.claude/skills/removing-notebooklm) |
+```bash
+curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
+```
 
-### Agents
+### Windows (PowerShell)
 
-Autonomous tools for specific workflows:
+```powershell
+irm https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.ps1 | iex
+```
 
-*(Coming soon)*
+See [Installation Guide](docs/installation.md) for manual installation and options.
 
-### Scripts
+## Available Skills
 
-Utility scripts and automation:
-
-Available in [`.claude/scripts`](./.claude/scripts)
-
-### Templates & Resources
-
-Reusable templates, configurations, and documentation resources:
-
-Available in [`/contents`](./contents)
-
-## Quick Start
-
-1. **Browse components**: Explore the skills, agents, or scripts directories
-2. **Read documentation**: Each component includes a detailed README or SKILL.md
-3. **Use or integrate**: Follow setup instructions to use in your projects
+| Skill | Purpose |
+|-------|---------|
+| `/commit` | Create well-structured git commits with conventional format |
+| `/fixing-markdown` | Validate and fix markdown formatting |
+| `/security-scan` | Basic security scanning for exposed secrets and vulnerabilities |
+| `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images |
 
 ## Project Structure
 
+```text
+agentic-ai-palas/
+├── .claude/                    # ← Gets installed to your projects
+│   ├── skills/                 # Skill definitions
+│   ├── scripts/                # Utility scripts
+│   └── _tooling/               # Shared tools and configs
+├── docs/                       # Documentation (not installed)
+│   ├── installation.md
+│   ├── creating-skills.md
+│   └── architecture.md
+├── install/                    # Installation scripts
+│   ├── install.sh              # Linux/macOS
+│   └── install.ps1             # Windows
+└── README.md
 ```
-├── .claude/                 # Claude Code skills and tools
-│   ├── skills/              # Available skills (SKILL.md format)
-│   │   ├── fixing-markdown/
-│   │   ├── removing-notebooklm/
-│   │   └── [new-skills]/
-│   └── scripts/             # Utility scripts
-├── agents/                  # Autonomous agents
-├── scripts/                 # General utility scripts
-├── contents/                # Templates and resources
-├── README.md                # This file (overview & available components)
-└── .claude/CLAUDE.md        # Claude integration guide
-```
 
-## Contributing
+## What Gets Installed
 
-This is a collaborative project. When adding new components:
+When you run the installer on your project:
 
-1. Follow the component-specific structure (see [`.claude/CLAUDE.md`](./.claude/CLAUDE.md))
-2. Write clear documentation with examples
-3. Keep components modular and reusable
-4. Write all documentation in English
-5. **Update this README** with the new component in the "What's Available" section
-6. Submit a pull request
+| Component | Installed | Notes |
+|-----------|-----------|-------|
+| `.claude/skills/` | ✅ Yes | All skills |
+| `.claude/scripts/` | ✅ Yes | Utility scripts |
+| `.claude/_tooling/` | ✅ Yes | Shared tooling |
+| `.claude/CLAUDE.md` | ✅ Only if missing | Won't overwrite your customizations |
 
 ## Documentation
 
-- [Claude Integration Guide](./.claude/CLAUDE.md) — Setup and component structure
-- [Skills Guide](./skills/README.md) — How to create and use skills
-- [Agents Guide](./agents/README.md) — How to create and use agents
-- [Scripts Guide](./scripts/README.md) — How to create and use scripts
-- [Contents Guide](./contents/README.md) — Templates and resources
+| Document | Description |
+|----------|-------------|
+| [Installation](docs/installation.md) | Install, update, and uninstall |
+| [Creating Skills](docs/creating-skills.md) | How to create new skills |
+| [Architecture](docs/architecture.md) | Project structure and design |
 
----
+## Contributing
 
-**Note**: This README serves as the main entry point. Each component has detailed documentation in its own directory.
+1. Create skill in `.claude/skills/my-skill/SKILL.md`
+2. Follow the [skill format](docs/creating-skills.md)
+3. Update this README's skills table
+4. Run `/fixing-markdown` on new files
+5. Submit pull request
+
+## Internal Note
+
+This repository uses [Antigravity Kit](https://github.com/vudovn/antigravity-kit) (`.agent/` directory) for its own development. The `.agent/` directory is **not** installed to target projects—it's for internal use only.

@@ -1,76 +1,59 @@
 # Agentic AI Palas
 
-Reusable components for AI-powered projects.
+Portable toolkit of skills and scripts for Claude Code.
 
-## Components
+## Purpose
 
-| Component | Location | Purpose |
-|-----------|----------|---------|
-| **Skills** | `.claude/skills` | Custom Claude Code commands |
-| **Scripts** | `.claude/scripts` | Utility automation |
+This repository provides generic, reusable components for Claude Code that work in any project. We focus exclusively on `.claude/` directory—skills, scripts, and configurations.
 
 ## Available Skills
 
 | Skill | Purpose |
 |-------|---------|
-| `/fixing-markdown` | Validate and fix markdown formatting using markdownlint-cli2 and prettier |
+| `/commit` | Create well-structured git commits with conventional format |
+| `/fixing-markdown` | Validate and fix markdown formatting |
+| `/security-scan` | Basic security scanning for exposed secrets |
 | `/removing-notebooklm` | Remove NotebookLM watermark from PDFs and images |
 
-See [skills directory](./skills/) for full documentation.
+## Project Structure
 
-## Quick Start
+```text
+.claude/
+├── skills/                 # Skill definitions (SKILL.md format)
+│   ├── commit/
+│   ├── fixing-markdown/
+│   ├── initializing-environment/
+│   ├── removing-notebooklm/
+│   └── security-scan/
+├── scripts/                # Utility scripts
+└── _tooling/               # Shared tools and configs
+```
 
-1. Navigate to the component directory
-2. Follow the component's README for setup
-3. Integrate into your project
+## Creating New Skills
 
-**Requirements**:
-- Follow component-specific structure
-- Include documentation with examples
-- Write in English
-- Keep components modular and reusable
+1. Create directory: `.claude/skills/my-skill/`
+2. Add `SKILL.md` with frontmatter and instructions
+3. Follow format in [docs/creating-skills.md](../docs/creating-skills.md)
+4. Update [README.md](../README.md) skills table
+5. Run `/fixing-markdown .claude/skills/my-skill/SKILL.md`
 
 ## Documentation Quality
 
-**After creating or updating ANY markdown file**, validate and fix formatting:
+After creating or updating markdown files, validate formatting:
 
-```bash
+```text
 /fixing-markdown <file-or-folder>
 ```
 
-**Examples:**
-```bash
-/fixing-markdown README.md
-/fixing-markdown .claude/CLAUDE.md
-/fixing-markdown .
-```
+## Internal Development
 
-Use `/fixing-markdown` on:
-- ✅ README.md (after any update)
-- ✅ CLAUDE.md (after any update)
-- ✅ Component README files
-- ✅ SKILL.md files
-- ✅ Any other markdown documentation
+This repo uses [Antigravity Kit](https://github.com/vudovn/antigravity-kit) (`.agent/` directory) for development. The `.agent/` directory is **not distributed** to target projects.
 
-This ensures consistent formatting, proper spacing, and adherence to markdown standards.
+## Installation Scripts
 
----
+The `install/` directory contains installation scripts:
 
-## Contributing
+- `install.sh` — Linux/macOS
+- `install.ps1` — Windows PowerShell
 
-### Before Adding a New Skill or Agent
-
-1. Create component following structure in respective README:
-   - Skills: See [`skills/README.md`](../skills/README.md#creating-a-new-skill)
-   - Agents: See [`agents/README.md`](../agents/README.md#creating-a-new-agent)
-
-2. **After creation, update [`../README.md`](../README.md)**
-   - Add entry to "Skills" or "Agents" table in the "What's Available" section
-   - Include name, purpose, and location link
-
-3. **Run markdown validation** (see "Documentation Quality" section above)
-   ```bash
-   /fixing-markdown README.md
-   ```
-
-**This keeps the project overview accurate and formatting consistent for all collaborators.**
+These scripts copy `.claude/skills/`, `.claude/scripts/`, and `.claude/_tooling/` to target projects. They create a minimal `CLAUDE.md` only if one doesn't exist.
