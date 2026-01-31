@@ -2,6 +2,8 @@
 
 **Stop configuring Claude Code from scratch on every project.**
 
+![Agentic AI Palas Overview](docs/infographic.svg)
+
 One command. Instant skills. Works everywhere.
 
 ```bash
@@ -74,7 +76,7 @@ Have a skill that could help everyone?
 
 ## Extras: Antigravity Kit
 
-If you use [Antigravity IDE](https://antigravity.google/) with both Claude and Gemini accounts, you can extend your setup with [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/):
+If you use [Antigravity](https://antigravity.google/) as your main IDE and you have a Claude account and using it simultaneously (together with Gemini), you can extend your setup with [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/):
 
 ```bash
 npx @vudovn/ag-kit init
