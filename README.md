@@ -18,7 +18,7 @@ Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básic
 * 🧩 **Plugins:** Son extensiones que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
 * 🛠️ **Habilidades (Skills):** Son las tareas específicas que Palas añade a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
 
-## Para Usuarios Nuevos
+## Para usuarios nuevos
 
 ¿Empezando de cero? Si tienes el efecto "papel en blanco" y tu carpeta está vacía, este comando te crea una configuración mínima:
 
@@ -69,7 +69,7 @@ claude
 /plugin install palas@palas
 ```
 
-### Instalación Directa
+### Instalación directa
 
 ```shell
 # Clonar y cargar directamente
@@ -77,9 +77,11 @@ git clone https://github.com/Jacopalas/agentic-ai-palas.git
 claude --plugin-dir ./agentic-ai-palas
 ```
 
-## Habilidades Disponibles
+## Habilidades disponibles
 
-### Herramientas Genéricas
+### Herramientas genéricas
+
+Hemos empezado con un conjunto pequeño, de momento, de habilidades genericas.
 
 | Habilidad | Comando | Descripción |
 |-----------|---------|-------------|
@@ -88,9 +90,9 @@ claude --plugin-dir ./agentic-ai-palas
 | Seguridad | `/palas:security-scan` | Escanear secretos expuestos y vulnerabilidades |
 | Watermark | `/palas:removing-notebooklm` | Eliminar marcas de agua de NotebookLM en PDFs/imágenes |
 
-### Habilidades de Dominio (Roadmap)
+### Habilidades especializadas (Roadmap)
 
-Estamos construyendo habilidades para dominios de negocio:
+Estamos pensando en estas habilidades especializadas de negocio:
 
 | Dominio | Ejemplos |
 |---------|----------|
