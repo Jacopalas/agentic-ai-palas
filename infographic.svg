@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 425">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0" style="stop-color:#1a1a2e"/>
@@ -9,58 +9,42 @@
       <stop offset="0" style="stop-color:#e94560"/>
       <stop offset="1" style="stop-color:#ff6b6b"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0" style="stop-color:#e94560;stop-opacity:0.3"/>
-      <stop offset="1" style="stop-color:#e94560;stop-opacity:0"/>
-    </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="800" height="450" fill="url(#bg)"/>
-
-  <!-- Title -->
-  <text x="400" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="bold">Palas</text>
-  <text x="400" y="80" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="16">Claude Code Plugin</text>
-
-  <!-- Tagline -->
-  <text x="400" y="120" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Install once. Use everywhere.</text>
-
-  <!-- Central concept: Plugin -->
-  <g filter="url(#shadow)">
-    <rect x="300" y="150" width="200" height="80" rx="12" fill="#1f2937"/>
-    <rect x="300" y="150" width="200" height="4" rx="2" fill="url(#accent)"/>
+  <rect width="540" height="425" fill="url(#bg)" style="" x="0.01"/>
+  <text x="270.01" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" style="white-space: pre; font-size: 32px;">Palas</text>
+  <text x="270.01" y="80" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="16" style="white-space: pre; font-size: 16px;">Claude Code Plugin</text>
+  <text x="272.43" y="104.029" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" style="white-space: pre; font-size: 14px;">Install once. Use everywhere.</text>
+  <g transform="matrix(1, 0, 0, 1, -129.989443, 0)">
+    <g filter="url(#shadow)" transform="matrix(0.703681, 0, 0, 1, 118.527658, -26.836491)" style="">
+      <rect x="300" y="150" width="200" height="80" rx="12" fill="#1f2937"/>
+      <rect x="300" y="150" width="200" height="4" rx="2" fill="url(#accent)"/>
+    </g>
+    <text x="400" y="158.164" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" style="white-space: pre; font-size: 16px;">palas plugin</text>
+    <text x="400" y="183.164" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Portable skills toolkit</text>
+    <g style="" transform="matrix(1, 0, 0, 0.673665, 0, 69.562814)">
+      <path d="M 350 213.164 L 223.241 274.841" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+      <path d="M 400.001 213.164 L 400.001 273.164" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4" style=""/>
+      <path d="M 450 213.164 L 573.404 273.164" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+    </g>
+    <g filter="url(#shadow)" transform="matrix(0.811306, 0, 0, 1, 99.86799, -48.641091)" style="">
+      <rect x="70" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
+    </g>
+    <text x="221.564" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">your-web-app/</text>
+    <text x="221.564" y="311.359" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10" style="white-space: pre; font-size: 10px;">TypeScript • Next • API</text>
+    <g filter="url(#shadow)" transform="matrix(0.860227, 0, 0, 1, 55.909322, -48.641091)" style="">
+      <rect x="320" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
+    </g>
+    <text x="400" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">your-bizz-project/</text>
+    <text x="400" y="311.359" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10" style="white-space: pre; font-size: 10px;">Customer • Sales • Ops</text>
+    <g filter="url(#shadow)" transform="matrix(0.783351, 0, 0, 1, 69.257585, -48.641091)" style="">
+      <rect x="570" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
+    </g>
+    <text x="578.436" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">your-learning/</text>
+    <text x="578.436" y="311.359" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10" style="white-space: pre; font-size: 10px;">Plan • Notes • Research</text>
+    <rect x="199.441" y="347.973" width="400" height="3" rx="1.5" fill="url(#accent)"/>
+    <text x="400" y="380.209" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Same skills • Any project • Zero configuration</text>
   </g>
-  <text x="400" y="185" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">palas plugin</text>
-  <text x="400" y="210" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12">Portable skills toolkit</text>
-
-  <!-- Arrows from plugin to projects -->
-  <path d="M 350 240 L 150 300" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
-  <path d="M 400 240 L 400 300" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
-  <path d="M 450 240 L 650 300" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
-
-  <!-- Project boxes -->
-  <g filter="url(#shadow)">
-    <rect x="70" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
-  </g>
-  <text x="150" y="340" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11">your-web-app/</text>
-  <text x="150" y="360" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10">TypeScript • Next • API</text>
-
-  <g filter="url(#shadow)">
-    <rect x="320" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
-  </g>
-  <text x="400" y="340" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11">your-bizz-project/</text>
-  <text x="400" y="360" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10">Customer • Sales • Ops</text>
-
-  <g filter="url(#shadow)">
-    <rect x="570" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
-  </g>
-  <text x="650" y="340" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11">your-learning/</text>
-  <text x="650" y="360" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10">Plan • Notes • Research</text>
-
-  <!-- Bottom message -->
-  <rect x="200" y="405" width="400" height="3" rx="1.5" fill="url(#accent)"/>
-  <text x="400" y="435" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12">Same skills • Any project • Zero configuration</text>
 </svg>
