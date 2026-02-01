@@ -20,6 +20,24 @@ Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básic
 
 ## Instalación
 
+Primero sitúate en el proyecto en el que vas a trabajar:
+
+**Opción A — Línea de comando:**
+
+```bash
+# Abre una terminal y navega a tu proyecto
+cd ~/Documentos/mi-proyecto
+
+# Inicia Claude Code
+claude
+```
+
+**Opción B — Desde un IDE (VS Code, Cursor, etc.):**
+
+1. Abre tu proyecto en el IDE
+2. Abre el panel de Claude Code (normalmente en la barra lateral)
+3. Claude ya estará en el contexto de tu proyecto
+
 ### Desde el Marketplace (Recomendado)
 
 ```shell
