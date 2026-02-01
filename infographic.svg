@@ -15,7 +15,7 @@
   </defs>
   <rect width="540" height="425" fill="url(#bg)" style="" x="0.01"/>
   <text x="270.01" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" style="white-space: pre; font-size: 32px;">Palas</text>
-  <text x="270.01" y="80" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="16" style="white-space: pre; font-size: 16px;">Claude Code Plugin</text>
+  <text x="270.01" y="80" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="16" style="white-space: pre; font-size: 16px;">Plugin para Claude Code</text>
   <text x="272.43" y="104.029" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" style="white-space: pre; font-size: 14px;">Instálalo una vez y úsalo en todos lados.</text>
   <g transform="matrix(1, 0, 0, 1, -129.989443, 0)">
     <g filter="url(#shadow)" transform="matrix(0.703681, 0, 0, 1, 118.527658, -26.836491)" style="">

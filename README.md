@@ -152,6 +152,20 @@ Lee el documento [CONTRIBUIR.md](CONTRIBUIR.md) donde explico guías e ideas de 
 
 Este plugin se distribuye a través del repositorio [palas-marketplace](https://github.com/Jacopalas/palas-marketplace).
 
+## Extras: Antigravity Kit
+
+Si además de Claude, utilizas como ID [Antigravity](https://antigravity.google/), vas a trabajar con dos superpoderes a la vez, tendrás la opción de tener ambos becarios. Cada uno con sus capacidades y habilidades. Solo si usas Antigravity, hay un kit muy bueno que te recomiendo, se trata de [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/). Puedes instalarlo en paralelo así:
+
+```bash
+# Dede la terminal
+cd ~/Documentos/mi-proyecto
+
+# Instala ek Antigravity Kit 2.0
+npx @vudovn/ag-kit init
+```
+
+Añade más de 20 agentes y más 36 habilidades (Skills) a tu entorno, en el directorio raíz `.agent/`. Es completamente opcional, independiente y no entra en conflicto con el Plugin o Skills de Claude.
+
 ## Licencia
 
-MIT
+Usamos la licencia [MIT](./LICENSE), ampliamente conocida por ser una licencia de software de código abierto (open source) permisiva, ampliamente utilizada y reconocida por ser no restrictiva.
