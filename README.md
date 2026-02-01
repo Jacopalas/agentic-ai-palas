@@ -1,111 +1,122 @@
-# Palas — Claude Code Plugin
+# Palas — Plugin para Claude Code
 
-![Agentic AI Palas Overview](./infographic.svg)
+![Palas Overview](./infographic.svg)
 
-**AI skills for your business, not just your code.**
+**Habilidades de IA para tu negocio, no solo para tu código.**
 
-A Claude Code plugin focused on **generic tools** and **domain-specific skills** for small and medium businesses. While most plugins target developers, Palas helps everyone—from operations to finance to marketing.
+Un plugin de Claude Code enfocado en **herramientas genéricas** y **habilidades de dominio** para pequeñas y medianas empresas. Mientras la mayoría de plugins se enfocan en desarrolladores, Palas ayuda a todos—desde operaciones hasta finanzas y marketing.
 
-## Why Palas?
+## ¿Por qué Palas?
 
-Most Claude Code plugins focus on software development. Palas is different:
+La mayoría de plugins de Claude Code se enfocan en desarrollo de software. Palas es diferente:
 
-- **Generic tools** that work in any project (commits, markdown, security)
-- **Domain skills** for business functions (finance, HR, marketing, sales)
-- **SMB-friendly** — practical tools for small teams without dedicated IT
+- **Herramientas genéricas** que funcionan en cualquier proyecto (commits, markdown, seguridad)
+- **Habilidades de dominio** para funciones de negocio (finanzas, RRHH, marketing, ventas)
+- **Para PYMEs** — herramientas prácticas para equipos pequeños sin IT dedicado
 
-## Installation
+## Instalación
 
-### From Marketplace (Recommended)
+### Desde el Marketplace (Recomendado)
 
 ```shell
-# Add the marketplace (one time)
+# Añadir el marketplace (una sola vez)
 /plugin marketplace add Jacopalas/palas-marketplace
 
-# Install the plugin
+# Instalar el plugin
 /plugin install palas@palas
 ```
 
-### Direct Installation
+### Instalación Directa
 
 ```shell
-# Clone and load directly
+# Clonar y cargar directamente
 git clone https://github.com/Jacopalas/agentic-ai-palas.git
 claude --plugin-dir ./agentic-ai-palas
 ```
 
-## Available Skills
+## Habilidades Disponibles
 
-### Generic Tools
+### Herramientas Genéricas
 
-| Skill | Command | Description |
-|-------|---------|-------------|
-| Commit | `/palas:commit` | Create well-formatted conventional git commits |
-| Markdown | `/palas:fixing-markdown` | Validate and auto-fix markdown formatting |
-| Security | `/palas:security-scan` | Scan for exposed secrets and vulnerabilities |
-| Watermark | `/palas:removing-notebooklm` | Remove NotebookLM watermarks from PDFs/images |
+| Habilidad | Comando | Descripción |
+|-----------|---------|-------------|
+| Commit | `/palas:commit` | Crear commits de git bien formateados |
+| Markdown | `/palas:fixing-markdown` | Validar y corregir formato de markdown |
+| Seguridad | `/palas:security-scan` | Escanear secretos expuestos y vulnerabilidades |
+| Watermark | `/palas:removing-notebooklm` | Eliminar marcas de agua de NotebookLM en PDFs/imágenes |
 
-### Domain Skills (Roadmap)
+### Habilidades de Dominio (Roadmap)
 
-We're building skills for business domains:
+Estamos construyendo habilidades para dominios de negocio:
 
-| Domain | Examples |
-|--------|----------|
-| **Finance** | Invoice review, budget analysis, expense reports |
-| **Marketing** | SEO content review, social posts, newsletters |
-| **HR** | Job descriptions, onboarding checklists, policies |
-| **Sales** | Proposals, follow-up emails, meeting notes |
-| **Legal** | Contract review, compliance checklists, NDAs |
+| Dominio | Ejemplos |
+|---------|----------|
+| **Finanzas** | Revisión de facturas, análisis de presupuestos, informes de gastos |
+| **Marketing** | Revisión SEO de contenido, posts para redes, newsletters |
+| **RRHH** | Descripciones de puesto, checklists de onboarding, políticas |
+| **Ventas** | Propuestas comerciales, emails de seguimiento, notas de reuniones |
+| **Legal** | Revisión de contratos, checklists de cumplimiento, NDAs |
 
-Want to contribute a domain skill? See [CONTRIBUTING.md](CONTRIBUTING.md).
+¿Quieres contribuir una habilidad de dominio? Ver [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Usage Examples
+## Ejemplos de Uso
 
 ```text
 /palas:commit
--> Analyzes staged changes and creates a conventional commit
+-> Analiza cambios staged y crea un commit convencional
 
 /palas:fixing-markdown docs/
--> Fixes markdown formatting in all files under docs/
+-> Corrige formato markdown en todos los archivos de docs/
 
 /palas:security-scan
--> Scans current directory for exposed secrets
+-> Escanea el directorio actual buscando secretos expuestos
 ```
 
-## Requirements
+## Requisitos
 
-- **Claude Code** v1.0.33 or later
-- **Node.js** (for markdown linting) — installed on first use
-- **Python 3** (for watermark removal) — installed on first use
+- **Claude Code** v1.0.33 o posterior
+- **Node.js** (para linting de markdown) — se instala en el primer uso
+- **Python 3** (para eliminar watermarks) — se instala en el primer uso
 
-Dependencies are installed automatically in isolated environments. No pollution of your project or system.
+Las dependencias se instalan automáticamente en entornos aislados. Sin contaminar tu proyecto o sistema.
 
-## Optional for new users
+## Nota sobre Idiomas
 
-If you don't have a `.claude/CLAUDE.md` in your project yet:
+> **¿Por qué las instrucciones internas están en inglés?**
+>
+> Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
+> - El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
+> - La **documentación y ejemplos** (lo que tú lees) está en español
+> - Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
+>
+> Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
+
+## Para Usuarios Nuevos
+
+Si no tienes un `.claude/CLAUDE.md` en tu proyecto:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-**Windows users**: Run from Git Bash, not PowerShell or CMD.
+**Usuarios de Windows**: Ejecutar desde Git Bash, no PowerShell o CMD.
 
-## Contributing
+## Contribuir
 
-We welcome contributions, especially:
+Bienvenidas las contribuciones, especialmente:
 
-- **Generic tools** you use daily across projects
-- **Domain skills** for business functions (finance, HR, marketing, legal, sales)
-- **SMB workflows** that help small teams work smarter
+- **Herramientas genéricas** que uses a diario en tus proyectos
+- **Habilidades de dominio** para funciones de negocio (finanzas, RRHH, marketing, legal, ventas)
+- **Flujos de trabajo para PYMEs** que ayuden a equipos pequeños a trabajar mejor
 
-This project intentionally avoids competing with developer-focused plugins. Our niche is **business users** and **domain experts** who use Claude Code.
+Este proyecto evita intencionalmente competir con plugins enfocados en desarrolladores. Nuestro nicho son los **usuarios de negocio** y **expertos de dominio** que usan Claude Code.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and skill ideas.
+Ver [CONTRIBUTING.md](CONTRIBUTING.md) para guías e ideas de habilidades.
 
 ## Marketplace
 
-This plugin is distributed via the [palas-marketplace](https://github.com/Jacopalas/palas-marketplace) repository.
+Este plugin se distribuye a través del repositorio [palas-marketplace](https://github.com/Jacopalas/palas-marketplace).
 
-## License
+## Licencia
 
 MIT

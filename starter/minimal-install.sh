@@ -1,78 +1,78 @@
 #!/usr/bin/env bash
 #
-# Palas Plugin - Minimal Project Setup
-# Creates a basic .claude/CLAUDE.md for projects without one
+# Palas Plugin - Configuración Mínima de Proyecto
+# Crea un .claude/CLAUDE.md básico para proyectos sin uno
 #
-# Usage:
+# Uso:
 #   curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 #
 
 set -e
 
-# Colors for output
+# Colores para salida
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+NC='\033[0m' # Sin color
 
 echo ""
-echo "Palas Plugin - Minimal Project Setup"
-echo "====================================="
+echo "Palas Plugin - Configuración Mínima de Proyecto"
+echo "================================================"
 echo ""
 
-# Check if .claude directory exists
+# Verificar si existe el directorio .claude
 if [ -d ".claude" ]; then
-    echo -e "${YELLOW}Warning: .claude/ directory already exists${NC}"
+    echo -e "${YELLOW}Aviso: El directorio .claude/ ya existe${NC}"
 
     if [ -f ".claude/CLAUDE.md" ]; then
-        echo -e "${YELLOW}CLAUDE.md already exists. Skipping to avoid overwriting.${NC}"
+        echo -e "${YELLOW}CLAUDE.md ya existe. Omitiendo para evitar sobrescribirlo.${NC}"
         echo ""
-        echo "To use the palas plugin, run in Claude Code:"
+        echo "Para usar el plugin palas, ejecuta en Claude Code:"
         echo "  /plugin marketplace add Jacopalas/palas-marketplace"
         echo "  /plugin install palas@palas"
         exit 0
     fi
 else
     mkdir -p .claude
-    echo -e "${GREEN}Created .claude/ directory${NC}"
+    echo -e "${GREEN}Directorio .claude/ creado${NC}"
 fi
 
-# Create minimal CLAUDE.md
+# Crear CLAUDE.md mínimo
 cat > .claude/CLAUDE.md << 'EOF'
-# Project Instructions
+# Instrucciones del Proyecto
 
-## Available Skills (via palas plugin)
+## Habilidades Disponibles (via plugin palas)
 
-Install the palas plugin to get these skills:
+Instala el plugin palas para obtener estas habilidades:
 
 ```shell
 /plugin marketplace add Jacopalas/palas-marketplace
 /plugin install palas@palas
 ```
 
-### Skills
+### Habilidades
 
-- `/palas:commit` — Create well-structured git commits with conventional format
-- `/palas:fixing-markdown` — Validate and fix markdown formatting
-- `/palas:security-scan` — Scan for exposed secrets and vulnerabilities
-- `/palas:removing-notebooklm` — Remove watermarks from PDFs and images
+- `/palas:commit` — Crear commits de git bien estructurados con formato convencional
+- `/palas:fixing-markdown` — Validar y corregir formato de markdown
+- `/palas:security-scan` — Escanear secretos expuestos y vulnerabilidades
+- `/palas:removing-notebooklm` — Eliminar marcas de agua de PDFs e imágenes
 
-## Project-Specific Notes
+## Notas del Proyecto
 
-<!-- Add your project instructions here -->
-<!-- Examples: -->
-<!-- - Project uses Python 3.11 with uv for dependency management -->
-<!-- - Run tests with: pytest tests/ -->
-<!-- - Build with: npm run build -->
+<!-- Añade aquí las instrucciones de tu proyecto -->
+<!-- Ejemplos: -->
+<!-- - El proyecto usa Python 3.11 con uv para gestión de dependencias -->
+<!-- - Ejecutar tests con: pytest tests/ -->
+<!-- - Compilar con: npm run build -->
 
 EOF
 
-echo -e "${GREEN}Created .claude/CLAUDE.md${NC}"
+echo -e "${GREEN}Archivo .claude/CLAUDE.md creado${NC}"
 echo ""
-echo "Next steps:"
-echo "  1. Open Claude Code in this directory"
-echo "  2. Run: /plugin marketplace add Jacopalas/palas-marketplace"
-echo "  3. Run: /plugin install palas@palas"
-echo "  4. Edit .claude/CLAUDE.md to add your project-specific instructions"
+echo "Siguientes pasos:"
+echo "  1. Abre Claude Code en este directorio"
+echo "  2. Ejecuta: /plugin marketplace add Jacopalas/palas-marketplace"
+echo "  3. Ejecuta: /plugin install palas@palas"
+echo "  4. Edita .claude/CLAUDE.md para añadir las instrucciones de tu proyecto"
 echo ""
-echo -e "${GREEN}Done!${NC}"
+echo -e "${GREEN}¡Listo!${NC}"

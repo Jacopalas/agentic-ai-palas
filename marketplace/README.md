@@ -1,38 +1,38 @@
 # Palas Marketplace
 
-Official marketplace for the Palas plugin toolkit.
+Marketplace oficial del plugin Palas.
 
-## Installation
+## Instalación
 
-Add this marketplace to Claude Code:
+Añade este marketplace a Claude Code:
 
 ```shell
 /plugin marketplace add Jacopalas/palas-marketplace
 ```
 
-## Available Plugins
+## Plugins Disponibles
 
-| Plugin | Description |
+| Plugin | Descripción |
 |--------|-------------|
-| `palas` | Portable toolkit with skills for commits, markdown, security, and watermarks |
+| `palas` | Toolkit portátil con habilidades para commits, markdown, seguridad y watermarks |
 
-## Install a Plugin
+## Instalar un Plugin
 
 ```shell
 /plugin install palas@palas
 ```
 
-## Usage
+## Uso
 
-After installation, use the skills in any project:
+Después de instalar, usa las habilidades en cualquier proyecto:
 
 ```text
-/palas:commit              # Create conventional git commits
-/palas:fixing-markdown     # Fix markdown formatting
-/palas:security-scan       # Scan for secrets
-/palas:removing-notebooklm # Remove watermarks
+/palas:commit              # Crear commits de git convencionales
+/palas:fixing-markdown     # Corregir formato markdown
+/palas:security-scan       # Escanear secretos
+/palas:removing-notebooklm # Eliminar marcas de agua
 ```
 
-## License
+## Licencia
 
 MIT
