@@ -1,24 +1,49 @@
 # Contributing to Palas
 
-Thanks for wanting to contribute! This plugin provides portable skills for Claude Code users.
+Thanks for wanting to contribute! Palas focuses on **generic tools** and **domain-specific skills** for small and medium businesses.
+
+## Our Focus
+
+Most Claude Code plugins target developers. We're different:
+
+- **Generic tools** — Useful across any project (commits, formatting, security)
+- **Domain skills** — Business functions like finance, HR, marketing, sales, legal
+- **SMB-friendly** — Practical tools for small teams without dedicated IT
 
 ## What We're Looking For
 
-### Skills
+### Generic Tools
 
-Reusable skills that work across any project:
+Skills that work in any project:
 
-- **Developer workflows**: Git operations, code review, refactoring
-- **Documentation**: Markdown, API docs, READMEs
-- **Quality**: Linting, formatting, testing helpers
-- **Security**: Scanning, auditing, compliance checks
-- **Utilities**: File processing, data transformation, automation
+- **Productivity**: Task management, note-taking, documentation
+- **Quality**: Formatting, validation, consistency checks
+- **Security**: Scanning, auditing, compliance
+- **Utilities**: File processing, data transformation
 
-Good skills are:
+### Domain Skills (High Priority)
 
-- **Generic**: Work in any project, not tied to specific frameworks
-- **Self-contained**: Include all instructions Claude needs
-- **Portable**: Don't require project-specific setup
+We especially welcome skills for business domains:
+
+| Domain | Skill Ideas |
+|--------|-------------|
+| **Finance** | `/palas:invoice` — Generate/review invoices |
+| | `/palas:budget` — Analyze budgets and forecasts |
+| | `/palas:expense-report` — Create expense reports |
+| **Marketing** | `/palas:seo-review` — Review content for SEO |
+| | `/palas:social-post` — Create social media posts |
+| | `/palas:newsletter` — Structure email newsletters |
+| **HR** | `/palas:job-description` — Write job descriptions |
+| | `/palas:onboarding` — Create onboarding checklists |
+| | `/palas:policy` — Review/draft internal policies |
+| **Sales** | `/palas:proposal` — Structure sales proposals |
+| | `/palas:followup` — Write follow-up emails |
+| | `/palas:meeting-notes` — Summarize client meetings |
+| **Legal** | `/palas:contract-review` — Review basic contracts |
+| | `/palas:compliance` — Compliance checklists |
+| | `/palas:nda` — Generate simple NDAs |
+
+**Don't see your domain?** We welcome skills for accounting, operations, customer support, project management, and more.
 
 ---
 
@@ -41,21 +66,13 @@ git checkout -b add-your-skill-name
 
 Create a directory in `skills/` with a `SKILL.md` file:
 
-```
+```text
 skills/
 └── your-skill-name/
     └── SKILL.md
 ```
 
-If your skill needs scripts, add them in a `scripts/` subdirectory:
-
-```
-skills/
-└── your-skill-name/
-    ├── SKILL.md
-    └── scripts/
-        └── your-script.py
-```
+If your skill needs scripts, add them in a `scripts/` subdirectory.
 
 ### 4. Follow the skill format
 
@@ -71,9 +88,7 @@ What this skill does.
 
 ## Usage
 
-```text
 /palas:your-skill-name [arguments]
-```
 
 **Arguments:**
 
@@ -85,24 +100,14 @@ What this skill does.
 2. Step two
 3. Step three
 
-## Commands
-
-```bash
-# Commands Claude should run
-your-command here
-```
-
 ## Examples
 
-```text
 /palas:your-skill-name example
 -> Expected result
-```
 
 ## Notes
 
 - Important considerations
-- Edge cases
 ```
 
 ### 5. Test your skill
@@ -124,7 +129,7 @@ git push origin add-your-skill-name
 Open a PR with:
 
 - What the skill does
-- Why it's useful
+- Why it's useful (especially for SMBs)
 - How you tested it
 
 ---
@@ -134,18 +139,18 @@ Open a PR with:
 ### Do
 
 - Keep skills focused on one task
+- Write for non-technical users when possible
 - Include clear usage instructions
 - Test before submitting
-- Follow existing patterns in other skills
-- Document any system requirements (Python, Node.js, etc.)
+- Think about SMB use cases
 
 ### Don't
 
 - Include sensitive data (API keys, tokens, personal paths)
-- Create skills that only work in specific projects
-- Submit untested skills
+- Require expensive paid services
+- Assume technical expertise
 - Duplicate existing functionality
-- Require paid services without alternatives
+- Create overly complex workflows
 
 ---
 
@@ -156,14 +161,14 @@ If your skill needs Python or Node.js packages:
 1. **Python**: Add to `_tooling/requirements.txt`
 2. **Node.js**: Add to `_tooling/package.json`
 
-Include setup instructions in your SKILL.md that reference the plugin's `_tooling/` directory.
+Include setup instructions in your SKILL.md.
 
 ---
 
 ## File Naming
 
-- Use lowercase with hyphens: `code-review/SKILL.md`
-- Be descriptive: `tdd-workflow` not `workflow`
+- Use lowercase with hyphens: `invoice-review/SKILL.md`
+- Be descriptive: `budget-analysis` not `budget`
 - Match the directory name to the skill name in frontmatter
 
 ---
@@ -174,4 +179,4 @@ Open an [issue](https://github.com/Jacopalas/agentic-ai-palas/issues).
 
 ---
 
-Thanks for contributing!
+Thanks for contributing to Palas!

@@ -2,9 +2,17 @@
 
 ![Agentic AI Palas Overview](./infographic.svg)
 
-**Portable toolkit of skills for Claude Code.**
+**AI skills for your business, not just your code.**
 
-A plugin that provides reusable skills for git commits, markdown linting, security scanning, and watermark removal. Works in any project.
+A Claude Code plugin focused on **generic tools** and **domain-specific skills** for small and medium businesses. While most plugins target developers, Palas helps everyone—from operations to finance to marketing.
+
+## Why Palas?
+
+Most Claude Code plugins focus on software development. Palas is different:
+
+- **Generic tools** that work in any project (commits, markdown, security)
+- **Domain skills** for business functions (finance, HR, marketing, sales)
+- **SMB-friendly** — practical tools for small teams without dedicated IT
 
 ## Installation
 
@@ -28,12 +36,28 @@ claude --plugin-dir ./agentic-ai-palas
 
 ## Available Skills
 
+### Generic Tools
+
 | Skill | Command | Description |
 |-------|---------|-------------|
 | Commit | `/palas:commit` | Create well-formatted conventional git commits |
 | Markdown | `/palas:fixing-markdown` | Validate and auto-fix markdown formatting |
 | Security | `/palas:security-scan` | Scan for exposed secrets and vulnerabilities |
 | Watermark | `/palas:removing-notebooklm` | Remove NotebookLM watermarks from PDFs/images |
+
+### Domain Skills (Roadmap)
+
+We're building skills for business domains:
+
+| Domain | Examples |
+|--------|----------|
+| **Finance** | Invoice review, budget analysis, expense reports |
+| **Marketing** | SEO content review, social posts, newsletters |
+| **HR** | Job descriptions, onboarding checklists, policies |
+| **Sales** | Proposals, follow-up emails, meeting notes |
+| **Legal** | Contract review, compliance checklists, NDAs |
+
+Want to contribute a domain skill? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Usage Examples
 
@@ -46,9 +70,6 @@ claude --plugin-dir ./agentic-ai-palas
 
 /palas:security-scan
 -> Scans current directory for exposed secrets
-
-/palas:removing-notebooklm presentation.pdf
--> Removes watermark, creates presentation_clean.pdf
 ```
 
 ## Requirements
@@ -57,49 +78,29 @@ claude --plugin-dir ./agentic-ai-palas
 - **Node.js** (for markdown linting) — installed on first use
 - **Python 3** (for watermark removal) — installed on first use
 
-Dependencies are installed automatically in isolated environments within the plugin directory. No pollution of your project or system.
-
-## Plugin Structure
-
-```text
-agentic-ai-palas/
-├── .claude-plugin/
-│   └── plugin.json        # Plugin manifest
-├── skills/
-│   ├── commit/            # Git commit skill
-│   ├── fixing-markdown/   # Markdown linting skill
-│   ├── security-scan/     # Security scanning skill
-│   └── removing-notebooklm/
-│       ├── SKILL.md
-│       └── scripts/       # Python watermark removal
-└── _tooling/
-    ├── package.json       # Node.js dependencies
-    ├── requirements.txt   # Python dependencies
-    └── configs...         # Linting configurations
-```
+Dependencies are installed automatically in isolated environments. No pollution of your project or system.
 
 ## Optional for new users
 
-If you don't have a `.claude/CLAUDE.md` in your project yet, run this one-liner to create a minimal setup:
+If you don't have a `.claude/CLAUDE.md` in your project yet:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-This creates a `.claude/CLAUDE.md` with plugin installation instructions and a section for your project-specific notes.
-
 **Windows users**: Run from Git Bash, not PowerShell or CMD.
 
 ## Contributing
 
-Want to add a skill? See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions, especially:
 
-Quick start:
+- **Generic tools** you use daily across projects
+- **Domain skills** for business functions (finance, HR, marketing, legal, sales)
+- **SMB workflows** that help small teams work smarter
 
-1. Fork this repository, create a branch
-2. Create `skills/your-skill/SKILL.md`
-3. Test with `claude --plugin-dir .`
-4. Submit a pull request
+This project intentionally avoids competing with developer-focused plugins. Our niche is **business users** and **domain experts** who use Claude Code.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines and skill ideas.
 
 ## Marketplace
 
