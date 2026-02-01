@@ -38,13 +38,13 @@ claude
 2. Abre el panel de Claude Code (normalmente en la barra lateral)
 3. Claude ya estará en el contexto de tu proyecto
 
-### Desde el Marketplace (Recomendado)
+### Instala "Palas" desde el Marketplace (Recomendado)
 
 ```shell
 # Añadir el marketplace (una sola vez)
 /plugin marketplace add Jacopalas/palas-marketplace
 
-# Instalar el plugin
+# Instalar el plugin Palas
 /plugin install palas@palas
 ```
 
