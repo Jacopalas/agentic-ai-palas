@@ -15,7 +15,7 @@ Mientras la mayoría de plugins se centran en el desarrollo de software, Palas n
 Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
 
 * 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
-* 🧩 **Plugins:** Son extensiones que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
+* 🧩 **Plugins:** Son extras que añades a Claude que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
 * 🛠️ **Habilidades (Skills):** Son las tareas específicas que Palas añade a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
 
 ## Para usuarios nuevos
