@@ -1,85 +1,110 @@
-# Agentic AI Palas
+# Palas — Claude Code Plugin
 
-**Stop configuring Claude Code from scratch on every project.**
+![Agentic AI Palas Overview](./infographic.svg)
 
-![Agentic AI Palas Overview](docs/infographic.svg)
+**Portable toolkit of skills for Claude Code.**
 
-One command. Instant skills. Works everywhere.
+A plugin that provides reusable skills for git commits, markdown linting, security scanning, and watermark removal. Works in any project.
+
+## Installation
+
+### From Marketplace (Recommended)
+
+```shell
+# Add the marketplace (one time)
+/plugin marketplace add Jacopalas/palas-marketplace
+
+# Install the plugin
+/plugin install palas@palas
+```
+
+### Direct Installation
+
+```shell
+# Clone and load directly
+git clone https://github.com/Jacopalas/agentic-ai-palas.git
+claude --plugin-dir ./agentic-ai-palas
+```
+
+## Available Skills
+
+| Skill | Command | Description |
+|-------|---------|-------------|
+| Commit | `/palas:commit` | Create well-formatted conventional git commits |
+| Markdown | `/palas:fixing-markdown` | Validate and auto-fix markdown formatting |
+| Security | `/palas:security-scan` | Scan for exposed secrets and vulnerabilities |
+| Watermark | `/palas:removing-notebooklm` | Remove NotebookLM watermarks from PDFs/images |
+
+## Usage Examples
+
+```text
+/palas:commit
+-> Analyzes staged changes and creates a conventional commit
+
+/palas:fixing-markdown docs/
+-> Fixes markdown formatting in all files under docs/
+
+/palas:security-scan
+-> Scans current directory for exposed secrets
+
+/palas:removing-notebooklm presentation.pdf
+-> Removes watermark, creates presentation_clean.pdf
+```
+
+## Requirements
+
+- **Claude Code** v1.0.33 or later
+- **Node.js** (for markdown linting) — installed on first use
+- **Python 3** (for watermark removal) — installed on first use
+
+Dependencies are installed automatically in isolated environments within the plugin directory. No pollution of your project or system.
+
+## Plugin Structure
+
+```text
+agentic-ai-palas/
+├── .claude-plugin/
+│   └── plugin.json        # Plugin manifest
+├── skills/
+│   ├── commit/            # Git commit skill
+│   ├── fixing-markdown/   # Markdown linting skill
+│   ├── security-scan/     # Security scanning skill
+│   └── removing-notebooklm/
+│       ├── SKILL.md
+│       └── scripts/       # Python watermark removal
+└── _tooling/
+    ├── package.json       # Node.js dependencies
+    ├── requirements.txt   # Python dependencies
+    └── configs...         # Linting configurations
+```
+
+## Optional for new users
+
+If you don't have a `.claude/CLAUDE.md` in your project yet, run this one-liner to create a minimal setup:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-- Windows Users: Install [Git for Windows](https://git-scm.com/download/win) which includes **Git Bash**. Run the install command from *Git Bash*, not PowerShell or CMD.
-- **Updating?** Run the same command. Your custom `CLAUDE.md` stays untouched.
+This creates a `.claude/CLAUDE.md` with plugin installation instructions and a section for your project-specific notes.
 
-## The Problem
-
-Every time you start a new project with Claude Code, you're back to zero. No commit conventions. No markdown validation. No security checks. You either spend time setting things up again, or you just don't bother.
-
-If you work on multiple projects—or juggle client work across different repos—this friction adds up fast.
-
-## The Solution
-
-Agentic AI Palas gives you a portable set of skills that install in seconds and work in any project. Python, JavaScript, Rust, Go—doesn't matter. These are generic tools that help you work faster with Claude Code.
-
-**Perfect for:**
-
-- Developers starting with Claude Code who want useful defaults
-- Freelancers and consultants managing multiple client projects
-- Teams who want consistent Claude behavior across repositories
-
-## What You Get
-
-| Skill | What it does |
-|-------|--------------|
-| `/commit` | Consistent, well-formatted git commits every time |
-| `/fixing-markdown` | Catches and fixes markdown formatting issues |
-| `/security-scan` | Finds exposed secrets before they hit your repo |
-| `/removing-notebooklm` | Strips NotebookLM watermarks from PDFs and images |
-
-Just type the skill name in Claude Code:
-
-```text
-/commit
-/fixing-markdown docs/
-/security-scan
-```
-
-## What Gets Installed
-
-```text
-your-project/
-└── .claude/
-    ├── skills/      # All the skills above
-    ├── _tooling/    # Shared configs and tools
-    └── CLAUDE.md    # Project instructions (only if missing)
-```
-
-Nothing outside `.claude/`. Your project structure stays clean.
-
-## Documentation
-
-| Guide | Description |
-|-------|-------------|
-| [Creating Skills](docs/creating-skills.md) | Build your own skills |
-| [Architecture](docs/architecture.md) | How it all fits together |
+**Windows users**: Run from Git Bash, not PowerShell or CMD.
 
 ## Contributing
 
-Have a skill that could help everyone?
+Want to add a skill? See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-1. Create `.claude/skills/your-skill/SKILL.md`
-2. Follow the [skill format](docs/creating-skills.md)
-3. Update the skills table above
+Quick start:
+
+1. Fork this repository, create a branch
+2. Create `skills/your-skill/SKILL.md`
+3. Test with `claude --plugin-dir .`
 4. Submit a pull request
 
-## Extras: Antigravity Kit
+## Marketplace
 
-If you use [Antigravity](https://antigravity.google/) as your main IDE and you have a Claude account and using it simultaneously (together with Gemini), you can extend your setup with [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/):
+This plugin is distributed via the [palas-marketplace](https://github.com/Jacopalas/palas-marketplace) repository.
 
-```bash
-npx @vudovn/ag-kit init
-```
+## License
 
-This adds 20+ agents and 36+ skills in a separate `.agent/` directory. Completely optional and doesn't conflict with this toolkit.
+MIT

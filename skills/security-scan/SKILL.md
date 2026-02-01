@@ -1,20 +1,16 @@
 ---
 name: security-scan
 description: Basic security scanning for common vulnerabilities. Use when the user wants to check security, scan for vulnerabilities, find secrets, audit security, revisar seguridad, escanear vulnerabilidades, or check for exposed credentials.
-metadata:
-  skillport:
-    category: security
-    tags: [security, scanning, vulnerabilities, secrets, audit]
 ---
 
-# /security-scan — Basic Security Scanning
+# /palas:security-scan — Basic Security Scanning
 
 Scan codebase for common security issues: exposed secrets, vulnerable patterns, and risky configurations.
 
 ## Usage
 
 ```text
-/security-scan [target]
+/palas:security-scan [target]
 ```
 
 **Arguments:**
@@ -100,34 +96,34 @@ grep -E "^\.env" .gitignore 2>/dev/null || echo "WARNING: .env not in .gitignore
 ### Clean Scan
 
 ```text
-🔍 Security Scan: ./src
+Security Scan: ./src
 
 Secrets: 0 found
 Dangerous files: 0 found
 Risky patterns: 0 found
-.gitignore: ✅ .env is ignored
+.gitignore: .env is ignored
 
-✅ No security issues detected
+No security issues detected
 ```
 
 ### Issues Found
 
 ```text
-🔍 Security Scan: ./src
+Security Scan: ./src
 
-⚠️ SECRETS FOUND (3):
+SECRETS FOUND (3):
   src/config.js:12 — api_key = "sk-..."
   src/database.js:5 — password: "hardcoded"
   .env.example:3 — Contains actual API key
 
-🚨 DANGEROUS FILES (2):
+DANGEROUS FILES (2):
   .env — Contains credentials, check .gitignore
   credentials.json — Service account file
 
-⚠️ RISKY PATTERNS (1):
+RISKY PATTERNS (1):
   src/utils.js:45 — eval() usage
 
-📋 RECOMMENDATIONS:
+RECOMMENDATIONS:
 1. Move secrets to environment variables
 2. Add .env to .gitignore
 3. Remove credentials.json from repo
@@ -136,11 +132,11 @@ Risky patterns: 0 found
 
 ## Severity Levels
 
-| Level | Icon | Examples |
-|-------|------|----------|
-| Critical | 🚨 | Private keys, AWS credentials, database passwords |
-| Warning | ⚠️ | Generic API keys, eval usage, .env exposure |
-| Info | ℹ️ | Potential false positives, best practice suggestions |
+| Level | Examples |
+|-------|----------|
+| Critical | Private keys, AWS credentials, database passwords |
+| Warning | Generic API keys, eval usage, .env exposure |
+| Info | Potential false positives, best practice suggestions |
 
 ## False Positive Handling
 
@@ -156,14 +152,14 @@ Review each finding in context before taking action.
 ## Examples
 
 ```text
-/security-scan
-→ Scans current directory
+/palas:security-scan
+-> Scans current directory
 
-/security-scan src/
-→ Scans only src/ directory
+/palas:security-scan src/
+-> Scans only src/ directory
 
-/security-scan package.json
-→ Checks single file for embedded secrets
+/palas:security-scan package.json
+-> Checks single file for embedded secrets
 ```
 
 ## Limitations

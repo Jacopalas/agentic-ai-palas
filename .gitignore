@@ -3,8 +3,10 @@
 .env.local
 .env.*.local
 
-# Dependencies
+# Dependencies (plugin tooling)
 node_modules/
+_tooling/node_modules/
+_tooling/.venv/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
@@ -76,16 +78,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
-dist/
-build/
 
 # Antigravity Kit (optional, installed separately)
 .agent/
-
-# Local configuration
-.local
-local.config.js
-.claude/settings.local.json
 
 # API keys and secrets (local testing)
 secrets/

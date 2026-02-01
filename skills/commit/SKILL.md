@@ -1,20 +1,16 @@
 ---
 name: commit
 description: Create well-structured git commits with consistent message format. Use when the user wants to commit changes, make a commit, guardar cambios, hacer commit, or save work to git.
-metadata:
-  skillport:
-    category: git
-    tags: [git, commit, version-control, workflow]
 ---
 
-# /commit — Create Consistent Git Commits
+# /palas:commit — Create Consistent Git Commits
 
 Create git commits with well-structured, conventional commit messages.
 
 ## Usage
 
 ```text
-/commit [message]
+/palas:commit [message]
 ```
 
 **Arguments:**
@@ -75,17 +71,17 @@ Optional. Component or area affected (e.g., `auth`, `api`, `ui`).
 ## Examples
 
 ```text
-/commit
-→ Analyzes staged changes, drafts appropriate message
+/palas:commit
+-> Analyzes staged changes, drafts appropriate message
 
-/commit add user authentication
-→ Creates: feat(auth): add user authentication
+/palas:commit add user authentication
+-> Creates: feat(auth): add user authentication
 
-/commit fix login redirect bug
-→ Creates: fix(auth): fix login redirect bug
+/palas:commit fix login redirect bug
+-> Creates: fix(auth): fix login redirect bug
 
-/commit update README with installation steps
-→ Creates: docs: update README with installation steps
+/palas:commit update README with installation steps
+-> Creates: docs: update README with installation steps
 ```
 
 ## Commands
