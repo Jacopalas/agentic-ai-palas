@@ -18,7 +18,28 @@ Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básic
 * 🧩 **Plugins:** Son extensiones que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
 * 🛠️ **Habilidades (Skills):** Son las tareas específicas que Palas añade a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
 
-## Instalación
+## Para Usuarios Nuevos
+
+¿Empezando de cero? Si tienes el efecto "papel en blanco" y tu carpeta está vacía, este comando te crea una configuración mínima:
+
+```bash
+# Abre una terminal y navega a tu proyecto
+cd ~/Documentos/mi-proyecto
+
+# Crea la configuración mínima
+# Usuarios de Windows: Ejecutar desde Git Bash, no PowerShell o CMD.
+curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
+```
+
+**¿Qué hace?** Crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene:
+
+- Instrucciones básicas para Claude sobre tu proyecto
+- Las habilidades de Palas listas para usar
+- Un espacio donde añadir notas específicas de tu proyecto
+
+Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
+
+## Instalación del Plugin "Palas"
 
 Primero sitúate en el proyecto en el que vas a trabajar:
 
@@ -112,16 +133,6 @@ Las dependencias se instalan automáticamente en entornos aislados. Sin contamin
 > - Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
 >
 > Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
-
-## Para Usuarios Nuevos
-
-Si no tienes un `.claude/CLAUDE.md` en tu proyecto:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
-```
-
-**Usuarios de Windows**: Ejecutar desde Git Bash, no PowerShell o CMD.
 
 ## Contribuir
 
