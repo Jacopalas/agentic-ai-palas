@@ -16,14 +16,14 @@
   <rect width="540" height="425" fill="url(#bg)" style="" x="0.01"/>
   <text x="270.01" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" style="white-space: pre; font-size: 32px;">Palas</text>
   <text x="270.01" y="80" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="16" style="white-space: pre; font-size: 16px;">Claude Code Plugin</text>
-  <text x="272.43" y="104.029" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" style="white-space: pre; font-size: 14px;">Instala una vez. Usa en todos lados.</text>
+  <text x="272.43" y="104.029" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" style="white-space: pre; font-size: 14px;">Instala una vez. Úsalo en todos lados.</text>
   <g transform="matrix(1, 0, 0, 1, -129.989443, 0)">
     <g filter="url(#shadow)" transform="matrix(0.703681, 0, 0, 1, 118.527658, -26.836491)" style="">
       <rect x="300" y="150" width="200" height="80" rx="12" fill="#1f2937"/>
       <rect x="300" y="150" width="200" height="4" rx="2" fill="url(#accent)"/>
     </g>
     <text x="400" y="158.164" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" style="white-space: pre; font-size: 16px;">palas plugin</text>
-    <text x="400" y="183.164" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Toolkit de habilidades portátil</text>
+    <text x="400" y="183.164" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Kit de habilidades</text>
     <g style="" transform="matrix(1, 0, 0, 0.673665, 0, 69.562814)">
       <path d="M 350 213.164 L 223.241 274.841" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
       <path d="M 400.001 213.164 L 400.001 273.164" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4" style=""/>
@@ -32,17 +32,17 @@
     <g filter="url(#shadow)" transform="matrix(0.811306, 0, 0, 1, 99.86799, -48.641091)" style="">
       <rect x="70" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
     </g>
-    <text x="221.564" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">your-web-app/</text>
+    <text x="221.564" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-app-web/</text>
     <text x="221.564" y="311.359" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10" style="white-space: pre; font-size: 10px;">TypeScript • Next • API</text>
     <g filter="url(#shadow)" transform="matrix(0.860227, 0, 0, 1, 55.909322, -48.641091)" style="">
       <rect x="320" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
     </g>
-    <text x="400" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">your-bizz-project/</text>
+    <text x="400" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-proyecto/</text>
     <text x="400" y="311.359" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10" style="white-space: pre; font-size: 10px;">Cliente • Ventas • Operaciones</text>
     <g filter="url(#shadow)" transform="matrix(0.783351, 0, 0, 1, 69.257585, -48.641091)" style="">
       <rect x="570" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
     </g>
-    <text x="578.436" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">your-learning/</text>
+    <text x="578.436" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-aprendizaje/</text>
     <text x="578.436" y="311.359" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10" style="white-space: pre; font-size: 10px;">Plan • Notas • Investigación</text>
     <rect x="199.441" y="347.973" width="400" height="3" rx="1.5" fill="url(#accent)"/>
     <text x="400" y="380.209" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Mismas habilidades • Cualquier proyecto • Sin configuración</text>
