@@ -33,17 +33,17 @@
       <rect x="70" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
     </g>
     <text x="221.564" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-app-web/</text>
-    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 9px; text-anchor: middle; white-space: pre;" x="221.564" y="311.359">TypeScript • Next • API</text>
+    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 8px; text-anchor: middle; white-space: pre;" x="221.564" y="311.359">TypeScript • Next • API</text>
     <g filter="url(#shadow)" transform="matrix(0.860227, 0, 0, 1, 55.909322, -48.641091)" style="">
       <rect x="320" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
     </g>
     <text x="400" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-proyecto/</text>
-    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 9px; text-anchor: middle; white-space: pre;" x="400" y="311.359">Cliente • Ventas • Operaciones</text>
+    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 8px; text-anchor: middle; white-space: pre;" x="400" y="311.359">Cliente • Ventas • Operaciones</text>
     <g filter="url(#shadow)" transform="matrix(0.783351, 0, 0, 1, 69.257585, -48.641091)" style="">
       <rect x="570" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
     </g>
     <text x="578.436" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-aprendizaje/</text>
-    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 9px; text-anchor: middle; white-space: pre;" x="578.436" y="311.359">Plan • Notas • Investigación</text>
+    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 8px; text-anchor: middle; white-space: pre;" x="578.436" y="311.359">Plan • Notas • Investigación</text>
     <rect x="199.441" y="347.973" width="400" height="3" rx="1.5" fill="url(#accent)"/>
     <text x="400" y="380.209" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Mismas habilidades • Cualquier proyecto • Sin configuración</text>
   </g>
