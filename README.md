@@ -2,17 +2,21 @@
 
 ![Palas Overview](./infographic.svg)
 
-**Habilidades de IA para tu negocio, no solo para tu código.**
-
-Un plugin de Claude Code enfocado en **herramientas genéricas** y **habilidades de dominio** para pequeñas y medianas empresas. Mientras la mayoría de plugins se enfocan en desarrolladores, Palas ayuda a todos—desde operaciones hasta finanzas y marketing.
-
 ## ¿Por qué Palas?
 
-La mayoría de plugins de Claude Code se enfocan en desarrollo de software. Palas es diferente:
+**Habilidades de IA para tu negocio, no solo para tu código.**
 
-- **Herramientas genéricas** que funcionan en cualquier proyecto (commits, markdown, seguridad)
-- **Habilidades de dominio** para funciones de negocio (finanzas, RRHH, marketing, ventas)
-- **Para PYMEs** — herramientas prácticas para equipos pequeños sin IT dedicado
+Un plugin de Claude Code que une **productividad general y conocimiento especializado** para ayudar a particulares y PYMES a dar sus primeros pasos en la IA.
+
+Mientras la mayoría de plugins se centran en el desarrollo de software, Palas nace para ayudar a todos: desde el crecimiento personal y la gestión de datos, hasta operaciones, finanzas y marketing.
+
+## Conceptos Clave
+
+Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
+
+* 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
+* 🧩 **Plugins:** Son extensiones que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
+* 🛠️ **Habilidades (Skills):** Son las tareas específicas que Palas añade a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
 
 ## Instalación
 
@@ -57,7 +61,7 @@ Estamos construyendo habilidades para dominios de negocio:
 | **Ventas** | Propuestas comerciales, emails de seguimiento, notas de reuniones |
 | **Legal** | Revisión de contratos, checklists de cumplimiento, NDAs |
 
-¿Quieres contribuir una habilidad de dominio? Ver [CONTRIBUTING.md](CONTRIBUTING.md).
+¿Quieres contribuir una habilidad de dominio? Echa un ojo al documento [CONTRIBUIR.md](CONTRIBUIR.md).
 
 ## Ejemplos de Uso
 
@@ -111,7 +115,7 @@ Bienvenidas las contribuciones, especialmente:
 
 Este proyecto evita intencionalmente competir con plugins enfocados en desarrolladores. Nuestro nicho son los **usuarios de negocio** y **expertos de dominio** que usan Claude Code.
 
-Ver [CONTRIBUTING.md](CONTRIBUTING.md) para guías e ideas de habilidades.
+Lee el documento [CONTRIBUIR.md](CONTRIBUIR.md) donde explico guías e ideas de habilidades.
 
 ## Marketplace
 
