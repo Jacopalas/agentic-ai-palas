@@ -3,14 +3,14 @@ name: removing-notebooklm
 description: Remove the NotebookLM watermark from PDFs (presentations) and images (infographics) automatically. Use when the user wants to remove the NotebookLM watermark, eliminar el watermark, quitar la marca de agua.
 ---
 
-# /removing-notebooklm — Remove NotebookLM Watermark
+# /palas:removing-notebooklm — Remove NotebookLM Watermark
 
 Remove the NotebookLM watermark from PDFs and images automatically.
 
 ## Usage
 
 ```text
-/removing-notebooklm <file> [--output <path>]
+/palas:removing-notebooklm <file> [--output <path>]
 ```
 
 **Arguments:**
@@ -22,11 +22,27 @@ Remove the NotebookLM watermark from PDFs and images automatically.
 
 **No argument = show this usage.**
 
-## Prerequisites
+## Environment Setup
 
-**Run initializing-environment first** to ensure Python environment is ready.
+This skill requires Python dependencies. Before running:
 
-Tools required in `.claude/_tooling/.venv/`:
+1. **Locate plugin directory**: Find this plugin's `_tooling/` directory (contains `requirements.txt`)
+2. **Create virtual environment if needed**: If `_tooling/.venv/` doesn't exist:
+   ```bash
+   python -m venv <plugin-path>/_tooling/.venv
+   ```
+3. **Install dependencies if needed**:
+   ```bash
+   # Windows
+   <plugin-path>/_tooling/.venv/Scripts/pip.exe install -r <plugin-path>/_tooling/requirements.txt
+
+   # Unix/macOS
+   <plugin-path>/_tooling/.venv/bin/pip install -r <plugin-path>/_tooling/requirements.txt
+   ```
+
+The plugin directory is typically in `~/.claude/plugins/cache/` or wherever the plugin was installed.
+
+### Dependencies
 
 - `Pillow` — Image processing
 - `pymupdf` — PDF processing
@@ -34,25 +50,33 @@ Tools required in `.claude/_tooling/.venv/`:
 
 ## Command
 
-```bash
-# Default output (adds _clean suffix)
-.claude/_tooling/.venv/Scripts/python.exe .claude/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>"
+Replace `<plugin-path>` with the actual path to this plugin's installation directory.
 
-# Custom output path
-.claude/_tooling/.venv/Scripts/python.exe .claude/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>" --output "<output>"
+```bash
+# Windows - Default output (adds _clean suffix)
+<plugin-path>/_tooling/.venv/Scripts/python.exe <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>"
+
+# Windows - Custom output path
+<plugin-path>/_tooling/.venv/Scripts/python.exe <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>" --output "<output>"
+
+# Unix/macOS - Default output
+<plugin-path>/_tooling/.venv/bin/python <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>"
+
+# Unix/macOS - Custom output
+<plugin-path>/_tooling/.venv/bin/python <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>" --output "<output>"
 ```
 
 ## Examples
 
 ```text
-/removing-notebooklm presentation.pdf
-→ Creates presentation_clean.pdf
+/palas:removing-notebooklm presentation.pdf
+-> Creates presentation_clean.pdf
 
-/removing-notebooklm infographic.png
-→ Creates infographic_clean.png
+/palas:removing-notebooklm infographic.png
+-> Creates infographic_clean.png
 
-/removing-notebooklm input.pdf --output final.pdf
-→ Creates final.pdf
+/palas:removing-notebooklm input.pdf --output final.pdf
+-> Creates final.pdf
 ```
 
 ## Output Format
@@ -66,7 +90,7 @@ Pages: 12
   Page 12/12
 Saved: presentation_clean.pdf
 
-✅ Done
+Done
 ```
 
 ## How It Works
@@ -98,7 +122,7 @@ Uses OpenCV's Telea inpainting algorithm to seamlessly reconstruct the backgroun
 ## Behavior
 
 1. **Check argument**: If no file provided, show usage and exit
-2. **Run initializing-environment**: Ensure Python environment is ready
+2. **Setup environment**: Ensure Python venv exists with dependencies in plugin directory
 3. **Validate file**: Check file exists and format is supported
 4. **Process file**: Remove watermark using appropriate method
 5. **Save output**: `{original_name}_clean.{extension}`
@@ -107,4 +131,5 @@ Uses OpenCV's Telea inpainting algorithm to seamlessly reconstruct the backgroun
 
 - Output file is saved in the same directory as input
 - Original file is not modified
-- Requires: Python environment (handled by initializing-environment)
+- Requires: Python 3 installed on system
+- Dependencies installed on first use in plugin's `_tooling/.venv/`

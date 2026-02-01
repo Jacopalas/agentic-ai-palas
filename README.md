@@ -1,83 +1,157 @@
-# Agentic AI Palas
+# Palas — Plugin para Claude Code
 
-**Stop configuring Claude Code from scratch on every project.**
+![Palas Overview](./infographic.svg)
 
-One command. Instant skills. Works everywhere.
+## ¿Por qué Palas?
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/install/install.sh | bash
-```
+**Habilidades de IA para tu negocio, no solo para tu código.**
 
-- Windows Users: Install [Git for Windows](https://git-scm.com/download/win) which includes **Git Bash**. Run the install command from *Git Bash*, not PowerShell or CMD.
-- **Updating?** Run the same command. Your custom `CLAUDE.md` stays untouched.
+Un plugin de Claude Code que une **productividad general y conocimiento especializado** para ayudar a particulares y PYMES a dar sus primeros pasos en la IA.
 
-## The Problem
+Mientras la mayoría de plugins se centran en el desarrollo de software, Palas nace para ayudar a todos: desde el crecimiento personal y la gestión de datos, hasta operaciones, finanzas y marketing.
 
-Every time you start a new project with Claude Code, you're back to zero. No commit conventions. No markdown validation. No security checks. You either spend time setting things up again, or you just don't bother.
+## Conceptos Clave
 
-If you work on multiple projects—or juggle client work across different repos—this friction adds up fast.
+Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
 
-## The Solution
+* 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
+* 🧩 **Plugins:** Son extras que añades a Claude que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
+* 🛠️ **Habilidades (Skills):** Son las tareas específicas que Palas añade a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
 
-Agentic AI Palas gives you a portable set of skills that install in seconds and work in any project. Python, JavaScript, Rust, Go—doesn't matter. These are generic tools that help you work faster with Claude Code.
+## Para usuarios nuevos
 
-**Perfect for:**
-
-- Developers starting with Claude Code who want useful defaults
-- Freelancers and consultants managing multiple client projects
-- Teams who want consistent Claude behavior across repositories
-
-## What You Get
-
-| Skill | What it does |
-|-------|--------------|
-| `/commit` | Consistent, well-formatted git commits every time |
-| `/fixing-markdown` | Catches and fixes markdown formatting issues |
-| `/security-scan` | Finds exposed secrets before they hit your repo |
-| `/removing-notebooklm` | Strips NotebookLM watermarks from PDFs and images |
-
-Just type the skill name in Claude Code:
-
-```text
-/commit
-/fixing-markdown docs/
-/security-scan
-```
-
-## What Gets Installed
-
-```text
-your-project/
-└── .claude/
-    ├── skills/      # All the skills above
-    ├── _tooling/    # Shared configs and tools
-    └── CLAUDE.md    # Project instructions (only if missing)
-```
-
-Nothing outside `.claude/`. Your project structure stays clean.
-
-## Documentation
-
-| Guide | Description |
-|-------|-------------|
-| [Creating Skills](docs/creating-skills.md) | Build your own skills |
-| [Architecture](docs/architecture.md) | How it all fits together |
-
-## Contributing
-
-Have a skill that could help everyone?
-
-1. Create `.claude/skills/your-skill/SKILL.md`
-2. Follow the [skill format](docs/creating-skills.md)
-3. Update the skills table above
-4. Submit a pull request
-
-## Extras: Antigravity Kit
-
-If you use [Antigravity IDE](https://antigravity.google/) with both Claude and Gemini accounts, you can extend your setup with [Antigravity Kit 2.0](https://antigravity-kit.vercel.app/):
+¿Empezando de cero? Si tienes el efecto "papel en blanco" y tu carpeta está vacía, este comando te crea una configuración mínima:
 
 ```bash
-npx @vudovn/ag-kit init
+# Abre una terminal y navega a tu proyecto
+cd ~/Documentos/mi-proyecto
+
+# Crea la configuración mínima
+# Usuarios de Windows: Ejecutar desde Git Bash, no PowerShell o CMD.
+curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-This adds 20+ agents and 36+ skills in a separate `.agent/` directory. Completely optional and doesn't conflict with this toolkit.
+**¿Qué hace?** Crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene:
+
+- Instrucciones básicas para Claude sobre tu proyecto
+- Las habilidades de Palas listas para usar
+- Un espacio donde añadir notas específicas de tu proyecto
+
+Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
+
+## Instalación del Plugin "Palas"
+
+Primero sitúate en el proyecto en el que vas a trabajar:
+
+**Opción A — Línea de comando:**
+
+```bash
+# Abre una terminal y navega a tu proyecto
+cd ~/Documentos/mi-proyecto
+
+# Inicia Claude Code
+claude
+```
+
+**Opción B — Desde un IDE (VS Code, Cursor, etc.):**
+
+1. Abre tu proyecto en el IDE
+2. Abre el panel de Claude Code (normalmente en la barra lateral)
+3. Claude ya estará en el contexto de tu proyecto
+
+### Instala "Palas" desde el Marketplace (Recomendado)
+
+```shell
+# Añadir el marketplace (una sola vez)
+/plugin marketplace add Jacopalas/palas-marketplace
+
+# Instalar el plugin Palas
+/plugin install palas@palas
+```
+
+### Instalación directa
+
+```shell
+# Clonar y cargar directamente
+git clone https://github.com/Jacopalas/agentic-ai-palas.git
+claude --plugin-dir ./agentic-ai-palas
+```
+
+## Habilidades disponibles
+
+### Herramientas genéricas
+
+Hemos empezado con un conjunto pequeño, de momento, de habilidades genericas.
+
+| Habilidad | Comando | Descripción |
+|-----------|---------|-------------|
+| Commit | `/palas:commit` | Crear commits de git bien formateados |
+| Markdown | `/palas:fixing-markdown` | Validar y corregir formato de markdown |
+| Seguridad | `/palas:security-scan` | Escanear secretos expuestos y vulnerabilidades |
+| Watermark | `/palas:removing-notebooklm` | Eliminar marcas de agua de NotebookLM en PDFs/imágenes |
+
+### Habilidades especializadas (Roadmap)
+
+Estamos pensando en estas habilidades especializadas de negocio:
+
+| Dominio | Ejemplos |
+|---------|----------|
+| **Finanzas** | Revisión de facturas, análisis de presupuestos, informes de gastos |
+| **Marketing** | Revisión SEO de contenido, posts para redes, newsletters |
+| **RRHH** | Descripciones de puesto, checklists de onboarding, políticas |
+| **Ventas** | Propuestas comerciales, emails de seguimiento, notas de reuniones |
+| **Legal** | Revisión de contratos, checklists de cumplimiento, NDAs |
+
+¿Quieres contribuir una habilidad de dominio? Echa un ojo al documento [CONTRIBUIR.md](CONTRIBUIR.md).
+
+## Ejemplos de Uso
+
+```text
+/palas:commit
+-> Analiza cambios staged y crea un commit convencional
+
+/palas:fixing-markdown docs/
+-> Corrige formato markdown en todos los archivos de docs/
+
+/palas:security-scan
+-> Escanea el directorio actual buscando secretos expuestos
+```
+
+## Requisitos
+
+- **Claude Code** v1.0.33 o posterior
+- **Node.js** (para linting de markdown) — se instala en el primer uso
+- **Python 3** (para eliminar watermarks) — se instala en el primer uso
+
+Las dependencias se instalan automáticamente en entornos aislados. Sin contaminar tu proyecto o sistema.
+
+## Nota sobre Idiomas
+
+> **¿Por qué las instrucciones internas están en inglés?**
+>
+> Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
+> - El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
+> - La **documentación y ejemplos** (lo que tú lees) está en español
+> - Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
+>
+> Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
+
+## Contribuir
+
+Bienvenidas las contribuciones, especialmente:
+
+- **Herramientas genéricas** que uses a diario en tus proyectos
+- **Habilidades de dominio** para funciones de negocio (finanzas, RRHH, marketing, legal, ventas)
+- **Flujos de trabajo para PYMEs** que ayuden a equipos pequeños a trabajar mejor
+
+Este proyecto evita intencionalmente competir con plugins enfocados en desarrolladores. Nuestro nicho son los **usuarios de negocio** y **expertos de dominio** que usan Claude Code.
+
+Lee el documento [CONTRIBUIR.md](CONTRIBUIR.md) donde explico guías e ideas de habilidades.
+
+## Marketplace
+
+Este plugin se distribuye a través del repositorio [palas-marketplace](https://github.com/Jacopalas/palas-marketplace).
+
+## Licencia
+
+MIT
