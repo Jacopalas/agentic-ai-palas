@@ -5,20 +5,21 @@ description: Validate and fix markdown formatting in files and folders. Use when
 
 # /palas:fixing-markdown — Validate and Fix Markdown
 
-Run `markdownlint-cli2` + `prettier` to auto-fix markdown formatting issues.
+Run `markdownlint-cli2` + `fix_md_extra.py` + `prettier` to auto-fix markdown formatting issues.
 
 ## CRITICAL: Execution Requirements
 
-**ALWAYS run BOTH tools in sequence, regardless of exit codes.**
+**ALWAYS run ALL tools in sequence, regardless of exit codes.**
 
-1. **markdownlint-cli2** may exit with code 1 if it finds errors it cannot auto-fix. This is expected behavior—**proceed to prettier anyway**.
-2. **prettier** must ALWAYS run after markdownlint, even if markdownlint reports errors.
-3. After both tools complete, manually fix any remaining markdownlint errors (e.g., MD040 for missing code block language).
+1. **markdownlint-cli2** may exit with code 1 if it finds errors it cannot auto-fix. This is expected behavior—**proceed anyway**.
+2. **fix_md_extra.py** fixes issues markdownlint cannot auto-fix (MD040, MD025).
+3. **prettier** must ALWAYS run after the previous steps.
+4. After all tools complete, verify with a final markdownlint check.
 
 **Correct flow:**
 
 ```text
-markdownlint-cli2 --fix → (ignore exit code) → prettier --write → fix remaining errors manually
+markdownlint-cli2 --fix → fix_md_extra.py → prettier --write → markdownlint-cli2 (verify)
 ```
 
 **Wrong flow (DO NOT DO THIS):**
@@ -83,10 +84,13 @@ Replace `<plugin-path>` with the actual path to this plugin's installation direc
 # Step 1: Fix structural issues (ALWAYS run, ignore exit code)
 node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config <plugin-path>/_tooling/.markdownlint-cli2.jsonc --fix "path/to/file.md"
 
-# Step 2: Format (ALWAYS run, even if step 1 had errors)
+# Step 2: Fix issues markdownlint cannot auto-fix (MD040, MD025)
+python <plugin-path>/skills/fixing-markdown/scripts/fix_md_extra.py "path/to/file.md"
+
+# Step 3: Format (ALWAYS run, even if previous steps had errors)
 node <plugin-path>/_tooling/node_modules/prettier/bin/prettier.cjs --config <plugin-path>/_tooling/.prettierrc --write "path/to/file.md"
 
-# Step 3: Check remaining errors (if any, fix manually)
+# Step 4: Check remaining errors (if any, fix manually)
 node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config <plugin-path>/_tooling/.markdownlint-cli2.jsonc "path/to/file.md"
 ```
 
@@ -96,10 +100,13 @@ node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin
 # Step 1: Fix structural issues (exclude .agent/, ignore exit code)
 node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config <plugin-path>/_tooling/.markdownlint-cli2.jsonc --fix "path/to/folder/**/*.md" "#.agent"
 
-# Step 2: Format (exclude .agent/, ALWAYS run)
+# Step 2: Fix issues markdownlint cannot auto-fix (MD040, MD025)
+python <plugin-path>/skills/fixing-markdown/scripts/fix_md_extra.py "path/to/folder"
+
+# Step 3: Format (exclude .agent/, ALWAYS run)
 node <plugin-path>/_tooling/node_modules/prettier/bin/prettier.cjs --config <plugin-path>/_tooling/.prettierrc --write "path/to/folder/**/*.md" --ignore-pattern ".agent/**"
 
-# Step 3: Check remaining errors
+# Step 4: Check remaining errors
 node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config <plugin-path>/_tooling/.markdownlint-cli2.jsonc "path/to/folder/**/*.md" "#.agent"
 ```
 
@@ -111,10 +118,13 @@ When target is `.` or root, always exclude `.agent/`:
 # Step 1: Fix structural issues (ignore exit code)
 node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config <plugin-path>/_tooling/.markdownlint-cli2.jsonc --fix "**/*.md" "#.agent"
 
-# Step 2: Format (ALWAYS run)
+# Step 2: Fix issues markdownlint cannot auto-fix (MD040, MD025)
+python <plugin-path>/skills/fixing-markdown/scripts/fix_md_extra.py "."
+
+# Step 3: Format (ALWAYS run)
 node <plugin-path>/_tooling/node_modules/prettier/bin/prettier.cjs --config <plugin-path>/_tooling/.prettierrc --write "**/*.md" --ignore-pattern ".agent/**"
 
-# Step 3: Check remaining errors
+# Step 4: Check remaining errors
 node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs --config <plugin-path>/_tooling/.markdownlint-cli2.jsonc "**/*.md" "#.agent"
 ```
 
@@ -139,6 +149,7 @@ node <plugin-path>/_tooling/node_modules/markdownlint-cli2/markdownlint-cli2-bin
 Fixing: src/content/posts/example.md
 
 markdownlint: 0 errors
+fix_md_extra: no changes
 prettier: formatted
 
 Done
@@ -150,23 +161,9 @@ Done
 Fixing: src/content/posts/example.md
 
 markdownlint: 2 errors fixed
+fix_md_extra: added language to 1 code block
 prettier: formatted
 
-Done
-```
-
-### With Remaining Manual Fixes
-
-```text
-Fixing: src/content/posts/example.md
-
-markdownlint: 3 errors (1 auto-fixed, 2 require manual fix)
-prettier: formatted
-
-Remaining errors:
-- Line 35: MD040 - Fenced code blocks should have a language specified
-
-Fixing manually...
 Done
 ```
 
@@ -175,25 +172,32 @@ Done
 | Tool              | Purpose                                                      |
 | ----------------- | ------------------------------------------------------------ |
 | markdownlint-cli2 | Structural fixes (headings, lists, code blocks, blank lines) |
+| fix_md_extra.py   | Fixes MD040 (code block language) and MD025 (multiple H1)    |
 | prettier          | Visual formatting (table alignment, consistent spacing)      |
 
 ## Rules Enforced
 
 ### markdownlint-cli2 (`_tooling/.markdownlint-cli2.jsonc`)
 
-| Rule  | Description                     | Auto-fixable |
-| ----- | ------------------------------- | ------------ |
-| MD001 | Heading levels increment by one | No           |
-| MD003 | ATX style headings (`##`)       | Yes          |
-| MD004 | Dash (`-`) for unordered lists  | Yes          |
-| MD009 | No trailing whitespace          | Yes          |
-| MD010 | No hard tabs                    | Yes          |
-| MD012 | Max 1 consecutive blank line    | Yes          |
-| MD022 | Blank lines around headings     | Yes          |
-| MD031 | Blank lines around code blocks  | Yes          |
-| MD032 | Blank lines around lists        | Yes          |
-| MD040 | Code blocks have language       | **No**       |
-| MD047 | File ends with newline          | Yes          |
+| Rule  | Description                     | Auto-fixable         |
+| ----- | ------------------------------- | -------------------- |
+| MD001 | Heading levels increment by one | No                   |
+| MD003 | ATX style headings (`##`)       | Yes                  |
+| MD004 | Dash (`-`) for unordered lists  | Yes                  |
+| MD009 | No trailing whitespace          | Yes                  |
+| MD010 | No hard tabs                    | Yes                  |
+| MD012 | Max 1 consecutive blank line    | Yes                  |
+| MD022 | Blank lines around headings     | Yes                  |
+| MD025 | Single H1 heading               | Yes (via script)     |
+| MD031 | Blank lines around code blocks  | Yes                  |
+| MD032 | Blank lines around lists        | Yes                  |
+| MD040 | Code blocks have language       | Yes (via script)     |
+| MD047 | File ends with newline          | Yes                  |
+
+### fix_md_extra.py (`skills/fixing-markdown/scripts/`)
+
+- MD040: Adds `text` as default language to code blocks without one
+- MD025: Demotes duplicate H1 headings to H2
 
 ### prettier (`_tooling/.prettierrc`)
 
@@ -208,14 +212,14 @@ Done
 3. **Setup environment**: Ensure Node.js dependencies are installed in plugin directory
 4. **Detect target type**: file or folder
 5. **Run markdownlint-cli2 with --fix**: Fix structural issues (always exclude `.agent/`). **IGNORE exit code—proceed regardless.**
-6. **Run prettier**: Format visual appearance (always exclude `.agent/`). **ALWAYS run this step.**
-7. **Run markdownlint-cli2 without --fix**: Check for remaining errors
-8. **Fix remaining errors manually**: If any errors remain (e.g., MD040), edit the file to fix them
-9. **Report**: Show results from both tools
+6. **Run fix_md_extra.py**: Fix MD040 and MD025 issues that markdownlint cannot auto-fix.
+7. **Run prettier**: Format visual appearance (always exclude `.agent/`). **ALWAYS run this step.**
+8. **Run markdownlint-cli2 without --fix**: Verify no remaining errors
+9. **Report**: Show results from all tools
 
 ## Notes
 
 - Config files: `_tooling/.markdownlint-cli2.jsonc`, `_tooling/.prettierrc`
-- Requires: Node.js installed on system
+- Requires: Node.js and Python 3 installed on system
 - Dependencies installed on first use in plugin's `_tooling/node_modules/`
 - **markdownlint exit code 1 is normal** when there are unfixable errors—do not stop execution
