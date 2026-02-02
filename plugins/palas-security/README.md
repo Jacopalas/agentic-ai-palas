@@ -1,11 +1,11 @@
-# Security — Escaneo de Seguridad
+# Palas-Security — Escaneo de Seguridad
 
 Habilidades de IA para tu negocio y proyectos relacionadas con seguridad.
 
 ## Estructura
 
 ```
-security/
+palas-security/
 ├── .claude-plugin/
 │   └── plugin.json           # Metadatos del plugin
 └── skills/
@@ -15,12 +15,12 @@ security/
 
 ## Habilidades Disponibles
 
-### `/security:security-scan` — Escaneo de Seguridad
+### `/palas-security:security-scan` — Escaneo de Seguridad
 
 Escanea el código buscando problemas de seguridad comunes.
 
 ```text
-/security:security-scan [objetivo]
+/palas-security:security-scan [objetivo]
 ```
 
 **Detecta:**
@@ -44,13 +44,13 @@ Escanea el código buscando problemas de seguridad comunes.
 ## Uso
 
 ```text
-/security:security-scan
+/palas-security:security-scan
 -> Escanea el directorio actual
 
-/security:security-scan src/
+/palas-security:security-scan src/
 -> Escanea solo el directorio src/
 
-/security:security-scan package.json
+/palas-security:security-scan package.json
 -> Revisa un archivo específico
 ```
 

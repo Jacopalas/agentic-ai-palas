@@ -29,9 +29,9 @@ if [ -d ".claude" ]; then
         echo ""
         echo "Para usar los plugins de Palas, ejecuta en Claude Code:"
         echo "  /plugin marketplace add Jacopalas/agentic-ai-palas"
-        echo "  /plugin install basic@agentic-ai-palas"
-        echo "  /plugin install security@agentic-ai-palas"
-        echo "  /plugin install git@agentic-ai-palas"
+        echo "  /plugin install palas-basic@agentic-ai-palas"
+        echo "  /plugin install palas-security@agentic-ai-palas"
+        echo "  /plugin install palas-git@agentic-ai-palas"
         exit 0
     fi
 else
@@ -49,17 +49,17 @@ Instala los plugins de Palas para obtener estas habilidades:
 
 ```shell
 /plugin marketplace add Jacopalas/agentic-ai-palas
-/plugin install basic@agentic-ai-palas
-/plugin install security@agentic-ai-palas
-/plugin install git@agentic-ai-palas
+/plugin install palas-basic@agentic-ai-palas
+/plugin install palas-security@agentic-ai-palas
+/plugin install palas-git@agentic-ai-palas
 ```
 
 ### Habilidades
 
-- `/git:commit` — Crear commits de git bien estructurados con formato convencional
-- `/basic:fixing-markdown` — Validar y corregir formato de markdown
-- `/security:security-scan` — Escanear secretos expuestos y vulnerabilidades
-- `/basic:removing-notebooklm` — Eliminar marcas de agua de PDFs e imágenes
+- `/palas-git:commit` — Crear commits de git bien estructurados con formato convencional
+- `/palas-basic:fixing-markdown` — Validar y corregir formato de markdown
+- `/palas-security:security-scan` — Escanear secretos expuestos y vulnerabilidades
+- `/palas-basic:removing-notebooklm` — Eliminar marcas de agua de PDFs e imágenes
 
 ## Notas del Proyecto
 
@@ -77,9 +77,9 @@ echo "Siguientes pasos:"
 echo "  1. Abre Claude Code en este directorio"
 echo "  2. Ejecuta: /plugin marketplace add Jacopalas/agentic-ai-palas"
 echo "  3. Instala los plugins que necesites:"
-echo "     /plugin install basic@agentic-ai-palas"
-echo "     /plugin install security@agentic-ai-palas"
-echo "     /plugin install git@agentic-ai-palas"
+echo "     /plugin install palas-basic@agentic-ai-palas"
+echo "     /plugin install palas-security@agentic-ai-palas"
+echo "     /plugin install palas-git@agentic-ai-palas"
 echo "  4. Edita .claude/CLAUDE.md para añadir las instrucciones de tu proyecto"
 echo ""
 echo -e "${GREEN}¡Listo!${NC}"

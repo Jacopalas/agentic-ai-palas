@@ -8,15 +8,15 @@
   },
   "plugins": [
     {
-      "name": "basic",
-      "description": "AI skills for your business and projects: basic common tools that can be re-used in business or anything. Includes markdown linting and notebook watermark removal.",
+      "name": "palas-basic",
+      "description": "Habilidades de IA para tu negocio y proyectos: herramientas básicas comunes reutilizables en cualquier contexto. Incluye corrección de markdown y eliminación de marcas de agua de NotebookLM.",
       "version": "1.0.0",
       "author": {
         "name": "Jacopalas"
       },
-      "source": "./plugins/basic",
+      "source": "./plugins/palas-basic",
       "category": "productivity",
-      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/basic",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/palas-basic",
       "license": "MIT",
       "keywords": [
         "markdown",
@@ -27,15 +27,15 @@
       ]
     },
     {
-      "name": "security",
-      "description": "AI skills for your business and projects that are security related. Includes security scanning for secrets, vulnerabilities, and risky code patterns.",
+      "name": "palas-security",
+      "description": "Habilidades de IA relacionadas con seguridad para tu negocio y proyectos. Incluye escaneo de secretos, vulnerabilidades y patrones de código peligrosos.",
       "version": "1.0.0",
       "author": {
         "name": "Jacopalas"
       },
-      "source": "./plugins/security",
+      "source": "./plugins/palas-security",
       "category": "security",
-      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/security",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/palas-security",
       "license": "MIT",
       "keywords": [
         "security",
@@ -46,15 +46,15 @@
       ]
     },
     {
-      "name": "git",
-      "description": "AI skills for your business and projects that helps you work with git. Includes well-structured commits with conventional format.",
+      "name": "palas-git",
+      "description": "Habilidades de IA para trabajar con git en tu negocio y proyectos. Incluye commits bien estructurados con formato convencional.",
       "version": "1.0.0",
       "author": {
         "name": "Jacopalas"
       },
-      "source": "./plugins/git",
+      "source": "./plugins/palas-git",
       "category": "productivity",
-      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/git",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/palas-git",
       "license": "MIT",
       "keywords": [
         "git",
@@ -64,16 +64,16 @@
       ]
     },
     {
-      "name": "example-plugin",
-      "description": "A comprehensive example plugin demonstrating all Claude Code extension options including commands, agents, skills, hooks, and MCP servers",
+      "name": "palas-ejemplo",
+      "description": "Plugin de ejemplo que demuestra todas las opciones de extensión de Claude Code: comandos, agentes, habilidades, hooks y servidores MCP",
       "version": "1.0.0",
       "author": {
         "name": "Anthropic",
         "email": "support@anthropic.com"
       },
-      "source": "./plugins/example-plugin",
+      "source": "./plugins/palas-ejemplo",
       "category": "development",
-      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/example-plugin"
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/palas-ejemplo"
     }
   ]
 }

@@ -64,7 +64,7 @@ git checkout -b add-nombre-de-tu-skill
 
 ### 3. Añadir tu habilidad
 
-Ver [`/plugins/example-plugin`](plugins/example-plugin) como implementación de referencia y 
+Ver [`/plugins/palas-ejemplo`](plugins/palas-ejemplo) como implementación de referencia y 
 
 Si tu habilidad necesita scripts, añádelos en un subdirectorio `scripts/`.
 

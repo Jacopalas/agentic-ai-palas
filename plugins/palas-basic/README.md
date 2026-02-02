@@ -1,11 +1,11 @@
-# Basic — Herramientas Comunes
+# Palas-Basic — Herramientas Comunes
 
 Habilidades de IA para tu negocio y proyectos: herramientas básicas comunes que pueden reutilizarse en cualquier contexto.
 
 ## Estructura
 
 ```
-basic/
+palas-basic/
 ├── .claude-plugin/
 │   └── plugin.json           # Metadatos del plugin
 ├── _tooling/                  # Dependencias (Node.js y Python)
@@ -24,12 +24,12 @@ basic/
 
 ## Habilidades Disponibles
 
-### `/basic:fixing-markdown` — Validar y Corregir Markdown
+### `/palas-basic:fixing-markdown` — Validar y Corregir Markdown
 
 Ejecuta markdownlint-cli2 + prettier para auto-corregir formato.
 
 ```text
-/basic:fixing-markdown <objetivo>
+/palas-basic:fixing-markdown <objetivo>
 ```
 
 **Características:**
@@ -38,12 +38,12 @@ Ejecuta markdownlint-cli2 + prettier para auto-corregir formato.
 - Formatea visualmente (alineación de tablas, espaciado)
 - Excluye automáticamente `.agent/` (Antigravity Kit)
 
-### `/basic:removing-notebooklm` — Eliminar Watermark
+### `/palas-basic:removing-notebooklm` — Eliminar Watermark
 
 Elimina automáticamente la marca de agua de NotebookLM de PDFs e imágenes.
 
 ```text
-/basic:removing-notebooklm <archivo> [--output <ruta>]
+/palas-basic:removing-notebooklm <archivo> [--output <ruta>]
 ```
 
 **Soporta:**
@@ -61,11 +61,11 @@ Las dependencias se instalan automáticamente en la primera ejecución dentro de
 
 ## Uso
 
-Las habilidades se invocan usando el prefijo `/basic:`:
+Las habilidades se invocan usando el prefijo `/palas-basic:`:
 
 ```text
-/basic:fixing-markdown docs/
-/basic:removing-notebooklm presentation.pdf
+/palas-basic:fixing-markdown docs/
+/palas-basic:removing-notebooklm presentation.pdf
 ```
 
 ## Nota sobre Idiomas

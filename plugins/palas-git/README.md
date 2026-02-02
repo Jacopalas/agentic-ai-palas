@@ -1,11 +1,11 @@
-# Git — Herramientas de Control de Versiones
+# Palas-Git — Herramientas de Control de Versiones
 
 Habilidades de IA para tu negocio y proyectos que te ayudan a trabajar con git.
 
 ## Estructura
 
 ```
-git/
+palas-git/
 ├── .claude-plugin/
 │   └── plugin.json           # Metadatos del plugin
 └── skills/
@@ -15,12 +15,12 @@ git/
 
 ## Habilidades Disponibles
 
-### `/git:commit` — Commits Consistentes
+### `/palas-git:commit` — Commits Consistentes
 
 Crea commits de git con mensajes bien estructurados siguiendo Conventional Commits.
 
 ```text
-/git:commit [mensaje]
+/palas-git:commit [mensaje]
 ```
 
 **Características:**
@@ -51,13 +51,13 @@ Crea commits de git con mensajes bien estructurados siguiendo Conventional Commi
 ## Uso
 
 ```text
-/git:commit
+/palas-git:commit
 -> Analiza cambios staged y crea un commit convencional
 
-/git:commit add user authentication
+/palas-git:commit add user authentication
 -> Crea: feat(auth): añade autenticación de usuario
 
-/git:commit fix login redirect bug
+/palas-git:commit fix login redirect bug
 -> Crea: fix(auth): corrige bug de redirección en login
 ```
 

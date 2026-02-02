@@ -70,16 +70,16 @@ Alternativa, en modo comando:
 /plugin marketplace add Jacopalas/agentic-ai-palas
 
 # Instalar el plugin Palas
-/plugin install {nombre-plugin}@palas-marketplace
+/plugin install {nombre-plugin}@agentic-ai-palas
 ```
 
 ## Plugins Disponibles
 
 | Plugin | Habilidades | Descripción |
 |--------|-------------|-------------|
-| **basic** | `fixing-markdown`, `removing-notebooklm` | Herramientas comunes: formato markdown y eliminación de watermarks |
-| **git** | `commit` | Commits bien estructurados con Conventional Commits |
-| **security** | `security-scan` | Escaneo de secretos y vulnerabilidades |
+| **palas-basic** | `fixing-markdown`, `removing-notebooklm` | Herramientas comunes: formato markdown y eliminación de watermarks |
+| **palas-git** | `commit` | Commits bien estructurados con Conventional Commits |
+| **palas-security** | `security-scan` | Escaneo de secretos y vulnerabilidades |
 
 ## Estructura de Plugins
 

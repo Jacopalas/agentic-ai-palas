@@ -1,11 +1,11 @@
-# Plugin de Ejemplo
+# Palas-Ejemplo — Plugin de Ejemplo
 
 Un plugin completo de ejemplo que demuestra las opciones de extensión de Claude Code.
 
 ## Estructura
 
 ```
-example-plugin/
+palas-ejemplo/
 ├── .claude-plugin/
 │   └── plugin.json        # Metadatos del plugin
 ├── .mcp.json              # Configuración del servidor MCP
