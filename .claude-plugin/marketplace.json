@@ -10,7 +10,7 @@
     {
       "name": "palas-basic",
       "description": "Habilidades de IA para tu negocio y proyectos: herramientas básicas comunes reutilizables en cualquier contexto. Incluye corrección de markdown y eliminación de marcas de agua de NotebookLM.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Jacopalas"
       },
