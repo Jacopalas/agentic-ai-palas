@@ -61,7 +61,7 @@ claude
 
 ### Instala el Marketplace
 
-Escribe `/plugin > Manage Plugins`. Navega a `Marketplaces` añade `Jacopalas/palas-marketplace`. Navega a `Plugins` instala el plugin que desees
+Escribe `/plugin > Manage Plugins`. Navega a `Marketplaces` añade `Jacopalas/agentic-ai-palas`. Navega a `Plugins` instala el plugin que desees
 
 Alternativa, en modo comando:
 
