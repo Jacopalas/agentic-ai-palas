@@ -29,9 +29,9 @@ if [ -d ".claude" ]; then
         echo ""
         echo "Para usar los plugins de Palas, ejecuta en Claude Code:"
         echo "  /plugin marketplace add Jacopalas/agentic-ai-palas"
-        echo "  /plugin install basic@palas-marketplace"
-        echo "  /plugin install security@palas-marketplace"
-        echo "  /plugin install git@palas-marketplace"
+        echo "  /plugin install basic@agentic-ai-palas"
+        echo "  /plugin install security@agentic-ai-palas"
+        echo "  /plugin install git@agentic-ai-palas"
         exit 0
     fi
 else
@@ -49,9 +49,9 @@ Instala los plugins de Palas para obtener estas habilidades:
 
 ```shell
 /plugin marketplace add Jacopalas/agentic-ai-palas
-/plugin install basic@palas-marketplace
-/plugin install security@palas-marketplace
-/plugin install git@palas-marketplace
+/plugin install basic@agentic-ai-palas
+/plugin install security@agentic-ai-palas
+/plugin install git@agentic-ai-palas
 ```
 
 ### Habilidades
@@ -77,9 +77,9 @@ echo "Siguientes pasos:"
 echo "  1. Abre Claude Code en este directorio"
 echo "  2. Ejecuta: /plugin marketplace add Jacopalas/agentic-ai-palas"
 echo "  3. Instala los plugins que necesites:"
-echo "     /plugin install basic@palas-marketplace"
-echo "     /plugin install security@palas-marketplace"
-echo "     /plugin install git@palas-marketplace"
+echo "     /plugin install basic@agentic-ai-palas"
+echo "     /plugin install security@agentic-ai-palas"
+echo "     /plugin install git@agentic-ai-palas"
 echo "  4. Edita .claude/CLAUDE.md para añadir las instrucciones de tu proyecto"
 echo ""
 echo -e "${GREEN}¡Listo!${NC}"
