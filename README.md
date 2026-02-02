@@ -110,12 +110,6 @@ Algunos de los plugins tienen scripts que dependen de librerías de NodeJS o de 
 >
 > Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
 
-## Contribuir
-
-## Contribuir
-
-Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
-
 ## Documentación
 
 Para más información sobre desarrollo de plugins, ver la [documentación oficial](https://docs.anthropic.com/en/docs/claude-code/plugins).
@@ -123,3 +117,30 @@ Para más información sobre desarrollo de plugins, ver la [documentación ofici
 ## Licencia
 
 Usamos la licencia [MIT](./LICENSE).
+
+## Contribuir al proyecto
+
+Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
+
+<!-- readme: contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/Jacopalas">
+                    <img src="https://github.com/Jacopalas.png" width="80;" alt="Jacopalas"/>
+                    <br />
+                    <sub><b>Jacobo Palacios</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/LuisPalacios">
+                    <img src="https://github.com/LuisPalacios.png" width="80;" alt="LuisPalacios"/>
+                    <br />
+                    <sub><b>Luis Palacios</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
+</table>
+<!-- readme: contributors -end -->
