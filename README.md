@@ -1,6 +1,5 @@
 # Palas — Marketplace de Plugins para Claude Code
 
-
 ![Palas Overview](./infographic.svg)
 
 ## ¿Por qué Palas?
