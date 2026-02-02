@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "palas-marketplace",
+  "name": "palas-plugins-official",
   "description": "Directorio de plugins de Palas: herramientas de productividad y habilidades especializadas para PYMEs",
   "owner": {
     "name": "Jacopalas",

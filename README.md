@@ -86,7 +86,7 @@ Alternativa, en modo comando:
 Cada plugin sigue una estructura estándar:
 
 ```
-plugin-name/
+palas-<nombre>/
 ├── .claude-plugin/
 │   └── plugin.json      # Metadatos del plugin (requerido)
 ├── .mcp.json            # Configuración MCP (opcional)
