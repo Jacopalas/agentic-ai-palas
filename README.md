@@ -122,4 +122,4 @@ Para más información sobre desarrollo de plugins, ver la [documentación ofici
 
 ## Licencia
 
-[MIT](./LICENSE)
+Usamos la licencia [MIT](./LICENSE).
