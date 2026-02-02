@@ -1,6 +1,6 @@
 ---
 name: fixing-markdown
-description: Validate and fix markdown formatting in files and folders. Use when the user wants to check formatting, validate markdown, fix lint errors, revisar formato, validar notas, comprobar markdown, arreglar markdown, limpiar markdown, or clean up files.
+description: Validate and fix markdown formatting in files and folders. Use when the user wants to check formatting, validate markdown, fix lint errors, revisar formato, validar notas, comprobar markdown, arregla el formato, arreglar markdown, limpiar markdown, or clean up files.
 ---
 
 # /palas:fixing-markdown — Validate and Fix Markdown
