@@ -9,42 +9,95 @@
       <stop offset="0" style="stop-color:#e94560"/>
       <stop offset="1" style="stop-color:#ff6b6b"/>
     </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" style="stop-color:#7ee787"/>
+      <stop offset="1" style="stop-color:#56d364"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" style="stop-color:#58a6ff"/>
+      <stop offset="1" style="stop-color:#79c0ff"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" style="stop-color:#f0883e"/>
+      <stop offset="1" style="stop-color:#ffa657"/>
+    </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
     </filter>
   </defs>
-  <rect width="540" height="425" fill="url(#bg)" style="" x="0.01"/>
-  <text x="270.01" y="50" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" style="white-space: pre; font-size: 32px;">Palas</text>
-  <text x="270.01" y="80" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="16" style="white-space: pre; font-size: 16px;">Plugin para Claude Code</text>
-  <text x="272.43" y="104.029" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" style="white-space: pre; font-size: 14px;">Instálalo una vez y úsalo en todos lados.</text>
-  <g transform="matrix(1, 0, 0, 1, -129.989443, 0)">
-    <g filter="url(#shadow)" transform="matrix(0.703681, 0, 0, 1, 118.527658, -26.836491)" style="">
-      <rect x="300" y="150" width="200" height="80" rx="12" fill="#1f2937"/>
-      <rect x="300" y="150" width="200" height="4" rx="2" fill="url(#accent)"/>
-    </g>
-    <text x="400" y="158.164" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" style="white-space: pre; font-size: 16px;">palas plugin</text>
-    <text x="400" y="183.164" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Kit de habilidades</text>
-    <g style="" transform="matrix(1, 0, 0, 0.673665, 0, 69.562814)">
-      <path d="M 350 213.164 L 223.241 274.841" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
-      <path d="M 400.001 213.164 L 400.001 273.164" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4" style=""/>
-      <path d="M 450 213.164 L 573.404 273.164" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
-    </g>
-    <g filter="url(#shadow)" transform="matrix(0.811306, 0, 0, 1, 99.86799, -48.641091)" style="">
-      <rect x="70" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
-    </g>
-    <text x="221.564" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-app-web/</text>
-    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 8px; text-anchor: middle; white-space: pre;" x="221.564" y="311.359">TypeScript • Next • API</text>
-    <g filter="url(#shadow)" transform="matrix(0.860227, 0, 0, 1, 55.909322, -48.641091)" style="">
-      <rect x="320" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
-    </g>
-    <text x="400" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-proyecto/</text>
-    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 8px; text-anchor: middle; white-space: pre;" x="400" y="311.359">Cliente • Ventas • Operaciones</text>
-    <g filter="url(#shadow)" transform="matrix(0.783351, 0, 0, 1, 69.257585, -48.641091)" style="">
-      <rect x="570" y="310" width="160" height="70" rx="10" fill="#1f2937"/>
-    </g>
-    <text x="578.436" y="291.359" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11" style="white-space: pre; font-size: 11px;">tu-aprendizaje/</text>
-    <text style="fill: rgb(136, 146, 176); font-family: system-ui, sans-serif; font-size: 8px; text-anchor: middle; white-space: pre;" x="578.436" y="311.359">Plan • Notas • Investigación</text>
-    <rect x="199.441" y="347.973" width="400" height="3" rx="1.5" fill="url(#accent)"/>
-    <text x="400" y="380.209" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="12" style="white-space: pre; font-size: 12px;">Mismas habilidades • Cualquier proyecto • Sin configuración</text>
+
+  <!-- Background -->
+  <rect width="540" height="425" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="270" y="45" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="bold">Palas Marketplace</text>
+  <text x="270" y="70" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="14">Plugins de productividad para Claude Code</text>
+
+  <!-- Three plugins row -->
+  <!-- basic plugin -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="100" width="150" height="85" rx="10" fill="#1f2937"/>
+    <rect x="30" y="100" width="150" height="4" rx="2" fill="url(#accent)"/>
   </g>
+  <text x="105" y="125" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">basic</text>
+  <text x="105" y="145" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10">Herramientas comunes</text>
+  <text x="105" y="165" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="9">fixing-markdown</text>
+  <text x="105" y="178" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="9">removing-notebooklm</text>
+
+  <!-- git plugin -->
+  <g filter="url(#shadow)">
+    <rect x="195" y="100" width="150" height="85" rx="10" fill="#1f2937"/>
+    <rect x="195" y="100" width="150" height="4" rx="2" fill="url(#green)"/>
+  </g>
+  <text x="270" y="125" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">git</text>
+  <text x="270" y="145" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10">Control de versiones</text>
+  <text x="270" y="165" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="9">commit</text>
+
+  <!-- security plugin -->
+  <g filter="url(#shadow)">
+    <rect x="360" y="100" width="150" height="85" rx="10" fill="#1f2937"/>
+    <rect x="360" y="100" width="150" height="4" rx="2" fill="url(#yellow)"/>
+  </g>
+  <text x="435" y="125" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">security</text>
+  <text x="435" y="145" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="10">Seguridad</text>
+  <text x="435" y="165" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="9">security-scan</text>
+
+  <!-- Connecting lines -->
+  <path d="M 105 185 L 105 220 L 270 220 L 270 250" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <path d="M 270 185 L 270 250" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <path d="M 435 185 L 435 220 L 270 220 L 270 250" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+
+  <!-- Central node -->
+  <circle cx="270" cy="250" r="6" fill="#e94560"/>
+
+  <!-- Lines to projects -->
+  <path d="M 270 256 L 270 280 L 105 280 L 105 305" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <path d="M 270 256 L 270 305" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <path d="M 270 256 L 270 280 L 435 280 L 435 305" stroke="#e94560" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+
+  <!-- Three projects row -->
+  <!-- Project 1 -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="305" width="150" height="65" rx="10" fill="#1f2937"/>
+  </g>
+  <text x="105" y="330" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11">tu-app-web/</text>
+  <text x="105" y="350" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="9">TypeScript • Next • API</text>
+
+  <!-- Project 2 -->
+  <g filter="url(#shadow)">
+    <rect x="195" y="305" width="150" height="65" rx="10" fill="#1f2937"/>
+  </g>
+  <text x="270" y="330" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11">tu-negocio/</text>
+  <text x="270" y="350" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="9">Ventas • Facturas • Docs</text>
+
+  <!-- Project 3 -->
+  <g filter="url(#shadow)">
+    <rect x="360" y="305" width="150" height="65" rx="10" fill="#1f2937"/>
+  </g>
+  <text x="435" y="330" text-anchor="middle" fill="#7ee787" font-family="monospace" font-size="11">tu-aprendizaje/</text>
+  <text x="435" y="350" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="9">Notas • Investigación</text>
+
+  <!-- Bottom bar -->
+  <rect x="70" y="385" width="400" height="3" rx="1.5" fill="url(#accent)"/>
+  <text x="270" y="410" text-anchor="middle" fill="#8892b0" font-family="system-ui, sans-serif" font-size="11">Instala solo lo que necesites • Usa en cualquier proyecto</text>
 </svg>

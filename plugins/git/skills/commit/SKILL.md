@@ -3,14 +3,14 @@ name: commit
 description: Create well-structured git commits with consistent message format. Use when the user wants to commit changes, make a commit, guardar cambios, hacer commit, or save work to git.
 ---
 
-# /palas:commit — Create Consistent Git Commits
+# /git:commit — Create Consistent Git Commits
 
-Create git commits with well-structured, conventional commit messages.
+Create git commits with well-structured, conventional commit messages. **All commit messages MUST be written in Spanish.**
 
 ## Usage
 
 ```text
-/palas:commit [message]
+/git:commit [message]
 ```
 
 **Arguments:**
@@ -47,15 +47,17 @@ Optional. Component or area affected (e.g., `auth`, `api`, `ui`).
 
 ### Subject
 
-- Imperative mood ("add feature" not "added feature")
+- Imperative mood ("añade función" not "añadida función")
 - No period at end
 - Max 50 characters
+- **Always in Spanish**
 
 ### Body
 
 - Explain **why**, not **what** (code shows what)
 - Wrap at 72 characters
 - Optional for small changes
+- **Always in Spanish**
 
 ## Behavior
 
@@ -71,17 +73,17 @@ Optional. Component or area affected (e.g., `auth`, `api`, `ui`).
 ## Examples
 
 ```text
-/palas:commit
--> Analyzes staged changes, drafts appropriate message
+/git:commit
+-> Analyzes staged changes, drafts appropriate message in Spanish
 
-/palas:commit add user authentication
--> Creates: feat(auth): add user authentication
+/git:commit add user authentication
+-> Creates: feat(auth): añade autenticación de usuario
 
-/palas:commit fix login redirect bug
--> Creates: fix(auth): fix login redirect bug
+/git:commit fix login redirect bug
+-> Creates: fix(auth): corrige bug de redirección en login
 
-/palas:commit update README with installation steps
--> Creates: docs: update README with installation steps
+/git:commit update README with installation steps
+-> Creates: docs: actualiza README con pasos de instalación
 ```
 
 ## Commands
@@ -95,11 +97,11 @@ git log --oneline -5
 # Stage specific files (prefer over git add -A)
 git add path/to/file1.ts path/to/file2.ts
 
-# Commit with HEREDOC for proper formatting
+# Commit with HEREDOC for proper formatting (message in Spanish)
 git commit -m "$(cat <<'EOF'
-type(scope): subject line
+type(scope): línea de asunto en español
 
-Body explaining why this change was made.
+Cuerpo explicando por qué se hizo este cambio.
 EOF
 )"
 
@@ -109,11 +111,12 @@ git status
 
 ## Rules
 
-1. **Never use `git add -A`** — stage specific files to avoid accidents
-2. **Never commit secrets** — skip `.env`, credentials, API keys
-3. **Never amend without asking** — amending can lose work
-4. **Never push automatically** — commit only, user pushes manually
-5. **Never skip hooks** — let pre-commit hooks run
+1. **Always write commit messages in Spanish** — subject and body must be in Spanish
+2. **Never use `git add -A`** — stage specific files to avoid accidents
+3. **Never commit secrets** — skip `.env`, credentials, API keys
+4. **Never amend without asking** — amending can lose work
+5. **Never push automatically** — commit only, user pushes manually
+6. **Never skip hooks** — let pre-commit hooks run
 
 ## Multi-File Commits
 
@@ -124,11 +127,11 @@ When changes span multiple files:
 3. List affected areas in body if helpful
 
 ```text
-feat(api): add rate limiting
+feat(api): añade limitación de tasa
 
-- Add rate limit middleware
-- Update API routes
-- Add rate limit tests
+- Añade middleware de rate limit
+- Actualiza rutas de API
+- Añade tests de rate limit
 ```
 
 ## Notes

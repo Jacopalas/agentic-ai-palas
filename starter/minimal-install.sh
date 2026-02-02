@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Palas Plugin - Configuración Mínima de Proyecto
+# Palas Marketplace - Configuración Mínima de Proyecto
 # Crea un .claude/CLAUDE.md básico para proyectos sin uno
 #
 # Uso:
@@ -16,8 +16,8 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # Sin color
 
 echo ""
-echo "Palas Plugin - Configuración Mínima de Proyecto"
-echo "================================================"
+echo "Palas Marketplace - Configuración Mínima de Proyecto"
+echo "====================================================="
 echo ""
 
 # Verificar si existe el directorio .claude
@@ -27,9 +27,11 @@ if [ -d ".claude" ]; then
     if [ -f ".claude/CLAUDE.md" ]; then
         echo -e "${YELLOW}CLAUDE.md ya existe. Omitiendo para evitar sobrescribirlo.${NC}"
         echo ""
-        echo "Para usar el plugin palas, ejecuta en Claude Code:"
-        echo "  /plugin marketplace add Jacopalas/palas-marketplace"
-        echo "  /plugin install palas@palas"
+        echo "Para usar los plugins de Palas, ejecuta en Claude Code:"
+        echo "  /plugin marketplace add Jacopalas/agentic-ai-palas"
+        echo "  /plugin install basic@palas-marketplace"
+        echo "  /plugin install security@palas-marketplace"
+        echo "  /plugin install git@palas-marketplace"
         exit 0
     fi
 else
@@ -41,21 +43,23 @@ fi
 cat > .claude/CLAUDE.md << 'EOF'
 # Instrucciones del Proyecto
 
-## Habilidades Disponibles (via plugin palas)
+## Habilidades Disponibles (via Palas Marketplace)
 
-Instala el plugin palas para obtener estas habilidades:
+Instala los plugins de Palas para obtener estas habilidades:
 
 ```shell
-/plugin marketplace add Jacopalas/palas-marketplace
-/plugin install palas@palas
+/plugin marketplace add Jacopalas/agentic-ai-palas
+/plugin install basic@palas-marketplace
+/plugin install security@palas-marketplace
+/plugin install git@palas-marketplace
 ```
 
 ### Habilidades
 
-- `/palas:commit` — Crear commits de git bien estructurados con formato convencional
-- `/palas:fixing-markdown` — Validar y corregir formato de markdown
-- `/palas:security-scan` — Escanear secretos expuestos y vulnerabilidades
-- `/palas:removing-notebooklm` — Eliminar marcas de agua de PDFs e imágenes
+- `/git:commit` — Crear commits de git bien estructurados con formato convencional
+- `/basic:fixing-markdown` — Validar y corregir formato de markdown
+- `/security:security-scan` — Escanear secretos expuestos y vulnerabilidades
+- `/basic:removing-notebooklm` — Eliminar marcas de agua de PDFs e imágenes
 
 ## Notas del Proyecto
 
@@ -71,8 +75,11 @@ echo -e "${GREEN}Archivo .claude/CLAUDE.md creado${NC}"
 echo ""
 echo "Siguientes pasos:"
 echo "  1. Abre Claude Code en este directorio"
-echo "  2. Ejecuta: /plugin marketplace add Jacopalas/palas-marketplace"
-echo "  3. Ejecuta: /plugin install palas@palas"
+echo "  2. Ejecuta: /plugin marketplace add Jacopalas/agentic-ai-palas"
+echo "  3. Instala los plugins que necesites:"
+echo "     /plugin install basic@palas-marketplace"
+echo "     /plugin install security@palas-marketplace"
+echo "     /plugin install git@palas-marketplace"
 echo "  4. Edita .claude/CLAUDE.md para añadir las instrucciones de tu proyecto"
 echo ""
 echo -e "${GREEN}¡Listo!${NC}"

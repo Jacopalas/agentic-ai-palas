@@ -64,53 +64,13 @@ git checkout -b add-nombre-de-tu-skill
 
 ### 3. Añadir tu habilidad
 
-Crea un directorio en `skills/` con un archivo `SKILL.md`:
-
-```text
-skills/
-└── nombre-de-tu-skill/
-    └── SKILL.md
-```
+Ver [`/plugins/example-plugin`](plugins/example-plugin) como implementación de referencia y 
 
 Si tu habilidad necesita scripts, añádelos en un subdirectorio `scripts/`.
 
-### 4. Seguir el formato de habilidad
+### 4. Idioma
 
-```markdown
----
-name: nombre-de-tu-skill
-description: Descripción breve. Use when the user wants to [trigger phrases en inglés y español].
----
-
-# /palas:nombre-de-tu-skill — Título
-
-Qué hace esta habilidad.
-
-## Usage
-
-/palas:nombre-de-tu-skill [argumentos]
-
-**Arguments:**
-
-- `arg1` (Required/Optional): Descripción
-
-## Behavior
-
-1. Paso uno
-2. Paso dos
-3. Paso tres
-
-## Examples
-
-/palas:nombre-de-tu-skill ejemplo
--> Resultado esperado
-
-## Notes
-
-- Consideraciones importantes
-```
-
-> **Nota sobre idiomas:** El contenido interno del SKILL.md (instrucciones que ejecuta Claude) debe estar en inglés para máxima fiabilidad. Las trigger phrases deben ser bilingües.
+El contenido interno del SKILL.md (instrucciones que ejecuta Claude) debe estar en inglés para máxima fiabilidad. Las trigger phrases deben ser bilingües.
 
 ### 5. Probar tu habilidad
 

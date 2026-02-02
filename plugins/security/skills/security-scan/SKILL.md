@@ -3,14 +3,14 @@ name: security-scan
 description: Basic security scanning for common vulnerabilities. Use when the user wants to check security, scan for vulnerabilities, find secrets, audit security, revisar seguridad, escanear vulnerabilidades, or check for exposed credentials.
 ---
 
-# /palas:security-scan — Basic Security Scanning
+# /security:security-scan — Basic Security Scanning
 
 Scan codebase for common security issues: exposed secrets, vulnerable patterns, and risky configurations.
 
 ## Usage
 
 ```text
-/palas:security-scan [target]
+/security:security-scan [target]
 ```
 
 **Arguments:**
@@ -152,13 +152,13 @@ Review each finding in context before taking action.
 ## Examples
 
 ```text
-/palas:security-scan
+/security:security-scan
 -> Scans current directory
 
-/palas:security-scan src/
+/security:security-scan src/
 -> Scans only src/ directory
 
-/palas:security-scan package.json
+/security:security-scan package.json
 -> Checks single file for embedded secrets
 ```
 
