@@ -128,14 +128,14 @@ Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
 		<tr>
             <td align="center">
                 <a href="https://github.com/Jacopalas">
-                    <img src="https://github.com/Jacopalas.png" width="100;" alt="Jacopalas"/>
+                    <img src="https://github.com/Jacopalas.png" width="80;" alt="Jacopalas"/>
                     <br />
                     <sub><b>Jacobo Palacios</b></sub>
                 </a>
             </td>
             <td align="center">
                 <a href="https://github.com/LuisPalacios">
-                    <img src="https://github.com/LuisPalacios.png" width="100;" alt="LuisPalacios"/>
+                    <img src="https://github.com/LuisPalacios.png" width="80;" alt="LuisPalacios"/>
                     <br />
                     <sub><b>Luis Palacios</b></sub>
                 </a>
