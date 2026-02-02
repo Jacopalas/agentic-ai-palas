@@ -1,0 +1,17 @@
+{
+  "name": "security",
+  "description": "AI skills for your business and projects that are security related. Includes security scanning for secrets, vulnerabilities, and risky code patterns.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jacopalas",
+    "url": "https://github.com/Jacopalas"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "scanning",
+    "secrets",
+    "vulnerabilities",
+    "audit"
+  ]
+}

@@ -86,3 +86,6 @@ __pycache__/
 secrets/
 .secrets/
 credentials.json
+
+# Claude directory
+.claude/

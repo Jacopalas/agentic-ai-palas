@@ -1,4 +1,5 @@
-# Palas — Plugin para Claude Code
+# Palas — Marketplace de Plugins para Claude Code
+
 
 ![Palas Overview](./infographic.svg)
 
@@ -59,71 +60,45 @@ claude
 2. Abre el panel de Claude Code (normalmente en la barra lateral)
 3. Claude ya estará en el contexto de tu proyecto
 
-### Instala "Palas" desde el Marketplace (Recomendado)
+### Instala el Marketplace
+
+Escribe `/plugin > Manage Plugins`. Navega a `Marketplaces` añade `Jacopalas/palas-marketplace`. Navega a `Plugins` instala el plugin que desees
+
+Alternativa, en modo comando:
 
 ```shell
 # Añadir el marketplace (una sola vez)
-/plugin marketplace add Jacopalas/palas-marketplace
+/plugin marketplace add Jacopalas/agentic-ai-palas
 
 # Instalar el plugin Palas
-/plugin install palas@palas
+/plugin install {nombre-plugin}@palas-marketplace
 ```
 
-### Instalación directa
+## Plugins Disponibles
 
-```shell
-# Clonar y cargar directamente
-git clone https://github.com/Jacopalas/agentic-ai-palas.git
-claude --plugin-dir ./agentic-ai-palas
+| Plugin | Habilidades | Descripción |
+|--------|-------------|-------------|
+| **basic** | `fixing-markdown`, `removing-notebooklm` | Herramientas comunes: formato markdown y eliminación de watermarks |
+| **git** | `commit` | Commits bien estructurados con Conventional Commits |
+| **security** | `security-scan` | Escaneo de secretos y vulnerabilidades |
+
+## Estructura de Plugins
+
+Cada plugin sigue una estructura estándar:
+
 ```
-
-## Habilidades disponibles
-
-### Herramientas genéricas
-
-Hemos empezado con un conjunto pequeño, de momento, de habilidades genericas.
-
-| Habilidad | Comando | Descripción |
-|-----------|---------|-------------|
-| Commit | `/palas:commit` | Crear commits de git bien formateados |
-| Markdown | `/palas:fixing-markdown` | Validar y corregir formato de markdown |
-| Seguridad | `/palas:security-scan` | Escanear secretos expuestos y vulnerabilidades |
-| Watermark | `/palas:removing-notebooklm` | Eliminar marcas de agua de NotebookLM en PDFs/imágenes |
-
-### Habilidades especializadas (Roadmap)
-
-Estamos pensando en estas habilidades especializadas de negocio:
-
-| Dominio | Ejemplos |
-|---------|----------|
-| **Finanzas** | Revisión de facturas, análisis de presupuestos, informes de gastos |
-| **Marketing** | Revisión SEO de contenido, posts para redes, newsletters |
-| **RRHH** | Descripciones de puesto, checklists de onboarding, políticas |
-| **Ventas** | Propuestas comerciales, emails de seguimiento, notas de reuniones |
-| **Legal** | Revisión de contratos, checklists de cumplimiento, NDAs |
-
-¿Quieres contribuir una habilidad de dominio? Echa un ojo al documento [CONTRIBUIR.md](CONTRIBUIR.md).
-
-## Ejemplos de Uso
-
-```text
-/palas:commit
--> Analiza cambios staged y crea un commit convencional
-
-/palas:fixing-markdown docs/
--> Corrige formato markdown en todos los archivos de docs/
-
-/palas:security-scan
--> Escanea el directorio actual buscando secretos expuestos
+plugin-name/
+├── .claude-plugin/
+│   └── plugin.json      # Metadatos del plugin (requerido)
+├── .mcp.json            # Configuración MCP (opcional)
+├── commands/            # Comandos slash (opcional)
+├── skills/              # Habilidades (opcional)
+└── README.md            # Documentación
 ```
 
 ## Requisitos
 
-- **Claude Code** v1.0.33 o posterior
-- **Node.js** (para linting de markdown) — se instala en el primer uso
-- **Python 3** (para eliminar watermarks) — se instala en el primer uso
-
-Las dependencias se instalan automáticamente en entornos aislados. Sin contaminar tu proyecto o sistema.
+Algunos de los plugins tienen scripts que dependen de librerías de NodeJS o de Python. Estas se instalarán automáticamente en entornos aislados, sin contaminar tu proyecto o sistema. Necesitarán, eso sí, que **Node.js** y **Python 3** estén ya instalados en tu ordenador.
 
 ## Nota sobre Idiomas
 
@@ -138,20 +113,14 @@ Las dependencias se instalan automáticamente en entornos aislados. Sin contamin
 
 ## Contribuir
 
-Bienvenidas las contribuciones, especialmente:
+## Contribuir
 
-- **Herramientas genéricas** que uses a diario en tus proyectos
-- **Habilidades de dominio** para funciones de negocio (finanzas, RRHH, marketing, legal, ventas)
-- **Flujos de trabajo para PYMEs** que ayuden a equipos pequeños a trabajar mejor
+Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
 
-Este proyecto evita intencionalmente competir con plugins enfocados en desarrolladores. Nuestro nicho son los **usuarios de negocio** y **expertos de dominio** que usan Claude Code.
+## Documentación
 
-Lee el documento [CONTRIBUIR.md](CONTRIBUIR.md) donde explico guías e ideas de habilidades.
-
-## Marketplace
-
-Este plugin se distribuye a través del repositorio [palas-marketplace](https://github.com/Jacopalas/palas-marketplace).
+Para más información sobre desarrollo de plugins, ver la [documentación oficial](https://docs.anthropic.com/en/docs/claude-code/plugins).
 
 ## Licencia
 
-MIT
+[MIT](./LICENSE)

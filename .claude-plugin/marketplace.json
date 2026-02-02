@@ -1,0 +1,79 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "palas-marketplace",
+  "description": "Directorio de plugins de Palas: herramientas de productividad y habilidades especializadas para PYMEs",
+  "owner": {
+    "name": "Jacopalas",
+    "email": "jacopalas@example.com"
+  },
+  "plugins": [
+    {
+      "name": "basic",
+      "description": "AI skills for your business and projects: basic common tools that can be re-used in business or anything. Includes markdown linting and notebook watermark removal.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jacopalas"
+      },
+      "source": "./plugins/basic",
+      "category": "productivity",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/basic",
+      "license": "MIT",
+      "keywords": [
+        "markdown",
+        "linting",
+        "watermark",
+        "notebooklm",
+        "productivity"
+      ]
+    },
+    {
+      "name": "security",
+      "description": "AI skills for your business and projects that are security related. Includes security scanning for secrets, vulnerabilities, and risky code patterns.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jacopalas"
+      },
+      "source": "./plugins/security",
+      "category": "security",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/security",
+      "license": "MIT",
+      "keywords": [
+        "security",
+        "scanning",
+        "secrets",
+        "vulnerabilities",
+        "audit"
+      ]
+    },
+    {
+      "name": "git",
+      "description": "AI skills for your business and projects that helps you work with git. Includes well-structured commits with conventional format.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jacopalas"
+      },
+      "source": "./plugins/git",
+      "category": "productivity",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/git",
+      "license": "MIT",
+      "keywords": [
+        "git",
+        "commit",
+        "version-control",
+        "conventional-commits"
+      ]
+    },
+    {
+      "name": "example-plugin",
+      "description": "A comprehensive example plugin demonstrating all Claude Code extension options including commands, agents, skills, hooks, and MCP servers",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "source": "./plugins/example-plugin",
+      "category": "development",
+      "homepage": "https://github.com/Jacopalas/agentic-ai-palas/tree/main/plugins/example-plugin"
+    }
+  ]
+}
