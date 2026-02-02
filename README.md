@@ -123,3 +123,28 @@ Para más información sobre desarrollo de plugins, ver la [documentación ofici
 ## Licencia
 
 Usamos la licencia [MIT](./LICENSE).
+
+## Contribuidores
+
+<!-- readme: contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/Jacopalas">
+                    <img src="hhttps://github.com/Jacopalas.png" width="100;" alt="Jacopalas"/>
+                    <br />
+                    <sub><b>Jacobo Palacios</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/LuisPalacios">
+                    <img src="hhttps://github.com/LuisPalacios.png" width="100;" alt="LuisPalacios"/>
+                    <br />
+                    <sub><b>Luis Palacios</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
+</table>
+<!-- readme: contributors -end -->
