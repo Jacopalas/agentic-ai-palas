@@ -16,7 +16,7 @@ Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básic
 * 🧩 **Plugins:** Es una forma de empaquetar Skills para facilitar su consumo. En vez de tener que preocuparte de copiar/pegar Skills que veas por ahí, Claude facilita su consumo a través del concepto de "Plugin".
 * 🛠️ **Skills (Habilidades):** Es la chicha principal. Un Skill es una habilidad dedicada a hacer algo concreto, una tarea específica que añades y le da un nuevo "superpoder" a Claude. Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins, la ventaja que tienen es que es más cómodo de gestionar.
 
-Los Plugin son como cajas de herramientas, te los bajas de internet y no te ocupan espacio en tu repo (las skills se instalan en la zona de cache global de Claude). Puede coger el skill que necesites, coger el martillo, la calculadora o el gestor concreto en cada proyecto.
+Los Plugins son como cajas de herramientas, te los bajas de internet y no te ocupan espacio en tu repo (las skills se instalan en la zona de cache global de Claude). Puede coger el skill que necesites, coger el martillo, la calculadora o el gestor concreto en cada proyecto.
 
 ## ¿Empezando con Claude?
 
@@ -32,7 +32,7 @@ cd mi-proyecto
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-Este script crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene unas instrucciones básicas para Claude, le explica a tu proyecto que existen Skills de Palas listas para usarse y deja libre un pequeño spacio donde añadir notas específicas de tu proyecto.
+Se creará una carpeta `.claude/` con un archivo `CLAUDE.md`. Contiene unas instrucciones básicas para Claude, para que te sirva de ejemplo y deja un pequeño spacio donde añadir notas específicas de tu proyecto.
 
 Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
 
