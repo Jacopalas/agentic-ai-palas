@@ -1,6 +1,6 @@
 # Palas — Marketplace de Plugins para Claude Code
 
-![Palas Overview](./infographic.svg)
+![Palas Overview](./assets/infographic.svg)
 
 <br/>
 
@@ -54,6 +54,11 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
   * Escribe `/plugin` y entra en Manage Plugins.
   * En la lengüeta `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
   * En la lengüeta `Plugins` selecciona "palas-basic" y dale a Install
+
+<p align="center" width="100%">
+    <img width="60%" src="./assets/install-screenshot.png" alt="Instalación en modo GUI">
+</p>
+
 * **En modo comando**:
   * Añadir el marketplace (una sola vez): `/plugin marketplace add Jacopalas/agentic-ai-palas`
   * Instalar el plugin que quieras, ejemplo: `/plugin install palas-basic@agentic-ai-palas`
