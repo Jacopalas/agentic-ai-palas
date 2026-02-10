@@ -14,9 +14,9 @@ Mientras la mayoría de plugins se centran en el desarrollo de software, Palas n
 
 Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
 
-- 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
-- 🧩 **Plugins:** Es una forma de empaquetar extras que añades a Claude, para darle nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
-- 🛠️ **Habilidades (Skills):** Son las tareas específicas que añades a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
+* 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
+* 🧩 **Plugins:** Es una forma de empaquetar extras que añades a Claude, para darle nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
+* 🛠️ **Habilidades (Skills):** Son las tareas específicas que añades a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
 
 > Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins (que traen Skills), la ventaja de los Plugins es la forma de empaquetar dichos Skills, es mucho más cómodo.
 
@@ -35,9 +35,9 @@ curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/sta
 
 **¿Qué hace?** Crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene:
 
-- Instrucciones básicas para Claude sobre tu proyecto
-- Las habilidades de Palas listas para usar
-- Un espacio donde añadir notas específicas de tu proyecto
+* Instrucciones básicas para Claude sobre tu proyecto
+* Las habilidades de Palas listas para usar
+* Un espacio donde añadir notas específicas de tu proyecto
 
 Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
 
@@ -45,24 +45,24 @@ Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre t
 
 Primero sitúate en el proyecto en el que vas a trabajar:
 
-- Por línea de comando, abre un terminal y navega a tu proyecto
-  - `cd ~/Documentos/mi-proyecto`
-  - `claude`
-- Desde VS Code, Cursor, etc.
-  - Abre tu proyecto en el IDE
-  - Asegúrate de tener instalada la Extensión de Claude
-  - Abre el panel de Claude Code (normalmente en la barra lateral)
-  - Claude ya estará en el contexto de tu proyecto
+* Por línea de comando, abre un terminal y navega a tu proyecto
+  * `cd ~/Documentos/mi-proyecto`
+  * `claude`
+* Desde VS Code, Cursor, etc.
+  * Abre tu proyecto en el IDE
+  * Asegúrate de tener instalada la Extensión de Claude
+  * Abre el panel de Claude Code (normalmente en la barra lateral)
+  * Claude ya estará en el contexto de tu proyecto
 
 El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después instalar el plugin que quieras.
 
-- **En modo GUI**:
-  - Escribe `/plugin > Manage Plugins`.
-  - Navega a `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
-  - Navega a `Plugins` instala el plugin que desees, por ejemplo "palas-basic"
-- **En modo comando**:
-  - Añadir el marketplace (una sola vez): `/plugin marketplace add Jacopalas/agentic-ai-palas`
-  - Instalar el plugin que quieras, ejemplo: `/plugin install palas-basic@agentic-ai-palas`
+* **En modo GUI**:
+  * Escribe `/plugin > Manage Plugins`.
+  * Navega a `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
+  * Navega a `Plugins` instala el plugin que desees, por ejemplo "palas-basic"
+* **En modo comando**:
+  * Añadir el marketplace (una sola vez): `/plugin marketplace add Jacopalas/agentic-ai-palas`
+  * Instalar el plugin que quieras, ejemplo: `/plugin install palas-basic@agentic-ai-palas`
 
 ## Plugins Disponibles
 
@@ -90,8 +90,8 @@ palas-<nombre>/
 
 Algunos plugins tienen scripts que dependen de herramientas JavaScript CLI o librerías Python. Usamos **gestión de dependencias sin huella** (zero-footprint):
 
-- **Python**: Vas a tener que instalar tanto `Python` como el programa `uv`
-- **JavaScript**: Vas a tener que instalar tanto `NodeJS` como `pnpm`
+* **Python**: Vas a tener que instalar tanto `Python` como el programa `uv`
+* **JavaScript**: Vas a tener que instalar tanto `NodeJS` como `pnpm`
 
 Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
 
@@ -101,9 +101,9 @@ Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
 
 Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
 
-- El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
-- La **documentación y ejemplos** (lo que tú lees) está en español
-- Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
+* El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
+* La **documentación y ejemplos** (lo que tú lees) está en español
+* Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
 
 Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
 
