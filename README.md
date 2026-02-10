@@ -45,35 +45,24 @@ Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre t
 
 Primero sitúate en el proyecto en el que vas a trabajar:
 
-**Opción A — Línea de comando:**
+* Por línea de comando, abre un terminal y navega a tu proyecto
+  * `cd ~/Documentos/mi-proyecto`
+  * `claude`
+* Desde VS Code, Cursor, etc.
+  * Abre tu proyecto en el IDE
+  * Asegúrate de tener instalada la Extensión de Claude
+  * Abre el panel de Claude Code (normalmente en la barra lateral)
+  * Claude ya estará en el contexto de tu proyecto
 
-```bash
-# Abre una terminal y navega a tu proyecto
-cd ~/Documentos/mi-proyecto
+El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después instalar el plugin que quieras.
 
-# Inicia Claude Code
-claude
-```
-
-**Opción B — Desde un IDE (VS Code, Cursor, etc.):**
-
-1. Abre tu proyecto en el IDE
-2. Abre el panel de Claude Code (normalmente en la barra lateral)
-3. Claude ya estará en el contexto de tu proyecto
-
-### Instala el Marketplace
-
-Escribe `/plugin > Manage Plugins`. Navega a `Marketplaces` añade `Jacopalas/agentic-ai-palas`. Navega a `Plugins` instala el plugin que desees
-
-Alternativa, en modo comando:
-
-```shell
-# Añadir el marketplace (una sola vez)
-/plugin marketplace add Jacopalas/agentic-ai-palas
-
-# Instalar el plugin Palas
-/plugin install {nombre-plugin}@agentic-ai-palas
-```
+* **En modo GUI**:
+  * Escribe `/plugin > Manage Plugins`.
+  * Navega a `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
+  * Navega a `Plugins` instala el plugin que desees, por ejemplo "palas-basic"
+* **En modo comando**:
+  * Añadir el marketplace (una sola vez): `/plugin marketplace add Jacopalas/agentic-ai-palas`
+  * Instalar el plugin que quieras, ejemplo: `/plugin install palas-basic@agentic-ai-palas`
 
 ## Plugins Disponibles
 
@@ -87,7 +76,7 @@ Alternativa, en modo comando:
 
 Cada plugin sigue una estructura estándar:
 
-```
+```text
 palas-<nombre>/
 ├── .claude-plugin/
 │   └── plugin.json      # Metadatos del plugin (requerido)
