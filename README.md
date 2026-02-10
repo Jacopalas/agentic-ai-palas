@@ -52,9 +52,9 @@ Primero sitúate en el proyecto en el que vas a trabajar:
 El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después instalar el plugin que quieras.
 
 * **En modo GUI**:
-  * Escribe `/plugin > Manage Plugins`.
-  * Navega a `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
-  * Navega a `Plugins` instala el plugin que desees, por ejemplo "palas-basic"
+  * Escribe `/plugin` y entra en Manage Plugins.
+  * En la lengüeta `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
+  * En la lengüeta `Plugins` selecciona "palas-basic" y dale a Install
 * **En modo comando**:
   * Añadir el marketplace (una sola vez): `/plugin marketplace add Jacopalas/agentic-ai-palas`
   * Instalar el plugin que quieras, ejemplo: `/plugin install palas-basic@agentic-ai-palas`
