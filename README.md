@@ -56,7 +56,7 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
   * En la lengüeta `Plugins` selecciona "palas-basic" y dale a Install
 
 <p align="center" width="100%">
-    <img width="60%" src="./assets/install-screenshot.png" alt="Instalación en modo GUI">
+    <img width="50%" src="./assets/install-screenshot.png" alt="Instalación en modo GUI">
 </p>
 
 * **En modo comando**:
