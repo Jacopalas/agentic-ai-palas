@@ -2,7 +2,7 @@
 
 ![Palas Overview](./infographic.svg)
 
-## ¿Por qué Palas?
+# ¿Por qué Palas?
 
 **Habilidades de IA para tu negocio, no solo para tu código.**
 
@@ -76,7 +76,7 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
 
 Cada plugin sigue una estructura estándar:
 
-```text
+```
 palas-<nombre>/
 ├── .claude-plugin/
 │   └── plugin.json      # Metadatos del plugin (requerido)
