@@ -41,8 +41,7 @@ Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre t
 Primero sitúate en el proyecto en el que vas a trabajar:
 
 * Por línea de comando, abre un terminal y navega a tu proyecto (un ejemplo)
-  * `cd mi-proyecto`
-  * `claude`
+  * `cd mi-proyecto` y ejecuta `claude`
 * Desde VS Code, Cursor, etc.
   * Abre tu proyecto en el IDE
   * Asegúrate de tener instalada la Extensión de Claude
