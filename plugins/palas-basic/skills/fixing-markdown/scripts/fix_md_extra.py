@@ -20,57 +20,70 @@ import sys
 from pathlib import Path
 
 
-def fix_code_blocks(content: str) -> str:
+def fix_markdown_with_context(content: str) -> str:
     """
-    MD040: Añade 'text' como lenguaje por defecto a code blocks sin especificar.
-    
-    Antes:  ```
-    Después: ```text
-    """
-    return re.sub(r'^```\s*$', '```text', content, flags=re.MULTILINE)
+    Aplica correcciones MD040 y MD025 respetando el contexto de code blocks.
 
-
-def fix_multiple_h1(content: str) -> str:
-    """
-    MD025: Degrada encabezados H1 duplicados a H2.
-    
-    El primer H1 se mantiene, los siguientes se convierten en H2.
-    Solo afecta a líneas que empiezan con '# ' (ATX style).
+    - MD040: Añade 'text' a code blocks sin lenguaje (solo aperturas, no cierres)
+    - MD025: Degrada H1 duplicados a H2 (solo fuera de code blocks)
     """
     lines = content.split('\n')
+    result = []
+    inside_code_block = False
     found_h1 = False
-    
-    for i, line in enumerate(lines):
-        # Detecta H1: empieza con '# ' pero no con '## '
-        if line.startswith('# ') and not line.startswith('## '):
+
+    for line in lines:
+        # Detectar líneas de fence (``` con posible lenguaje)
+        fence_match = re.match(r'^(`{3,}|~{3,})(\s*)(\S*)(.*)$', line)
+
+        if fence_match:
+            fence_chars = fence_match.group(1)
+            lang = fence_match.group(3)
+
+            if not inside_code_block:
+                # Apertura de code block
+                inside_code_block = True
+                if not lang:
+                    # MD040: No tiene lenguaje, añadir 'text'
+                    result.append(f'{fence_chars}text')
+                else:
+                    result.append(line)
+            else:
+                # Cierre de code block (no modificar)
+                inside_code_block = False
+                result.append(line)
+        elif not inside_code_block and line.startswith('# ') and not line.startswith('## '):
+            # MD025: H1 fuera de code block
             if found_h1:
                 # Ya encontramos un H1 antes, degradar este a H2
-                lines[i] = '#' + line
+                result.append('#' + line)
             else:
                 # Primer H1, lo mantenemos
                 found_h1 = True
-    
-    return '\n'.join(lines)
+                result.append(line)
+        else:
+            # Línea normal, no modificar
+            result.append(line)
+
+    return '\n'.join(result)
 
 
 def process_file(filepath: Path) -> bool:
     """
     Procesa un archivo markdown aplicando todas las correcciones.
-    
+
     Retorna True si el archivo fue modificado.
     """
     original = filepath.read_text(encoding='utf-8')
-    
-    # Aplicar correcciones en orden
-    content = original
-    content = fix_code_blocks(content)
-    content = fix_multiple_h1(content)
-    
+
+    # Aplicar correcciones con awareness de contexto
+    content = fix_markdown_with_context(original)
+
     # Solo escribir si hubo cambios
     if content != original:
         filepath.write_text(content, encoding='utf-8')
         return True
-    
+
     return False
 
 
@@ -78,40 +91,40 @@ def main():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
-    
+
     target = Path(sys.argv[1])
-    
+
     # Excluir .agent/ siempre (convención del skill)
     def should_skip(path: Path) -> bool:
         return '.agent' in path.parts
-    
+
     if target.is_file():
         # Archivo único
         if should_skip(target):
             print(f"Saltando {target} (directorio .agent/)")
             sys.exit(0)
-        
+
         if process_file(target):
             print(f"Corregido: {target}")
         else:
             print(f"Sin cambios: {target}")
-    
+
     elif target.is_dir():
         # Carpeta: procesar todos los .md recursivamente
         modified = 0
         skipped = 0
-        
+
         for md_file in target.rglob('*.md'):
             if should_skip(md_file):
                 skipped += 1
                 continue
-            
+
             if process_file(md_file):
                 print(f"Corregido: {md_file}")
                 modified += 1
-        
+
         print(f"\nResumen: {modified} archivo(s) modificado(s), {skipped} saltado(s)")
-    
+
     else:
         print(f"Error: {target} no existe")
         sys.exit(1)
