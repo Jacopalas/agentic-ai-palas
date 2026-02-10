@@ -14,9 +14,9 @@ Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básic
 
 * 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
 * 🧩 **Plugins:** Es una forma de empaquetar Skills para facilitar su consumo. En vez de tener que preocuparte de copiar/pegar Skills que veas por ahí, Claude facilita su consumo a través del concepto de "Plugin".
-* 🛠️ **Habilidades (Skills):** Es la chicha principal. Un Skill es una habilidad dedicada a hacer algo concreto, una tarea específica que añades y le da un nuevo "superpoder" a Claude. Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins, la ventaja de los Plugins es la forma de empaquetar dichos Skills, es mucho más cómodo.
+* 🛠️ **Skills (Habilidades):** Es la chicha principal. Un Skill es una habilidad dedicada a hacer algo concreto, una tarea específica que añades y le da un nuevo "superpoder" a Claude. Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins, la ventaja que tienen es que es más cómodo de gestionar.
 
-En resumen, los Plugin son como cajas de herramientas, y los Skills son el martillo, la calculadora o el gestor de archivos. Nosotros ofrecemos varios plugins en este repositorio que puedes añadir a tu proyecto sin "llenarlo de ficheros", ya que se guardarán en una zona de Caché distinta a tu repo.
+Los Plugin son como cajas de herramientas, te los bajas de internet y no te ocupan espacio en tu repo (las skills se instalan en la zona de cache global de Claude). Puede coger el skill que necesites, coger el martillo, la calculadora o el gestor concreto en cada proyecto.
 
 ## ¿Empezando con Claude?
 
