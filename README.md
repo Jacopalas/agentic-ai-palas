@@ -2,7 +2,7 @@
 
 ![Palas Overview](./infographic.svg)
 
-# ¿Por qué Palas?
+## ¿Por qué Palas?
 
 **Habilidades de IA para tu negocio, no solo para tu código.**
 
@@ -76,7 +76,7 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
 
 Cada plugin sigue una estructura estándar:
 
-```
+```text
 palas-<nombre>/
 ├── .claude-plugin/
 │   └── plugin.json      # Metadatos del plugin (requerido)
@@ -107,17 +107,11 @@ Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
 
 Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
 
-## Documentación
-
-Para más información sobre desarrollo de plugins, ver la [documentación oficial](https://docs.anthropic.com/en/docs/claude-code/plugins).
-
-## Licencia
-
-Usamos la licencia [MIT](./LICENSE).
-
 ## Contribuir al proyecto
 
-Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
+Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md) donde explico cómo contribuir, que habilidades están todav´´ia por desarrollarse, y cómo trabajar en modo desarrollador, para que puedas hacer pruebas Locales (que puedas probar dentro de este repo sys propios skills).
+
+Estos son los contribuidores actuales:
 
 <!-- readme: contributors -start -->
 <table>
@@ -125,14 +119,14 @@ Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
   <tr>
             <td align="center">
                 <a href="https://github.com/Jacopalas">
-                    <img src="https://github.com/Jacopalas.png" width="80;" alt="Jacopalas"/>
+                    <img src="https://github.com/Jacopalas.png" width="70;" alt="Jacopalas"/>
                     <br />
                     <sub><b>Jacobo Palacios</b></sub>
                 </a>
             </td>
             <td align="center">
                 <a href="https://github.com/LuisPalacios">
-                    <img src="https://github.com/LuisPalacios.png" width="80;" alt="LuisPalacios"/>
+                    <img src="https://github.com/LuisPalacios.png" width="70;" alt="LuisPalacios"/>
                     <br />
                     <sub><b>Luis Palacios</b></sub>
                 </a>
@@ -141,3 +135,11 @@ Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
  <tbody>
 </table>
 <!-- readme: contributors -end -->
+
+## Documentación
+
+Para más información sobre desarrollo de plugins, ver la [documentación oficial](https://docs.anthropic.com/en/docs/claude-code/plugins).
+
+## Licencia
+
+Usamos la licencia [MIT](./LICENSE).

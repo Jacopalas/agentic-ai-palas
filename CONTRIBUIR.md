@@ -25,23 +25,23 @@ Habilidades que funcionen en cualquier proyecto:
 
 Especialmente buscamos habilidades para dominios de negocio:
 
-| Dominio | Ideas de Habilidades |
-|---------|----------------------|
-| **Finanzas** | `/palas:invoice` — Generar/revisar facturas |
-| | `/palas:budget` — Analizar presupuestos y previsiones |
-| | `/palas:expense-report` — Crear informes de gastos |
-| **Marketing** | `/palas:seo-review` — Revisar contenido para SEO |
-| | `/palas:social-post` — Crear posts para redes sociales |
-| | `/palas:newsletter` — Estructurar newsletters |
-| **RRHH** | `/palas:job-description` — Redactar descripciones de puesto |
-| | `/palas:onboarding` — Crear checklists de incorporación |
-| | `/palas:policy` — Revisar/redactar políticas internas |
-| **Ventas** | `/palas:proposal` — Estructurar propuestas comerciales |
-| | `/palas:followup` — Redactar emails de seguimiento |
-| | `/palas:meeting-notes` — Resumir reuniones con clientes |
-| **Legal** | `/palas:contract-review` — Revisar contratos básicos |
-| | `/palas:compliance` — Checklists de cumplimiento |
-| | `/palas:nda` — Generar NDAs sencillos |
+| Dominio       | Ideas de Habilidades                                        |
+| ------------- | ----------------------------------------------------------- |
+| **Finanzas**  | `/palas:invoice` — Generar/revisar facturas                 |
+|               | `/palas:budget` — Analizar presupuestos y previsiones       |
+|               | `/palas:expense-report` — Crear informes de gastos          |
+| **Marketing** | `/palas:seo-review` — Revisar contenido para SEO            |
+|               | `/palas:social-post` — Crear posts para redes sociales      |
+|               | `/palas:newsletter` — Estructurar newsletters               |
+| **RRHH**      | `/palas:job-description` — Redactar descripciones de puesto |
+|               | `/palas:onboarding` — Crear checklists de incorporación     |
+|               | `/palas:policy` — Revisar/redactar políticas internas       |
+| **Ventas**    | `/palas:proposal` — Estructurar propuestas comerciales      |
+|               | `/palas:followup` — Redactar emails de seguimiento          |
+|               | `/palas:meeting-notes` — Resumir reuniones con clientes     |
+| **Legal**     | `/palas:contract-review` — Revisar contratos básicos        |
+|               | `/palas:compliance` — Checklists de cumplimiento            |
+|               | `/palas:nda` — Generar NDAs sencillos                       |
 
 **¿No ves tu dominio?** También buscamos habilidades para contabilidad, operaciones, atención al cliente, gestión de proyectos y más.
 
@@ -64,7 +64,7 @@ git checkout -b add-nombre-de-tu-skill
 
 ### 3. Añadir tu habilidad
 
-Ver [`/plugins/palas-ejemplo`](plugins/palas-ejemplo) como implementación de referencia y 
+Ver [`/plugins/palas-ejemplo`](plugins/palas-ejemplo) como implementación de referencia.
 
 Si tu habilidad necesita scripts, añádelos en un subdirectorio `scripts/`.
 
@@ -74,11 +74,7 @@ El contenido interno del SKILL.md (instrucciones que ejecuta Claude) debe estar 
 
 ### 5. Probar tu habilidad
 
-```bash
-claude --plugin-dir .
-```
-
-Luego prueba `/palas:nombre-de-tu-skill` para verificar que funciona.
+Consulta la sección [Desarrollo y Pruebas Locales](#desarrollo-y-pruebas-locales) más abajo para instrucciones detalladas.
 
 ### 6. Enviar un PR
 
@@ -93,6 +89,73 @@ Abre un PR explicando:
 - Qué hace la habilidad
 - Por qué es útil (especialmente para PYMEs)
 - Cómo la has probado
+
+---
+
+## Desarrollo y Pruebas Locales
+
+Antes de enviar un PR, prueba tu plugin localmente. Claude Code permite cargar plugins desde una carpeta local sin necesidad de instalarlos.
+
+### Cargar un plugin local
+
+Usa el flag `--plugin-dir` para cargar tu plugin directamente:
+
+```bash
+# Desde el directorio raíz del repositorio
+claude --plugin-dir ./plugins/palas-basic
+```
+
+Esto carga el plugin sin usar la caché. Los cambios que hagas se reflejan al reiniciar Claude Code.
+
+### Cargar múltiples plugins
+
+Puedes cargar varios plugins a la vez:
+
+```bash
+claude --plugin-dir ./plugins/palas-basic --plugin-dir ./plugins/palas-git
+```
+
+### Flujo de desarrollo
+
+1. Haz cambios en tu plugin (SKILL.md, scripts, etc.)
+2. Reinicia Claude Code con `--plugin-dir`
+3. Prueba el skill completo: `/palas:nombre-de-tu-skill`
+4. Repite hasta que funcione correctamente
+
+### Ejecutar scripts directamente
+
+Si tu skill usa scripts Python o JavaScript, puedes probarlos sin cargar el plugin completo.
+
+**Python con `uv run`** (gestión sin huella):
+
+```bash
+# Desde el directorio raíz del repositorio
+uv run ./plugins/palas-basic/skills/fixing-markdown/scripts/fix_md_extra.py ./README.md
+```
+
+**JavaScript con `pnpm dlx`** (gestión sin huella):
+
+```bash
+# Ejemplo con markdownlint-cli2
+pnpm dlx markdownlint-cli2 --fix "./README.md"
+```
+
+### Verificar estructura del plugin
+
+Asegúrate de que tu plugin tenga esta estructura:
+
+```text
+plugins/tu-plugin/
+├── .claude-plugin/
+│   └── plugin.json          # Requerido
+├── skills/
+│   └── tu-skill/
+│       ├── SKILL.md         # Definición del skill
+│       └── scripts/         # Scripts auxiliares (opcional)
+└── README.md
+```
+
+**Importante**: Los directorios `skills/`, `commands/`, `agents/` van en la raíz del plugin, NO dentro de `.claude-plugin/`.
 
 ---
 
