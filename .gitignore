@@ -3,10 +3,8 @@
 .env.local
 .env.*.local
 
-# Dependencies (plugin tooling)
+# Dependencies
 node_modules/
-_tooling/node_modules/
-_tooling/.venv/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml

@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "Pillow>=10.0.0",
+#     "pymupdf>=1.24.0",
+#     "opencv-python>=4.8.0",
+#     "numpy",
+# ]
+# ///
 """
 Remove NotebookLM watermark from PDFs (presentations) and images (infographics).
 Uses OpenCV inpainting to seamlessly reconstruct the background.
