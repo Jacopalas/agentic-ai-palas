@@ -97,15 +97,15 @@ Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
 
 ## Nota sobre Idiomas
 
-> **¿Por qué las instrucciones internas están en inglés?**
->
-> Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
->
-> * El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
-> * La **documentación y ejemplos** (lo que tú lees) está en español
-> * Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
->
-> Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
+**¿Por qué las instrucciones internas están en inglés?**
+
+Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
+
+* El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
+* La **documentación y ejemplos** (lo que tú lees) está en español
+* Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
+
+Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
 
 ## Documentación
 
