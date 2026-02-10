@@ -4,18 +4,17 @@ Habilidades de IA para tu negocio y proyectos: herramientas básicas comunes que
 
 ## Estructura
 
-```
+```text
 palas-basic/
 ├── .claude-plugin/
 │   └── plugin.json           # Metadatos del plugin
-├── _tooling/                  # Dependencias (Node.js y Python)
-│   ├── package.json          # Deps de Node.js (markdownlint, prettier)
-│   ├── .markdownlint-cli2.jsonc
-│   ├── .prettierrc
-│   └── requirements.txt      # Deps de Python (Pillow, pymupdf, opencv)
 └── skills/
     ├── fixing-markdown/
-    │   └── SKILL.md          # Validar y corregir formato markdown
+    │   ├── SKILL.md          # Validar y corregir formato markdown
+    │   ├── .markdownlint-cli2.jsonc
+    │   ├── .prettierrc
+    │   └── scripts/
+    │       └── fix_md_extra.py
     └── removing-notebooklm/
         ├── SKILL.md          # Eliminar watermark de NotebookLM
         └── scripts/
@@ -54,10 +53,17 @@ Elimina automáticamente la marca de agua de NotebookLM de PDFs e imágenes.
 
 ## Requisitos
 
-- **Node.js** — Para markdownlint y prettier
-- **Python 3** — Para procesamiento de imágenes/PDFs
+Este plugin usa **gestión de dependencias sin huella** (zero-footprint):
 
-Las dependencias se instalan automáticamente en la primera ejecución dentro de `_tooling/`.
+- **Herramientas JavaScript CLI** (`markdownlint-cli2`, `prettier`): Se ejecutan via `pnpm dlx`
+- **Scripts Python**: Se ejecutan via `uv run` con metadatos PEP 723 inline
+
+**Prerrequisitos** (deben estar instalados en el sistema):
+
+- **pnpm** — [https://pnpm.io/](https://pnpm.io/)
+- **uv** — [https://docs.astral.sh/uv/](https://docs.astral.sh/uv/)
+
+No se crean `node_modules`, `.venv`, `package.json` ni `requirements.txt`. Las dependencias se cachean globalmente.
 
 ## Uso
 

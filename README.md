@@ -6,7 +6,7 @@
 
 **Habilidades de IA para tu negocio, no solo para tu código.**
 
-Un plugin de Claude Code que une **productividad general y conocimiento especializado** para ayudar a particulares y PYMES a dar sus primeros pasos en la IA.
+Varios plugins de Claude Code que une **productividad general y conocimiento especializado** para ayudar a particulares y PYMES a dar sus primeros pasos en la IA.
 
 Mientras la mayoría de plugins se centran en el desarrollo de software, Palas nace para ayudar a todos: desde el crecimiento personal y la gestión de datos, hasta operaciones, finanzas y marketing.
 
@@ -15,12 +15,14 @@ Mientras la mayoría de plugins se centran en el desarrollo de software, Palas n
 Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
 
 * 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
-* 🧩 **Plugins:** Son extras que añades a Claude que le dan nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
-* 🛠️ **Habilidades (Skills):** Son las tareas específicas que Palas añade a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
+* 🧩 **Plugins:** Es una forma de empaquetar extras que añades a Claude, para darle nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
+* 🛠️ **Habilidades (Skills):** Son las tareas específicas que añades a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
+
+> Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins (que traen Skills), la ventaja de los Plugins es la forma de empaquetar dichos Skills, es mucho más cómodo.
 
 ## Para usuarios nuevos
 
-¿Empezando de cero? Si tienes el efecto "papel en blanco" y tu carpeta está vacía, este comando te crea una configuración mínima:
+¿Empezando de cero? Si tienes el efecto "papel en blanco" y no has jugado con todo esto, tu carpeta está vacía, empieza probando con este ejemplo para romper el hielo:
 
 ```bash
 # Abre una terminal y navega a tu proyecto
@@ -33,9 +35,9 @@ curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/sta
 
 **¿Qué hace?** Crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene:
 
-- Instrucciones básicas para Claude sobre tu proyecto
-- Las habilidades de Palas listas para usar
-- Un espacio donde añadir notas específicas de tu proyecto
+* Instrucciones básicas para Claude sobre tu proyecto
+* Las habilidades de Palas listas para usar
+* Un espacio donde añadir notas específicas de tu proyecto
 
 Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
 
@@ -97,16 +99,22 @@ palas-<nombre>/
 
 ## Requisitos
 
-Algunos de los plugins tienen scripts que dependen de librerías de NodeJS o de Python. Estas se instalarán automáticamente en entornos aislados, sin contaminar tu proyecto o sistema. Necesitarán, eso sí, que **Node.js** y **Python 3** estén ya instalados en tu ordenador.
+Algunos plugins tienen scripts que dependen de herramientas JavaScript CLI o librerías Python. Usamos **gestión de dependencias sin huella** (zero-footprint):
+
+* **Python**: Vas a tener que instalar tanto `Python` como el programa `uv`
+* **JavaScript**: Vas a tener que instalar tanto `NodeJS` como `pnpm`
+
+Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
 
 ## Nota sobre Idiomas
 
 > **¿Por qué las instrucciones internas están en inglés?**
 >
 > Los modelos de IA funcionan mejor con instrucciones en inglés. Por eso:
-> - El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
-> - La **documentación y ejemplos** (lo que tú lees) está en español
-> - Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
+>
+> * El **motor del plugin** (instrucciones que Claude ejecuta) está en inglés
+> * La **documentación y ejemplos** (lo que tú lees) está en español
+> * Las **trigger phrases** son bilingües para que puedas hablar con Claude en español
 >
 > Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentación en tu idioma.
 
@@ -124,8 +132,8 @@ Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
 
 <!-- readme: contributors -start -->
 <table>
-	<tbody>
-		<tr>
+ <tbody>
+  <tr>
             <td align="center">
                 <a href="https://github.com/Jacopalas">
                     <img src="https://github.com/Jacopalas.png" width="80;" alt="Jacopalas"/>
@@ -140,7 +148,7 @@ Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md).
                     <sub><b>Luis Palacios</b></sub>
                 </a>
             </td>
-		</tr>
-	<tbody>
+  </tr>
+ <tbody>
 </table>
 <!-- readme: contributors -end -->

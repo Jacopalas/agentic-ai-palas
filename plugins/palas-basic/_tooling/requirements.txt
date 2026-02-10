@@ -1,4 +1,0 @@
-# Python dependencies for palas plugin skills
-Pillow>=10.0.0
-pymupdf>=1.24.0
-opencv-python>=4.8.0

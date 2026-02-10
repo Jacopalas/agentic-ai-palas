@@ -24,46 +24,33 @@ Remove the NotebookLM watermark from PDFs and images automatically.
 
 ## Environment Setup
 
-This skill requires Python dependencies. Before running:
+This skill uses **zero-footprint dependency management**:
 
-1. **Locate plugin directory**: Find this plugin's `_tooling/` directory (contains `requirements.txt`)
-2. **Create virtual environment if needed**: If `_tooling/.venv/` doesn't exist:
-   ```bash
-   python -m venv <plugin-path>/_tooling/.venv
-   ```
-3. **Install dependencies if needed**:
-   ```bash
-   # Windows
-   <plugin-path>/_tooling/.venv/Scripts/pip.exe install -r <plugin-path>/_tooling/requirements.txt
+- **Python scripts**: Executed via `uv run` with PEP 723 inline metadata — no `requirements.txt` or `.venv` needed
 
-   # Unix/macOS
-   <plugin-path>/_tooling/.venv/bin/pip install -r <plugin-path>/_tooling/requirements.txt
-   ```
+**Prerequisites** (must be installed on the system):
 
-The plugin directory is typically in `~/.claude/plugins/cache/` or wherever the plugin was installed.
+- `uv` — [https://docs.astral.sh/uv/](https://docs.astral.sh/uv/)
 
-### Dependencies
+No per-project setup required. Dependencies are cached globally and resolved on first run.
+
+### Dependencies (declared inline in script)
 
 - `Pillow` — Image processing
 - `pymupdf` — PDF processing
 - `opencv-python` — Inpainting algorithm
+- `numpy` — Array operations
 
 ## Command
 
 Replace `<plugin-path>` with the actual path to this plugin's installation directory.
 
 ```bash
-# Windows - Default output (adds _clean suffix)
-<plugin-path>/_tooling/.venv/Scripts/python.exe <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>"
+# Default output (adds _clean suffix)
+uv run <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>"
 
-# Windows - Custom output path
-<plugin-path>/_tooling/.venv/Scripts/python.exe <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>" --output "<output>"
-
-# Unix/macOS - Default output
-<plugin-path>/_tooling/.venv/bin/python <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>"
-
-# Unix/macOS - Custom output
-<plugin-path>/_tooling/.venv/bin/python <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>" --output "<output>"
+# Custom output path
+uv run <plugin-path>/skills/removing-notebooklm/scripts/removing-notebooklm.py "<file>" --output "<output>"
 ```
 
 ## Examples
@@ -122,14 +109,13 @@ Uses OpenCV's Telea inpainting algorithm to seamlessly reconstruct the backgroun
 ## Behavior
 
 1. **Check argument**: If no file provided, show usage and exit
-2. **Setup environment**: Ensure Python venv exists with dependencies in plugin directory
-3. **Validate file**: Check file exists and format is supported
-4. **Process file**: Remove watermark using appropriate method
-5. **Save output**: `{original_name}_clean.{extension}`
+2. **Validate file**: Check file exists and format is supported
+3. **Process file**: Remove watermark using appropriate method
+4. **Save output**: `{original_name}_clean.{extension}`
 
 ## Notes
 
 - Output file is saved in the same directory as input
 - Original file is not modified
-- Requires: Python 3 installed on system
-- Dependencies installed on first use in plugin's `_tooling/.venv/`
+- Requires: `uv` installed on system
+- No `.venv` created—dependencies cached globally by uv

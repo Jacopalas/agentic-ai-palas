@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = []
+# ///
 """
 fix_md_extra.py — Correcciones de markdown que markdownlint no puede auto-fixear.
 
