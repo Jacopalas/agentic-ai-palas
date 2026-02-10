@@ -2,15 +2,13 @@
 
 ![Palas Overview](./infographic.svg)
 
-## ¿Por qué Palas?
+<br/>
 
-**Habilidades de IA para tu negocio, no solo para tu código.**
-
-Varios plugins de Claude Code que une **productividad general y conocimiento especializado** para ayudar a particulares y PYMES a dar sus primeros pasos en la IA.
+En este repositorio encontrarás varias **"Habilidades" (skills) de IA para tí y tu negocio**. El objetivo es ir añadiendo plugins para Claude Code que sirvan para **productividad general y conocimiento especializado** para ayudarte a tí y a las PYMES a dar sus primeros pasos con la IA Agéntica.
 
 Mientras la mayoría de plugins se centran en el desarrollo de software, Palas nace para ayudar a todos: desde el crecimiento personal y la gestión de datos, hasta operaciones, finanzas y marketing.
 
-## Conceptos Clave
+## Conceptos clave
 
 Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
 
@@ -61,7 +59,7 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
   * Añadir el marketplace (una sola vez): `/plugin marketplace add Jacopalas/agentic-ai-palas`
   * Instalar el plugin que quieras, ejemplo: `/plugin install palas-basic@agentic-ai-palas`
 
-## Plugins Disponibles
+## Plugins disponibles
 
 | Plugin | Habilidades | Descripción |
 |--------|-------------|-------------|
