@@ -4,9 +4,9 @@
 
 <br/>
 
-En este repositorio encontrarás varias **"Habilidades" (skills) de IA para tí y tu negocio**. El objetivo es ir añadiendo plugins para Claude Code que sirvan para **productividad general y conocimiento especializado** para ayudarte a tí y a las PYMES a dar sus primeros pasos con la IA Agéntica.
+En este repositorio encontrarás varios **Plugins con "Habilidades" (skills) de Claude Code** que te serán **útiles a tí y a tu negocio**. Hemos empezado con un par, pero el objetivo es ir añadiendo más, con foco en mejorar la **productividad personal y la especializada en negocio** y poder ayudar también a las PYMES a dar sus primeros pasos con la IA Agéntica.
 
-Mientras la mayoría de plugins se centran en el desarrollo de software, Palas nace para ayudar a todos: desde el crecimiento personal y la gestión de datos, hasta operaciones, finanzas y marketing.
+Mientras la mayoría de plugins se centran en el desarrollo de software, "agentic-ai-palas" nace para ayudar a todos: rendimiento personal, la gestión de datos, operaciones, finanzas, marketing, etc.
 
 ## Conceptos clave
 
