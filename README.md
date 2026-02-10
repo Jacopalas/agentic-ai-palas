@@ -101,17 +101,10 @@ palas-<nombre>/
 
 Algunos plugins tienen scripts que dependen de herramientas JavaScript CLI o librerías Python. Usamos **gestión de dependencias sin huella** (zero-footprint):
 
-- **Python scripts**: Se ejecutan via `uv run` con metadatos PEP 723 inline
-- **JavaScript CLI tools**: Se ejecutan via `pnpm dlx`
+* **Python**: Vas a tener que instalar tanto `Python` como el programa `uv`
+* **JavaScript**: Vas a tener que instalar tanto `NodeJS` como `pnpm`
 
-No se crean `node_modules`, `.venv`, `package.json` ni `requirements.txt` en el repositorio. Las dependencias se cachean globalmente en tu máquina.
-
-**Prerrequisitos** (deben estar instalados en el sistema):
-
-- **pnpm** — [https://pnpm.io/](https://pnpm.io/)
-- **uv** — [https://docs.astral.sh/uv/](https://docs.astral.sh/uv/)
-
-Para más detalles, consulta [scripts-dependencies.md](scripts-dependencies.md).
+Para más detalles, consulta [Dependencias de los Scripts](scripts-dependencies.md).
 
 ## Nota sobre Idiomas
 
