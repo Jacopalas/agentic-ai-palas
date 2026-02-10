@@ -20,33 +20,30 @@ Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básic
 
 > Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins (que traen Skills), la ventaja de los Plugins es la forma de empaquetar dichos Skills, es mucho más cómodo.
 
-## Para usuarios nuevos
+## ¿Empezando con Claude?
 
-¿Empezando de cero? Si tienes el efecto "papel en blanco" y no has jugado con todo esto, tu carpeta está vacía, empieza probando con este ejemplo para romper el hielo:
+Si estás empezando desde cero y ni siquiera tienes el fichero `CLAUDE.md` ni el directorio `.claude` en tu proyecto, te recomiendo que sigas este mini-tutorial para romper el hielo:
 
 ```bash
 # Abre una terminal y navega a tu proyecto
-cd ~/Documentos/mi-proyecto
+mkdir -p mi-proyecto
+cd mi-proyecto
 
 # Crea la configuración mínima
 # Usuarios de Windows: Ejecutar desde Git Bash, no PowerShell o CMD.
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-**¿Qué hace?** Crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene:
-
-* Instrucciones básicas para Claude sobre tu proyecto
-* Las habilidades de Palas listas para usar
-* Un espacio donde añadir notas específicas de tu proyecto
+Este script crea una carpeta `.claude/` con un archivo `CLAUDE.md` que contiene unas instrucciones básicas para Claude, le explica a tu proyecto que existen Skills de Palas listas para usarse y deja libre un pequeño spacio donde añadir notas específicas de tu proyecto.
 
 Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
 
-## Instalación del Plugin "Palas"
+## Instalación de uno o más plugins "Palas"
 
 Primero sitúate en el proyecto en el que vas a trabajar:
 
-* Por línea de comando, abre un terminal y navega a tu proyecto
-  * `cd ~/Documentos/mi-proyecto`
+* Por línea de comando, abre un terminal y navega a tu proyecto (un ejemplo)
+  * `cd mi-proyecto`
   * `claude`
 * Desde VS Code, Cursor, etc.
   * Abre tu proyecto en el IDE
@@ -72,7 +69,7 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
 | **palas-git** | `commit` | Commits bien estructurados con Conventional Commits |
 | **palas-security** | `security-scan` | Escaneo de secretos y vulnerabilidades |
 
-## Estructura de Plugins
+## Estructura de un plugin
 
 Cada plugin sigue una estructura estándar:
 
@@ -95,7 +92,7 @@ Algunos plugins tienen scripts que dependen de herramientas JavaScript CLI o lib
 
 Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
 
-## Nota sobre Idiomas
+## Nota sobre idiomas
 
 **¿Por qué las instrucciones internas están en inglés?**
 
