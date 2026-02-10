@@ -1,10 +1,10 @@
-# Preparar tu ordenador para los Skills
+# Preparar tu ordenador para ejecutar Scripts Python/JS
 
-Algunos Skills de los Plugins ejecutan scripts en Python o JavaScript. Para que funcionen, necesitas tener instalados unos programas en tu ordenador. Esta guía te explica qué instalar y cómo.
+Algunos Skills de los Plugins ejecutan scripts en Python o JavaScript. Para que funcionen, necesitas tener instalado tanto Python como NodeJS, y un par de programas adicionales para manejar las dependencias.
 
 ## Paso 1: Instalar Python y/o Node.js
 
-Dependiendo de qué skills uses, puede que necesites uno o ambos:
+Dependiendo de qué skills uses, puede que necesites uno o ambos. Mi recomendación es que instales ambos.
 
 ### Python
 
@@ -28,7 +28,7 @@ Necesario para skills que usan herramientas de formato de texto (markdown, prett
 
 ## Paso 2: Instalar los gestores de dependencias
 
-Aquí viene la magia: los scripts de los skills pueden necesitar librerías externas (dependencias), pero **no van a ensuciar tu proyecto** con carpetas como `node_modules` o `.venv`. Todo se guarda en una caché global de tu ordenador.
+Aquí viene la magia: los scripts de los skills pueden necesitar librerías externas (dependencias), pero los hemos diseñado para que **no ensucien tu proyecto** con carpetas como `node_modules` o `.venv`. Todo se guarda en una caché global de tu ordenador.
 
 Para conseguirlo, necesitas instalar dos programas:
 
@@ -59,7 +59,7 @@ Más info: [pnpm.io/installation](https://pnpm.io/installation)
 
 No te preocupes por los detalles técnicos. Claude se encarga de ejecutar todo correctamente. Pero si tienes curiosidad:
 
-**Scripts Python:** Cuando un skill ejecuta un script Python, usa el comando `uv run script.py`. El programa `uv` lee las dependencias que el script necesita (están escritas dentro del propio archivo) y las descarga automáticamente la primera vez. Las siguientes ejecuciones son instantáneas porque ya están en caché.
+**Scripts Python:** Cuando un skill ejecuta un script Python, usa el comando `uv run script.py`. El programa `uv` lee las dependencias (si las tiene) que el script necesita (están escritas dentro del propio archivo) y las descarga automáticamente la primera vez. Las siguientes ejecuciones son instantáneas porque ya están en caché.
 
 **Herramientas JavaScript:** Cuando un skill necesita una herramienta como `prettier` o `markdownlint`, usa el comando `pnpm dlx nombre-herramienta`. Esto descarga y ejecuta la herramienta sin dejar rastro en tu proyecto.
 

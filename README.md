@@ -104,7 +104,7 @@ Algunos plugins tienen scripts que dependen de herramientas JavaScript CLI o lib
 * **Python**: Vas a tener que instalar tanto `Python` como el programa `uv`
 * **JavaScript**: Vas a tener que instalar tanto `NodeJS` como `pnpm`
 
-Para más detalles, consulta [Dependencias de los Scripts](scripts-dependencies.md).
+Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
 
 ## Nota sobre Idiomas
 
