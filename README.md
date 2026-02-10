@@ -4,7 +4,7 @@
 
 <br/>
 
-En este repositorio encontrarás varios **Plugins con "Habilidades" (skills) de Claude Code** que te serán **útiles a tí y a tu negocio**. Hemos empezado con un par, pero el objetivo es ir añadiendo más, con foco en mejorar la **productividad personal y la especializada en negocio** y poder ayudar también a las PYMES a dar sus primeros pasos con la IA Agéntica.
+En este repositorio encontrarás varios **Plugins con Skills (Habilidades) de Claude Code** que te serán **útiles a tí y a tu negocio**. Hemos empezado con un par, pero el objetivo es ir añadiendo más, con foco en mejorar la **productividad personal y la especializada en negocio** y poder ayudar también a las PYMES a dar sus primeros pasos con la IA Agéntica.
 
 Mientras la mayoría de plugins se centran en el desarrollo de software, "agentic-ai-palas" nace para ayudar a todos: rendimiento personal, la gestión de datos, operaciones, finanzas, marketing, etc.
 
@@ -13,10 +13,10 @@ Mientras la mayoría de plugins se centran en el desarrollo de software, "agenti
 Si es tu primera vez usando una herramienta de este tipo, aquí tienes lo básico para entender el potencial:
 
 * 🤖 **IA Agéntica:** A diferencia de un chat normal (que solo "habla"), una IA agéntica puede **actuar**. Tiene "manos": puede leer tus archivos, ejecutar comandos, realizar cálculos y tomar decisiones para completar tareas complejas de forma autónoma.
-* 🧩 **Plugins:** Es una forma de empaquetar extras que añades a Claude, para darle nuevos "superpoderes" a la IA. Imagínalos como las apps que instalas en tu móvil para hacer cosas que no venían de fábrica.
-* 🛠️ **Habilidades (Skills):** Son las tareas específicas que añades a tu entorno. Si el plugin es la caja de herramientas, las habilidades son el martillo, la calculadora o el gestor de archivos.
+* 🧩 **Plugins:** Es una forma de empaquetar Skills para facilitar su consumo. En vez de tener que preocuparte de copiar/pegar Skills que veas por ahí, Claude facilita su consumo a través del concepto de "Plugin".
+* 🛠️ **Habilidades (Skills):** Es la chicha principal. Un Skill es una habilidad dedicada a hacer algo concreto, una tarea específica que añades y le da un nuevo "superpoder" a Claude. Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins, la ventaja de los Plugins es la forma de empaquetar dichos Skills, es mucho más cómodo.
 
-> Siempre puedes crear o copiar Skills en un proyecto sin necesidad de Plugins (que traen Skills), la ventaja de los Plugins es la forma de empaquetar dichos Skills, es mucho más cómodo.
+En resumen, los Plugin son como cajas de herramientas, y los Skills son el martillo, la calculadora o el gestor de archivos. Nosotros ofrecemos varios plugins en este repositorio que puedes añadir a tu proyecto sin "llenarlo de ficheros", ya que se guardarán en una zona de Caché distinta a tu repo.
 
 ## ¿Empezando con Claude?
 
