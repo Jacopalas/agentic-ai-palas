@@ -32,7 +32,7 @@ cd mi-proyecto
 curl -fsSL https://raw.githubusercontent.com/Jacopalas/agentic-ai-palas/main/starter/minimal-install.sh | bash
 ```
 
-Se creará una carpeta `.claude/` con un archivo `CLAUDE.md`. Contiene unas instrucciones básicas para Claude, para que te sirva de ejemplo y deja un pequeño spacio donde añadir notas específicas de tu proyecto.
+Se creará una carpeta `.claude/` con un archivo `CLAUDE.md`. Contiene unas instrucciones básicas para Claude, para que te sirva de ejemplo y deja un pequeño espacio donde añadir notas específicas de tu proyecto.
 
 Piensa en `CLAUDE.md` como el "briefing" que le das a Claude cada vez que abre tu proyecto. Cuanto más contexto le des, mejor te ayudará.
 
