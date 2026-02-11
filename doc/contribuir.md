@@ -1,6 +1,6 @@
 # Contribuir a Palas
 
-¡Gracias por querer contribuir! Palas se centra en **herramientas genéricas** y **habilidades de dominio** para particulares y pequeñas empresas.
+¡Gracias por querer contribuir! Palas se centra en **herramientas genéricas** y **habilidades de dominio** para particulares y empresas.
 
 ## Nuestro Enfoque
 
