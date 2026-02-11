@@ -3,7 +3,7 @@ name: commit
 description: Create well-structured git commits with consistent message format. Use when the user wants to commit changes, make a commit, guardar cambios, hacer commit, or save work to git.
 ---
 
-# /git:commit — Create Consistent Git Commits
+# /palas-git:commit — Create Consistent Git Commits
 
 **IMPORTANT:** Before starting execution, inform the user: "ESTOY EJECUTANDO EL SKILL `/palas-git:commit`"
 
