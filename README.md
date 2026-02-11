@@ -45,7 +45,7 @@ Primero sitúate en el proyecto en el que vas a trabajar:
 - Desde VS Code, Cursor, etc.
   - Abre tu proyecto en el IDE
   - Asegúrate de tener instalada la Extensión de Claude
-  - Abre el panel de Claude Code (normalmente en la barra lateral)
+  - Abre el panel de Claude Code (normalmente en la barra lateral de la derecha)
   - Claude ya estará en el contexto de tu proyecto
 
 El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después instalar el plugin que quieras.
