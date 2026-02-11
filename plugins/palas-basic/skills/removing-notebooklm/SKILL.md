@@ -3,7 +3,9 @@ name: removing-notebooklm
 description: Remove the NotebookLM watermark from PDFs (presentations) and images (infographics) automatically. Use when the user wants to remove the NotebookLM watermark, eliminar el watermark, quitar la marca de agua.
 ---
 
-# /palas:removing-notebooklm — Remove NotebookLM Watermark
+# /palas-basic:removing-notebooklm — Remove NotebookLM Watermark
+
+**IMPORTANT:** Before starting execution, inform the user: "ESTOY EJECUTANDO EL SKILL `/palas-basic:removing-notebooklm`"
 
 Remove the NotebookLM watermark from PDFs and images automatically.
 

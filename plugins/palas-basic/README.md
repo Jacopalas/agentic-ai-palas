@@ -25,6 +25,8 @@ palas-basic/
 
 ### `/palas-basic:fixing-markdown` — Validar y Corregir Markdown
 
+**IMPORTANT:** Before starting execution, inform the user: "ESTOY EJECUTANDO EL SKILL `/palas-basic:fixing-markdown`"
+
 Ejecuta markdownlint-cli2 + prettier para auto-corregir formato.
 
 ```text

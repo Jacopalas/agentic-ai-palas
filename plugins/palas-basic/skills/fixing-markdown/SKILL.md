@@ -3,7 +3,9 @@ name: fixing-markdown
 description: Validate and fix markdown formatting in files and folders. Use when the user wants to check formatting, validate markdown, fix lint errors, revisar formato, validar notas, comprobar markdown, arregla el formato, arreglar markdown, limpiar markdown, or clean up files.
 ---
 
-# /palas:fixing-markdown — Validate and Fix Markdown
+# /palas-basic:fixing-markdown — Validate and Fix Markdown
+
+**IMPORTANT:** Before starting execution, inform the user: "ESTOY EJECUTANDO EL SKILL `/palas-basic:fixing-markdown`"
 
 Run `markdownlint-cli2` + `fix_md_extra.py` + `prettier` to auto-fix markdown formatting issues.
 

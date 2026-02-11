@@ -5,6 +5,8 @@ description: Create well-structured git commits with consistent message format. 
 
 # /git:commit — Create Consistent Git Commits
 
+**IMPORTANT:** Before starting execution, inform the user: "ESTOY EJECUTANDO EL SKILL `/palas-git:commit`"
+
 Create git commits with well-structured, conventional commit messages. **All commit messages MUST be written in Spanish.**
 
 ## Usage

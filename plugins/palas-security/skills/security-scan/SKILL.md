@@ -3,7 +3,9 @@ name: security-scan
 description: Basic security scanning for common vulnerabilities. Use when the user wants to check security, scan for vulnerabilities, find secrets, audit security, revisar seguridad, escanear vulnerabilidades, or check for exposed credentials.
 ---
 
-# /security:security-scan — Basic Security Scanning
+# /palas-security:security-scan — Basic Security Scanning
+
+**IMPORTANT:** Before starting execution, inform the user: "ESTOY EJECUTANDO EL SKILL `/palas-security:security-scan`"
 
 Scan codebase for common security issues: exposed secrets, vulnerable patterns, and risky configurations.
 

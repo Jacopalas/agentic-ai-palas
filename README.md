@@ -52,8 +52,9 @@ El siguiente paso es instalar el Marketplace `agentic-ai-palas` y después insta
 
 * **En modo GUI**:
   * Escribe `/plugin` y entra en Manage Plugins.
-  * En la lengüeta `Marketplaces` añade `Jacopalas/agentic-ai-palas`.
-  * En la lengüeta `Plugins` selecciona "palas-basic" y dale a Install
+  * En la lengüeta `Marketplaces` añade **`Jacopalas/agentic-ai-palas`**.
+  * En la lengüeta `Plugins` selecciona por ejemplo `palas-basic` y pulsa en Install
+  * De momento te recomiendo que uses el ámbito de instalacion "**`Install for you`**". Lee este documento sobre los [ámbitos de instalacion](./doc/ámbitos.md) para saber más sobre el tema.
 
 <p align="center" width="100%">
     <img width="50%" src="./assets/install-screenshot.png" alt="Instalación en modo GUI">
@@ -92,7 +93,7 @@ Algunos plugins tienen scripts que dependen de herramientas JavaScript CLI o lib
 * **Python**: Vas a tener que instalar tanto `Python` como el programa `uv`
 * **JavaScript**: Vas a tener que instalar tanto `NodeJS` como `pnpm`
 
-Para más detalles, consulta [Dependencias para Python/JS](./DEPENDENCIAS.md).
+Para más detalles, consulta [Dependencias para Python/JS](./doc/dependencias.md).
 
 ## Nota sobre idiomas
 
@@ -108,7 +109,7 @@ Esto garantiza la mejor experiencia: máxima fiabilidad técnica + documentació
 
 ## Contribuir al proyecto
 
-Lee por favor el documento [CONTRIBUIR.md](CONTRIBUIR.md) donde explico cómo contribuir, que habilidades están todav´´ia por desarrollarse, y cómo trabajar en modo desarrollador, para que puedas hacer pruebas Locales (que puedas probar dentro de este repo sys propios skills).
+Lee por favor como [Contribuir](./doc/contribuir.md), donde describo habilidades que podrías hacer, cómo trabajar en modo desarrollador, cómo hacer pruebas Locales, etc.
 
 Estos son los contribuidores actuales:
 
