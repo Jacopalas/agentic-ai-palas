@@ -140,6 +140,12 @@ Estos son los contribuidores actuales:
 
 Para más información sobre desarrollo de plugins, ver la [documentación oficial](https://docs.anthropic.com/en/docs/claude-code/plugins).
 
+## Referencias
+
+Proyectos muy interesantes a estudiar
+
+- [Planning with files](https://github.com/OthmanAdi/planning-with-files)
+
 ## Licencia
 
 Usamos la licencia [MIT](./LICENSE).
